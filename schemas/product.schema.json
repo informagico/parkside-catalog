@@ -1,22 +1,97 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/informagico/parkside-catalog/schemas/product.schema.json",
-  "title": "Tooltrace product frontmatter",
+  "title": "Parkside Atlas product frontmatter",
   "type": "object",
-  "required": ["model", "ian", "title", "category", "power", "company", "role", "manufacturer", "oem", "source", "checked", "specifications", "evidence"],
+  "required": [
+    "model",
+    "ian",
+    "title",
+    "category",
+    "power",
+    "company",
+    "role",
+    "manufacturer",
+    "oem",
+    "source",
+    "checked",
+    "specifications",
+    "evidence"
+  ],
   "properties": {
-    "model": {"type": "string", "minLength": 1},
-    "ian": {"type": "string", "pattern": "^[0-9]{5,6}$"},
-    "title": {"type": "string", "minLength": 1},
-    "category": {"type": "string"}, "power": {"type": "string"},
-    "company": {"type": "string", "minLength": 1},
-    "role": {"type": "string", "minLength": 1},
-    "manufacturer": {"type": ["string", "null"]}, "oem": {"type": ["string", "null"]},
-    "source": {"type": "string", "pattern": "^https://"},
-    "technical_source": {"type": "string", "pattern": "^https://"},
-    "checked": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
-    "market": {"type": ["string", "null"]},
-    "specifications": {"type": "object", "additionalProperties": {"type": "string"}},
-    "evidence": {"type": "string", "minLength": 1}
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ian": {
+      "type": "string",
+      "pattern": "^[0-9]{5,6}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string"
+    },
+    "power": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "oem": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "technical_source": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "checked": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "market": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "specifications": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manufacturer_basis": {
+      "type": "string",
+      "enum": [
+        "documents",
+        "owner_confirmation"
+      ],
+      "description": "Whether attribution is supported by archived manufacturer documents or explicitly confirmed by the catalog owner. Omitted for existing document-based records."
+    }
   }
 }

@@ -1,4 +1,4 @@
-# Tooltrace
+# Parkside Atlas
 
 An independent Parkside tool catalog built with **[Eleventy (11ty)](https://www.11ty.dev/)**, standard Markdown/YAML frontmatter and Nunjucks templates. The output is plain static HTML, CSS and JavaScript. There is no database or application server.
 
@@ -90,9 +90,9 @@ There are 127 records for 92 distinct models. Most records are deliberately part
 
 A model with three IANs gets three records. Keep IANs as strings and record the complete batch suffix in the evidence when available. Do not copy evidence automatically to another IAN.
 
-The `manufacturer` field names the manufacturer explicitly documented for that IAN, or stays `null`. The archived `role` and `oem` fields preserve source information, but are not displayed as fields on product pages. Source links and evidence remain visible.
+The `manufacturer` field names the manufacturer explicitly documented for that IAN or explicitly confirmed by the catalog owner, and otherwise stays `null`. Owner confirmations use `manufacturer_basis: owner_confirmation` and are clearly distinguished from documentary evidence in the UI and record notes. The archived `role` and `oem` fields preserve source information, but are not displayed as fields on product pages. Source links and evidence remain visible.
 
-Three records have verified declared manufacturers: Grizzly for PAMRC 250 A1 (IAN 507557) and PWD 25 C4 (IAN 458741), and Scheppach for PKS 1500 C4 (IAN 465511). PIFDS 120 B2 (IAN 472024) documents C.M.C. as conformity declarant and service provider. PWDL 40 A1 includes official Lidl specifications.
+Three records have verified declared manufacturers: Grizzly for PAMRC 250 A1 (IAN 507557) and PWD 25 C4 (IAN 458741), and Scheppach for PKS 1500 C4 (IAN 465511). PIFDS 120 B2 (IAN 472024) documents C.M.C. as conformity declarant and service provider. PWDL 40 A1 (IAN 544816) has a Grizzly Tools manufacturer attribution explicitly confirmed by the catalog owner on 23 October 2026, separately marked as owner confirmation pending an archived manufacturer document; it also includes official Lidl specifications.
 
 ## Product photos
 
@@ -100,7 +100,7 @@ Three records have verified declared manufacturers: Grizzly for PAMRC 250 A1 (IA
 
 `npm run images` attempts to cache the photos in `.cache/product-images/`. The build bundles successful downloads into `dist/assets/products/`, so the GitHub ZIP can contain the photos themselves. Failed downloads retain the original URL and browser icon fallback. Image caches are not committed.
 
-Photos belong to their respective owners. Credits and source links do not themselves grant a reuse license; verify permissions before public publication. Tooltrace's logo and category illustrations are original.
+Photos belong to their respective owners. Credits and source links do not themselves grant a reuse license; verify permissions before public publication. Parkside Atlas's logo and category illustrations are original.
 
 ## Contribution workflow
 

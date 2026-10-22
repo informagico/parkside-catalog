@@ -1,6 +1,6 @@
 # Contributing
 
-Tooltrace is an Eleventy site. Start with the [official Eleventy documentation](https://www.11ty.dev/docs/).
+Parkside Atlas is an Eleventy site. Start with the [official Eleventy documentation](https://www.11ty.dev/docs/).
 
 ## Setup
 
