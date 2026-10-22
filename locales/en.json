@@ -72,9 +72,7 @@
   "manual": "Manual and EU declaration",
   "officialCatalog": "Official catalog",
   "technicalSource": "Official Lidl specifications",
-  "downloadMarkdown": "Download Markdown record (English)",
   "openGithub": "Open record on GitHub",
-  "lastChecked": "Last checked",
   "privateRepo": "The GitHub repository is private and requires authorized access.",
   "variants": "Other IANs for this model",
   "footer": "An independent archive, built on documents.",
@@ -90,7 +88,7 @@
   "missingTitle": "Unknown information stays unknown.",
   "missingText": "No manufacturer attribution based on appearance, color or forum rumors. Power supplies and categories derived from catalog titles are editorial classifications; specifications need explicit documentation. Prices and availability are omitted unless checked recently.",
   "contribute": "How to contribute",
-  "contributeText": "Add or edit an English file in content/products in the repository. Include a manual or other primary source, the IAN and the verification date. Italian product translations live in locales/it-content.json. The build checks required fields, missing translations and duplicate records.",
+  "contributeText": "Copy the template, fill in one English product record with its source and image, and open a pull request. Translations are optional: the maintainer can add them later in separate files per IAN. Allowed categories are listed in the contribution guide.",
   "repository": "Open private repository",
   "methodLegal": "PARKSIDE and Lidl are trademarks of their respective owners. This project is not affiliated with, sponsored by or approved by Lidl. The names identify the products in the catalog. The Parkside Atlas logo and illustrations are original.",
   "translationNote": "Translations are provided for browsing the catalog. The linked original documents remain the reference for declarations and safety instructions.",
@@ -115,5 +113,7 @@
   "brandSubtitle": "INDEPENDENT PARKSIDE CATALOG",
   "manufacturerOwnerConfirmed": "Manufacturer confirmed by catalog owner",
   "manufacturerOwnerLabel": "Manufacturer",
-  "manufacturerOwnerNote": "Confirmed by the catalog owner on 23 October 2026. The manufacturer document remains to be archived."
+  "manufacturerOwnerNote": "Confirmed by the catalog owner on 23 October 2026. The manufacturer document remains to be archived.",
+  "translationMissing": "Translation is incomplete. Missing text is shown in English.",
+  "translationReview": "The English record has changed. Its translation needs review; original text is shown meanwhile."
 }

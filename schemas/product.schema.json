@@ -10,11 +10,8 @@
     "category",
     "power",
     "company",
-    "role",
     "manufacturer",
-    "oem",
     "source",
-    "checked",
     "specifications",
     "evidence"
   ],
@@ -32,7 +29,17 @@
       "minLength": 1
     },
     "category": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "Dust extraction",
+        "Drilling and fastening",
+        "Garden",
+        "Cutting",
+        "Sanding and grinding",
+        "Workshop",
+        "Welding"
+      ],
+      "description": "Controlled category list. Proposed replacements are awaiting maintainer approval."
     },
     "power": {
       "type": "string"
@@ -65,10 +72,6 @@
       "type": "string",
       "pattern": "^https://"
     },
-    "checked": {
-      "type": "string",
-      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
-    },
     "market": {
       "type": [
         "string",
@@ -92,6 +95,32 @@
         "owner_confirmation"
       ],
       "description": "Whether attribution is supported by archived manufacturer documents or explicitly confirmed by the catalog owner. Omitted for existing document-based records."
+    },
+    "image": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "url",
+        "source",
+        "credit"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "HTTPS URL or assets/products/<filename>.jpg, .jpeg, .png or .webp"
+        },
+        "source": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "credit": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
     }
   }
 }

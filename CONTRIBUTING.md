@@ -1,33 +1,54 @@
-# Contributing
+# Contributing to Parkside Atlas
 
-Parkside Atlas is an Eleventy site. Start with the [official Eleventy documentation](https://www.11ty.dev/docs/).
+## Add a product without installing anything
 
-## Setup
+1. Open [templates/product.md](templates/product.md) on GitHub and copy its raw contents.
+2. Open content/products and choose **Add file → Create new file**. Name it model-IAN.md, for example pwdl-40-a1-544816.md. If that IAN already exists, edit its file instead.
+3. Paste the template. Replace the examples with English product information and a primary-source link. Choose an exact category from [content/categories.json](content/categories.json). Remove the optional image block when no photo is available.
+4. Choose **Propose changes** on a new branch, or work in a fork if you do not have write access. Open a pull request and fill in the prepared product fields and checkboxes.
+5. GitHub Actions builds and tests the proposal. The maintainer reviews the evidence and merges it.
 
-Use Node.js 22. On an existing checkout run `npm ci`, then `npm run dev`. Before submitting changes run `npm run build` and `npm test`.
+One English Markdown file is enough. Translations are optional and may be added later by the maintainer. No checked field or separate photo registry is used. For this private repository, contributors need access; visibility is not changed by this workflow.
 
-## Product records
+## Product fields
 
-Copy `templates/product.md` into `content/products/`. Each model + IAN pair gets a separate file. Write all product fields and Markdown bodies in English. Use standard YAML frontmatter and Markdown. Field definitions are in `schemas/product.schema.json` and the template.
+The template and [JSON Schema](schemas/product.schema.json) document the fields. Required: model, ian, title, category, power, company, manufacturer (null is valid), source, evidence and specifications (an empty object is valid). Use strings for IANs and specification values. Product descriptions are normal Markdown after the frontmatter.
 
-Preserve the distinction between a declared manufacturer and a catalog/spare-parts relationship. Include a primary-source URL, the consultation date, the relevant document page and the complete IAN suffix when available. Unknown values remain `null`. Evidence never automatically carries across IANs.
+Do not infer manufacturers from appearance or a spare parts catalog. Keep manufacturer null unless evidence explicitly supports it. If confirmed in a manufacturer document, give the relevant passage in evidence. The maintainer can explicitly record owner_confirmation provenance; it is displayed separately from documentary evidence. Never carry manufacturer claims or specifications across IANs.
 
-## Translations
+### Photos in the same Markdown
 
-Interface dictionaries are `locales/it.json` and `locales/en.json`. Italian translations of canonical English product text are in `locales/it-content.json`. Keep model names, IANs, company identities and technical facts unchanged. Missing text translations fail the build.
+Use image.url, image.source and image.credit in the product frontmatter. The URL can be an HTTPS official photo or a file included in the PR, for example assets/products/544816.jpg. Local filenames may contain letters, numbers, hyphens and underscores; supported formats are JPG, JPEG, PNG and WebP.
 
-## Photos
+Keep the source page and publisher/owner credit. Confirm that the photo shows the exact model and IAN, and that reuse is permitted. Upload local files with **Add file → Upload files**, on the same branch as the product change. Do not paste a GitHub attachment URL for an image you intend to include as a repository asset.
 
-Add an entry keyed by the exact IAN to `content/images.json`: `url`, `source`, `owner` and `checked`. Use an official product photo and a source page associating that photo with the correct model/IAN. Do not substitute a similar model. Keep the image owner's credit. Verify reuse permissions before publishing images publicly.
+The build bundles local files and successfully downloaded remote photos. If the photo is unavailable, the original category icon is shown. Do not commit generated image caches.
 
-`npm run images` optionally caches the original photos for offline output. Missing downloads fall back to their source URL; failed browser loads reveal the original category icon. Do not commit image caches.
+## Categories
 
-## Design and templates
+Use only exact values from content/categories.json. The current seven categories are retained during the migration. A proposed function-based replacement list is in [docs/categories-proposal.md](docs/categories-proposal.md), awaiting maintainer approval. Do not create an ad hoc category or reclassify existing records without agreement.
 
-Shared layouts and components use Nunjucks under `site/_includes/`. Catalog, product and methodology templates are separate `.njk` files. Styles live in `src/`; the readability and photo adjustments are in `src/refinements.css`.
+## Optional translations — maintainer workflow
 
-Keep pages responsive and preserve accessible labels, alternate-language links and keyboard navigation. Do not add a database, runtime framework or credentials to the browser code.
+Each language gets a separate file per IAN: content/translations/it/544816.json. Stable fields are title, body and evidence. An optional specifications object translates textual values, keyed by their canonical English specification label. Do not repeat model, IAN, company, manufacturer, image or numeric facts.
 
-## Pull requests
+Shared labels (category names, power types and specification labels) live in locales/fields/it.json. Interface text lives in locales/it.json and locales/en.json. Product sentences are never dictionary keys.
 
-Describe the user-visible change, identify any new evidence, and report build/test results. Do not change repository visibility or publish a public site as part of an unrelated contribution.
+To create a translation scaffold locally:
+
+    npm ci
+    npm run translation -- 544816 it
+
+Fill the empty title, body and evidence fields with Italian text. The command supplies _sourceHash, a fingerprint of the current English text; maintainers do not calculate it by hand. JSON strings can contain Markdown, with paragraph breaks written as \n\n.
+
+For a browser-only contribution, copy templates/translation.json into content/translations/it/IAN.json and fill the text. A missing fingerprint marks it for review; the maintainer completes the review step before the site uses it.
+
+After editing an existing translation against changed English text, confirm the review with:
+
+    npm run translation -- 544816 it --reviewed
+
+This preserves the translation and records the new fingerprint. Only run it after reviewing the text. New or changed English records do not require translation work to pass CI. Missing fields fall back to English. A stale translation is held back and the page displays the English original with a review notice. Photo-only changes do not invalidate prose translations.
+
+## Optional local preview
+
+Use Node.js 22. Run npm ci, npm run dev. Before submitting code changes, run npm run build and npm test. Run npm run images if you want remote photos bundled locally. The static website is generated in dist.

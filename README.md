@@ -1,129 +1,79 @@
 # Parkside Atlas
 
-An independent Parkside tool catalog built with **[Eleventy (11ty)](https://www.11ty.dev/)**, standard Markdown/YAML frontmatter and Nunjucks templates. The output is plain static HTML, CSS and JavaScript. There is no database or application server.
+An independent Parkside product catalog built with [Eleventy](https://www.11ty.dev/), Markdown/YAML frontmatter and Nunjucks templates. Static HTML, CSS and JavaScript; no database or application server.
 
 Repository: https://github.com/informagico/parkside-catalog (private).
 
-## Quick start
+## Contribute a product
 
-Use Node.js 22.
+Copy [templates/product.md](templates/product.md), fill it in English, save it under content/products and open a pull request. Product information and the optional photo are in the same file. No local setup is required for content-only contributions; GitHub runs the checks. The PR description includes prepared fields and checkboxes.
 
-```sh
-npm ci
-npm run dev
-```
+Translations are optional. The maintainer can add them later, separately for each IAN. [CONTRIBUTING.md](CONTRIBUTING.md) covers the browser workflow, photo upload and translation maintenance.
 
-Eleventy builds the site and starts its local preview server. For the production output:
+## Local development
 
-```sh
-npm run images
-npm run build
-npm test
-```
+Use Node.js 22:
 
-The image step is optional locally. The complete website is generated in `dist/`. You can deploy that directory to any static host, or open `dist/index.html` directly. All internal links include explicit filenames and work under a project subpath.
+    npm ci
+    npm run dev
 
-If a new checkout does not yet contain a lockfile, use `npm install` once instead of `npm ci`.
+For production output:
 
-## Technology and conventions
+    npm run images
+    npm run build
+    npm test
 
-| Concern | Technology |
+The optional image step bundles successful remote downloads. Static output is in dist and works under a project subpath or by opening index.html directly.
+
+## Structure
+
+| Path | Purpose |
 | --- | --- |
-| Static site generation, pagination, data cascade and dev server | Eleventy 3 |
-| Layouts and reusable UI components | Nunjucks, `.njk` |
-| Product records | Markdown with YAML frontmatter |
-| Frontmatter parsing | gray-matter |
-| Markdown rendering | markdown-it |
-| Interface and content translations | JSON dictionaries |
-| Documented product field structure | JSON Schema, draft 2020-12 |
-| Validation | Node.js test runner and project-specific provenance checks |
-| CI and downloadable static site | GitHub Actions |
-
-Eleventy replaces the original custom generator. The project follows Eleventy’s standard configuration, input-directory, data-file, layout and pagination conventions. Category drawings, provenance rules, translations and catalog filters are specific to this catalog.
-
-This is a technology/conventions choice, not a claim of certification against every accessibility, security or data standard. The JSON Schema documents the data contract; provenance and translation rules are enforced by the build and tests.
-
-## Project structure
-
-```text
-eleventy.config.js             Eleventy configuration and template filters
-site/
-  _data/catalog.js             Loads and localizes the product records
-  _includes/layouts/base.njk   Shared page layout
-  _includes/components/       Reusable components, including photo/icon fallback
-  catalog.njk                 Catalog pages, paginated by language
-  products.njk                Product pages, paginated by record and language
-  method.njk                  Methodology pages
-  index.njk                   Language selection
-content/
-  products/*.md               One canonical record per model + IAN
-  images.json                 Official photo URLs, source pages and owner credits
-locales/                      Italian and English translation dictionaries
-lib/                          Catalog validation, translations and original SVG icons
-src/                          CSS and small browser scripts
-schemas/product.schema.json   Product frontmatter data contract
-templates/product.md          New-record template
-test/                         Integrity, translation, photo and link checks
-```
+| content/products/*.md | English records; one IAN per file, image included |
+| content/translations/it/IAN.json | Optional translated title, body, evidence and textual specification values |
+| content/categories.json | Exact allowed category values |
+| locales/fields/it.json | Shared field labels and enum translations |
+| locales/it.json, locales/en.json | Interface translations |
+| assets/products/ | Optional image files included in a PR |
+| templates/product.md | Contributor template |
+| templates/translation.json | Optional translation scaffold |
+| .github/pull_request_template.md | PR fields and checkboxes |
+| docs/categories-proposal.md | Proposed taxonomy awaiting approval |
+| schemas/ | Product and translation JSON Schemas |
+| site/ | Eleventy data, pages and Nunjucks layouts |
+| lib/ | Validation, loading, translations and category icons |
+| src/ | Styles and small browser scripts |
+| test/ | Integrity, fallback, image and link checks |
 
 ## Languages
 
-Italian and English pages are generated at build time:
+The site generates Italian and English pages. Identity, source, image and technical facts come from the English record. Product translations use stable fields, never whole sentences as keys. Shared labels are translated centrally.
 
-- `/index.html`: language selection.
-- `/it/index.html`, `/en/index.html`: localized catalogs.
-- `/{language}/products/{model-ian}/index.html`: product records.
-- `/{language}/method/index.html`: methodology.
-- `/{language}/data/catalog.json`: localized export.
-- `/data/catalog.json`: canonical data.
-- `/data/markdown/`: original English Markdown.
+Missing translations fall back to English with a notice. A fingerprint of the English title, body, evidence and specifications detects outdated translations. Stale translations are held back until reviewed; image-only edits do not invalidate prose. The fingerprint is maintenance metadata, not a checked date. There is no checked field in products or photos.
 
-The language switch preserves the current product, query, filters and fragment. Search covers both Italian and English product names. There is no runtime translation service.
+Maintainer commands:
 
-UI strings live in `locales/it.json` and `locales/en.json`. Italian versions of canonical English product text are in `locales/it-content.json`, keyed by the exact source string. Missing translations fail the build. Model codes, IANs, company names, document URLs and numerical facts remain unchanged between languages.
+    npm run translation -- 544816 it
+    npm run translation -- 544816 it --reviewed
 
-To add a language, register it in `lib/i18n.mjs`, provide complete UI and content dictionaries, and update the root language label. Eleventy’s pagination generates the matching routes.
+The first creates an empty scaffold with the current fingerprint and refuses to overwrite existing text. The second preserves edited text and updates the fingerprint after human review.
 
-## Product data and evidence
+The language switch preserves the current page and filters. Search uses both product titles when a current Italian translation exists. JSON exports remain available. Product pages no longer display a Markdown download link or bundle raw Markdown downloads.
 
-There are 127 records for 92 distinct models. Most records are deliberately partial. A spare-parts listing does **not** establish the legal manufacturer or the physical factory.
+## Data and provenance
 
-A model with three IANs gets three records. Keep IANs as strings and record the complete batch suffix in the evidence when available. Do not copy evidence automatically to another IAN.
+127 records cover 92 distinct models. Unknown manufacturers and physical factories remain null. A spare parts catalog does not establish manufacture. Explicit owner confirmations are labeled separately from documentary evidence. PWDL 40 A1, IAN 544816, is attributed to Grizzly Tools following owner confirmation and uses the owner-selected Lidl photo.
 
-The `manufacturer` field names the manufacturer explicitly documented for that IAN or explicitly confirmed by the catalog owner, and otherwise stays `null`. Owner confirmations use `manufacturer_basis: owner_confirmation` and are clearly distinguished from documentary evidence in the UI and record notes. The archived `role` and `oem` fields preserve source information, but are not displayed as fields on product pages. Source links and evidence remain visible.
+The 31 photo references are now in their product Markdown. Each has a source and credit. Local files can be included in a PR; remote HTTPS photos are cached during builds when available. Original category icons are the fallback. Attribution does not itself grant a reuse license.
 
-Three records have verified declared manufacturers: Grizzly for PAMRC 250 A1 (IAN 507557) and PWD 25 C4 (IAN 458741), and Scheppach for PKS 1500 C4 (IAN 465511). PIFDS 120 B2 (IAN 472024) documents C.M.C. as conformity declarant and service provider. PWDL 40 A1 (IAN 544816) has a Grizzly Tools manufacturer attribution explicitly confirmed by the catalog owner on 23 October 2026, separately marked as owner confirmation pending an archived manufacturer document; it also includes official Lidl specifications.
+Categories use an exact allowlist. The existing seven are retained until approval of the proposed replacement; no bulk reclassification has been applied.
 
-## Product photos
+## Technology and checks
 
-31 records currently have an official product-photo reference matched to their IAN. The registry stores the original URL, source page, publisher and consultation date. Photos appear in cards, product pages and the featured item. Original category icons are used when no photo is available or an image fails to load.
+Eleventy handles generation, pagination and serving. Nunjucks provides layouts; gray-matter parses YAML; markdown-it renders Markdown with embedded HTML disabled. JSON Schema documents fields; Node tests and provenance rules validate behavior. This is not a certification claim.
 
-`npm run images` attempts to cache the photos in `.cache/product-images/`. The build bundles successful downloads into `dist/assets/products/`, so the GitHub ZIP can contain the photos themselves. Failed downloads retain the original URL and browser icon fallback. Image caches are not committed.
+Pushes to main and pull requests install locked dependencies, cache photos, build both languages, run tests and upload the catalogo-statico ZIP. English-only records are valid. The workflow never automatically commits translations or source changes.
 
-Photos belong to their respective owners. Credits and source links do not themselves grant a reuse license; verify permissions before public publication. Parkside Atlas's logo and category illustrations are original.
+PR builds have read-only repository and Pages access. Publishing remains limited to explicit workflow_dispatch with publish_pages enabled; only the deployment job has Pages write and identity-token permissions. Repository visibility remains private. Check plan and site audience before enabling Pages: a private repository does not necessarily mean a private website. Normal pushes and PRs do not publish.
 
-## Contribution workflow
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
-
-1. Copy `templates/product.md` to `content/products/model-IAN.md`.
-2. Add primary-source evidence and only verified facts.
-3. Add translations for new text.
-4. Add an exact-IAN photo reference where available.
-5. Run the build and tests, then submit a pull request.
-
-Standard YAML syntax, including multiline values, is supported by gray-matter. Product descriptions use normal Markdown rendered by markdown-it, with embedded HTML disabled.
-
-## GitHub and hosting
-
-Every push to `main` installs the locked dependencies, caches available photos, runs Eleventy and the tests, and uploads the `catalogo-statico` artifact. The migration lockfile is reviewed and committed as an ordinary source update; later builds use `npm ci`. GitHub Actions retains read-only repository access and never pushes source changes.
-
-The repository remains private. The generated website never fetches private GitHub data from a visitor’s browser and contains no credentials.
-
-To use GitHub Pages, first confirm that your plan supports Pages for private repositories and check the intended site audience. Select **Settings → Pages → Source: GitHub Actions**, then run the workflow manually with `publish_pages: true`. A private repository does not necessarily mean a private Pages site. Normal pushes build and validate without publishing.
-
-The output can instead be deployed by any static hosting provider connected to the repository.
-
-## Validation
-
-Checks cover required metadata, duplicate identities, provenance constraints, translation completeness, matching locale catalogs, product pages, photo-source associations, browser fallback behavior and internal links. Visual QA still needs an environment where the browser can reach the preview.
+Visual verification requires a browser that can reach the preview; build and integrity checks run independently.

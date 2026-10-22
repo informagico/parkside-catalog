@@ -72,9 +72,7 @@
   "manual": "Manuale e dichiarazione UE",
   "officialCatalog": "Catalogo ufficiale",
   "technicalSource": "Specifiche ufficiali Lidl",
-  "downloadMarkdown": "Scarica scheda Markdown (inglese)",
   "openGithub": "Apri scheda su GitHub",
-  "lastChecked": "Ultima consultazione",
   "privateRepo": "Il repository GitHub è privato: richiede accesso autorizzato.",
   "variants": "Altri IAN dello stesso modello",
   "footer": "Un archivio indipendente, costruito sui documenti.",
@@ -90,7 +88,7 @@
   "missingTitle": "Le informazioni mancanti restano mancanti.",
   "missingText": "Nessuna attribuzione per somiglianza, colore o voce di forum. Alimentazione e categorie ricavate dai titoli del catalogo sono una classificazione editoriale; le specifiche richiedono documentazione esplicita. Non indichiamo prezzi o disponibilità senza un controllo attuale.",
   "contribute": "Come contribuire",
-  "contributeText": "Aggiungi o correggi un file in inglese in content/products nel repository. Allega un link al manuale o a una fonte primaria, il codice IAN e la data della verifica. I testi italiani sono in locales/it-content.json. La build controlla i campi obbligatori, le traduzioni mancanti e le schede duplicate.",
+  "contributeText": "Copia il template, compila una scheda in inglese con fonte e immagine e apri una pull request. Le traduzioni sono facoltative: il maintainer può aggiungerle in seguito, in file separati per IAN. Le categorie ammesse sono elencate nella guida del repository.",
   "repository": "Apri repository privato",
   "methodLegal": "PARKSIDE e Lidl sono marchi dei rispettivi titolari. Questo progetto non è affiliato, sponsorizzato o approvato da Lidl. Il nome viene usato per identificare i prodotti catalogati. Il logo e le illustrazioni di Parkside Atlas sono originali.",
   "translationNote": "Le traduzioni servono alla consultazione del catalogo. I documenti originali collegati rimangono il riferimento per le dichiarazioni e le istruzioni di sicurezza.",
@@ -115,5 +113,7 @@
   "brandSubtitle": "CATALOGO INDIPENDENTE PARKSIDE",
   "manufacturerOwnerConfirmed": "Produttore confermato dal curatore",
   "manufacturerOwnerLabel": "Produttore",
-  "manufacturerOwnerNote": "Conferma del curatore del catalogo del 23 ottobre 2026. Il documento del produttore resta da archiviare."
+  "manufacturerOwnerNote": "Conferma del curatore del catalogo del 23 ottobre 2026. Il documento del produttore resta da archiviare.",
+  "translationMissing": "Traduzione italiana non ancora completa: i testi mancanti sono mostrati in inglese.",
+  "translationReview": "La scheda inglese è stata aggiornata. La traduzione italiana è da rivedere; nel frattempo mostriamo i testi originali."
 }

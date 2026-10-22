@@ -2,11 +2,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import MarkdownIt from 'markdown-it';
 import {art} from './lib/product.mjs';
+import {loadProducts} from './lib/catalog.mjs';
 import {t,uiDictionary,languages} from './lib/i18n.mjs';
 const markdown=new MarkdownIt({html:false,linkify:false});
 export default function(eleventyConfig){
- eleventyConfig.addPassthroughCopy({'src':'assets','content/products':'data/markdown'});
- if(fs.existsSync('.cache/product-images'))eleventyConfig.addPassthroughCopy({'.cache/product-images':'assets/products'});
+ eleventyConfig.addPassthroughCopy({'src':'assets'});
+ if(fs.existsSync('assets/products'))eleventyConfig.addPassthroughCopy({'assets/products':'assets/products'});
+ for(const p of loadProducts()){
+  const cached='.cache/product-images/'+p.ian+'.jpg';
+  if(p.image&&!p.image.url.startsWith('assets/')&&fs.existsSync(cached))eleventyConfig.addPassthroughCopy({[cached]:'assets/products/'+p.ian+'.jpg'});
+ }
  eleventyConfig.addWatchTarget('content/');
  eleventyConfig.addWatchTarget('locales/');
  eleventyConfig.addFilter('t',(key,lang,values={})=>t(lang,key,values));

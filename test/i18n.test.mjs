@@ -14,7 +14,7 @@ test('Every UI language has the same keys and interpolation placeholders',()=>{
   }
  }
  assert.throws(()=>t('en','missing-key'));
- assert.throws(()=>translate('Untranslated new product title','it'));
+ assert.equal(translate('New shared label','it'),'New shared label');
 });
 
 test('Canonical English product records have complete Italian translations',()=>{
@@ -28,7 +28,7 @@ test('Canonical English product records have complete Italian translations',()=>
   assert.equal(en.categoryKey,original.category);assert.equal(en.powerKey,original.power);
   assert.equal(Object.keys(en.specifications).length,Object.keys(original.specifications).length);
   assert.deepEqual(localize(original,'it').searchTitles,en.searchTitles);
-  assert.throws(()=>localize({...original,specifications:{'Power supply':'New untranslated description'}},'it'));
+  assert.equal(localize({...original,title:original.title+' updated'},'it').translationNeedsReview,true);
  }
 });
 
@@ -49,4 +49,13 @@ test('Both static catalogs have identical identities and translated product page
  assert(enPage.includes('Wet and dry vacuum cleaner, 40 L'));
  assert(enPage.includes('Input power'));assert(enPage.includes('Up to 2200 W, automatic start'));
  assert(!enPage.includes('Capacità serbatoio'));assert(!enPage.includes('Produttore da verificare'));
+});
+
+test('New English records need no translation and stale prose is held back',()=>{
+ const original=parse(fs.readFileSync('content/products/pwdl-40-a1-544816.md','utf8'));
+ const missing=localize({...original,ian:'999999'},'it');
+ assert.equal(missing.title,original.title);assert.equal(missing.body,original.body);assert.equal(missing.translationMissing,true);assert.equal(missing.translationNeedsReview,false);
+ const changed=localize({...original,evidence:'Updated evidence'},'it');
+ assert.equal(changed.translationNeedsReview,true);assert.equal(changed.evidence,'Updated evidence');assert.equal(changed.title,original.title);
+ const photoOnly=localize({...original,image:{url:'https://example.com/new.jpg'}},'it');assert.equal(photoOnly.translationNeedsReview,false);assert.notEqual(photoOnly.title,original.title);
 });

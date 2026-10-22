@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {loadProducts} from '../lib/catalog.mjs';
+import {translationHash} from '../lib/translations.mjs';
+const [ian,lang='it',flag]=process.argv.slice(2);
+if(!/^\d{5,6}$/.test(ian||'')||lang!=='it'||(flag&&flag!=='--reviewed'))throw Error('Usage: npm run translation -- IAN it [--reviewed]');
+const product=loadProducts().find(p=>p.ian===ian);if(!product)throw Error('Unknown IAN: '+ian);
+const file='content/translations/'+lang+'/'+ian+'.json';
+if(fs.existsSync(file)&&flag!=='--reviewed')throw Error('Translation already exists. Edit it, then use --reviewed only after checking it against the current English record.');
+const data=fs.existsSync(file)?JSON.parse(fs.readFileSync(file,'utf8')):{title:'',body:'',evidence:''};
+data._sourceHash=translationHash(product);
+fs.mkdirSync('content/translations/'+lang,{recursive:true});fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');console.log('Saved '+file+'. Empty fields fall back to English.');

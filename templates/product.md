@@ -2,21 +2,22 @@
 model: "MODEL A1"
 ian: "123456"
 title: "Descriptive tool name"
+# Use an exact value from content/categories.json.
 category: "Workshop"
 power: "To be verified"
 company: "Company named in the source"
-role: "Spare parts catalog"
+# Keep null unless the source explicitly names the manufacturer.
 manufacturer: null
-oem: null
 source: "https://example.com/primary-source"
-checked: "2026-10-23"
-market: null
+evidence: "Explain exactly what this source confirms for this model and IAN."
 specifications: {}
-evidence: "Explain what the document confirms for this IAN. A spare parts listing does not establish the manufacturer."
+# Optional: delete the image block to use the category icon.
+image:
+  url: "https://example.com/official-product-photo.jpg"
+  source: "https://example.com/product-page"
+  credit: "Photo publisher or owner"
 ---
 
-Brief product description. Replace every example value before moving this file into content/products.
+Describe the product in English. Include only facts supported by the source.
 
-## Notes
-
-Explain what is missing and which checks are still needed. Add Italian translations in locales/it-content.json.
+Replace all example values before opening a PR. Translations are optional and can be added by the maintainer later.
