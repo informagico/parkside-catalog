@@ -76,11 +76,11 @@ Italian and English pages are generated at build time:
 - `/{language}/method/index.html`: methodology.
 - `/{language}/data/catalog.json`: localized export.
 - `/data/catalog.json`: canonical data.
-- `/data/markdown/`: original Italian Markdown.
+- `/data/markdown/`: original English Markdown.
 
 The language switch preserves the current product, query, filters and fragment. Search covers both Italian and English product names. There is no runtime translation service.
 
-UI strings live in `locales/it.json` and `locales/en.json`. English versions of canonical Italian product text are in `locales/en-content.json`, keyed by the exact source string. Missing translations fail the build. Model codes, IANs, company names, document URLs and numerical facts remain unchanged between languages.
+UI strings live in `locales/it.json` and `locales/en.json`. Italian versions of canonical English product text are in `locales/it-content.json`, keyed by the exact source string. Missing translations fail the build. Model codes, IANs, company names, document URLs and numerical facts remain unchanged between languages.
 
 To add a language, register it in `lib/i18n.mjs`, provide complete UI and content dictionaries, and update the root language label. Eleventy’s pagination generates the matching routes.
 

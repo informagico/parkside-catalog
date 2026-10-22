@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/informagico/parkside-catalog/schemas/product.schema.json",
-  "title": "Officina Index product frontmatter",
+  "title": "Tooltrace product frontmatter",
   "type": "object",
   "required": ["model", "ian", "title", "category", "power", "company", "role", "manufacturer", "oem", "source", "checked", "specifications", "evidence"],
   "properties": {

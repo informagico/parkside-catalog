@@ -1,6 +1,6 @@
 # Contributing
 
-Officina Index is an Eleventy site. Start with the [official Eleventy documentation](https://www.11ty.dev/docs/).
+Tooltrace is an Eleventy site. Start with the [official Eleventy documentation](https://www.11ty.dev/docs/).
 
 ## Setup
 
@@ -8,13 +8,13 @@ Use Node.js 22. On an existing checkout run `npm ci`, then `npm run dev`. Before
 
 ## Product records
 
-Copy `templates/product.md` into `content/products/`. Each model + IAN pair gets a separate file. Use standard YAML frontmatter and Markdown. Field definitions are in `schemas/product.schema.json` and the template.
+Copy `templates/product.md` into `content/products/`. Each model + IAN pair gets a separate file. Write all product fields and Markdown bodies in English. Use standard YAML frontmatter and Markdown. Field definitions are in `schemas/product.schema.json` and the template.
 
 Preserve the distinction between a declared manufacturer and a catalog/spare-parts relationship. Include a primary-source URL, the consultation date, the relevant document page and the complete IAN suffix when available. Unknown values remain `null`. Evidence never automatically carries across IANs.
 
 ## Translations
 
-Interface dictionaries are `locales/it.json` and `locales/en.json`. English translations of canonical Italian product text are in `locales/en-content.json`. Keep model names, IANs, company identities and technical facts unchanged. Missing text translations fail the build.
+Interface dictionaries are `locales/it.json` and `locales/en.json`. Italian translations of canonical English product text are in `locales/it-content.json`. Keep model names, IANs, company identities and technical facts unchanged. Missing text translations fail the build.
 
 ## Photos
 

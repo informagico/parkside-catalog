@@ -14,21 +14,21 @@ test('Every UI language has the same keys and interpolation placeholders',()=>{
   }
  }
  assert.throws(()=>t('en','missing-key'));
- assert.throws(()=>translate('Untranslated new product title','en'));
+ assert.throws(()=>translate('Untranslated new product title','it'));
 });
 
-test('All product titles, notes, evidence and specification labels have English translations',()=>{
+test('Canonical English product records have complete Italian translations',()=>{
  const files=fs.readdirSync('content/products').filter(f=>f.endsWith('.md'));
  for(const file of files){
   const original=parse(fs.readFileSync('content/products/'+file,'utf8'));
-  const en=localize(original,'en');
+  const en=localize(original,'en');const it=localize(original,'it');
   assert.equal(en.model,original.model);assert.equal(en.ian,original.ian);
   assert.equal(en.manufacturer,original.manufacturer);assert.equal(en.oem,original.oem);
-  assert.notEqual(en.title,original.title);assert.notEqual(en.evidence,original.evidence);
+  assert.equal(en.title,original.title);assert.equal(en.evidence,original.evidence);assert.notEqual(it.title,original.title);assert.notEqual(it.evidence,original.evidence);
   assert.equal(en.categoryKey,original.category);assert.equal(en.powerKey,original.power);
   assert.equal(Object.keys(en.specifications).length,Object.keys(original.specifications).length);
   assert.deepEqual(localize(original,'it').searchTitles,en.searchTitles);
-  assert.throws(()=>localize({...original,specifications:{'Alimentazione':'Nuova descrizione da tradurre'}},'en'));
+  assert.throws(()=>localize({...original,specifications:{'Power supply':'New untranslated description'}},'it'));
  }
 });
 

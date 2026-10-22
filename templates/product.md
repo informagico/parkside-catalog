@@ -1,22 +1,22 @@
 ---
-model: "MODELLO A1"
+model: "MODEL A1"
 ian: "123456"
-title: "Nome descrittivo dell'utensile"
-category: "Officina"
-power: "Da verificare"
-company: "Azienda citata dalla fonte"
-role: "Catalogo ricambi"
+title: "Descriptive tool name"
+category: "Workshop"
+power: "To be verified"
+company: "Company named in the source"
+role: "Spare parts catalog"
 manufacturer: null
 oem: null
-source: "https://esempio.it/fonte-primaria"
-checked: "2026-10-22"
+source: "https://example.com/primary-source"
+checked: "2026-10-23"
 market: null
 specifications: {}
-evidence: "Descrivi cosa prova il documento per questo IAN. Non confondere catalogo ricambi e produttore."
+evidence: "Explain what the document confirms for this IAN. A spare parts listing does not establish the manufacturer."
 ---
 
-Breve descrizione del prodotto. Sostituire tutti i dati di esempio prima di spostare questo file in content/products.
+Brief product description. Replace every example value before moving this file into content/products.
 
-## Note
+## Notes
 
-Specifica che cosa manca e quali verifiche restano da fare.
+Explain what is missing and which checks are still needed. Add Italian translations in locales/it-content.json.
