@@ -8,4 +8,5 @@
 - Non inserire token GitHub o altri segreti nel codice, nei contenuti, nella build o nei log.
 - Il repository previsto è privato. Non cambiare visibilità o attivare un hosting pubblico senza indicazione dell'utente.
 - Esegui npm test e npm run build dopo le modifiche ai contenuti o al generatore.
+- Il sito è disponibile in italiano e inglese. Il README deve essere in inglese. Aggiungi le traduzioni dei nuovi testi in locales e conserva modello, IAN, azienda, fonti e valori tecnici tra le lingue.
 - Non rigenerare il contenuto editoriale esistente con scripts/seed.mjs: è uno script storico d'importazione iniziale, non un sincronizzatore.

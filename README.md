@@ -1,64 +1,116 @@
 # Officina Index
 
-Catalogo indipendente degli utensili Parkside. Sito statico, senza database, server applicativo o dipendenze npm. Ogni scheda è un file Markdown leggibile e versionato. Il codice richiede Node.js 22 o successivo.
+An independent, multilingual Parkside tool catalog, built as a fully static website from Markdown files. No database, application server or npm dependencies.
 
-## Avvio
+Repository: https://github.com/informagico/parkside-catalog (private).
+
+## Quick start
+
+Requires Node.js 22 or later.
 
 ```sh
-npm test
 npm run build
+npm test
 npm run dev
 ```
 
-Apri http://127.0.0.1:4173. La cartella `dist/` contiene il sito completo. Puoi anche aprire `dist/index.html` direttamente nel browser: i collegamenti includono il nome dei file e non richiedono un server. Si può pubblicare su qualunque hosting statico, anche sotto un percorso come `/parkside-catalog/`: tutti i link interni sono relativi.
+Open http://127.0.0.1:4173 and choose Italian or English. No `npm install` is required. You can also open `dist/index.html` directly in a browser: internal links include explicit file names, and filtering uses data already embedded in the page.
 
-## Organizzazione
+The complete output is in `dist/`. Relative links support static hosting at either a domain root or a subpath such as `/parkside-catalog/`.
 
-```text
-content/products/       Una scheda Markdown per modello + IAN
-src/style.css           Stile e layout responsive
-src/app.js              Ricerca, filtri e vista elenco, senza backend
-scripts/build.mjs       Generazione HTML e indice JSON
-scripts/serve.mjs       Anteprima locale
-test/                   Controlli sui dati e sulla provenienza
-config.json             Repository e branch di riferimento
-.github/workflows/      Build e pubblicazione GitHub Pages
+## Architecture
+
+| Path | Purpose |
+| --- | --- |
+| `content/products/*.md` | One canonical record per model and IAN |
+| `locales/it.json`, `locales/en.json` | Interface translations |
+| `locales/en-content.json` | English translations of product text and specification labels |
+| `scripts/model.mjs` | Markdown frontmatter parsing, validation and category illustrations |
+| `scripts/i18n.mjs` | Translation lookup, interpolation and localized records |
+| `scripts/generate.mjs` | Static catalog, product and methodology page generation |
+| `scripts/build.mjs` | Build entry point |
+| `src/` | Shared styles and small browser scripts |
+| `templates/product.md` | Template for a new product record |
+| `test/` | Data integrity, provenance, translation and internal-link checks |
+| `.github/workflows/pages.yml` | CI build and optional GitHub Pages deployment |
+
+The generator supports a deliberately small Markdown subset: paragraphs and level-two headings. Frontmatter is flat YAML with JSON-formatted values, which are valid YAML. Specifications use an inline JSON object.
+
+## Languages
+
+Both Italian and English are generated at build time. There are no runtime translation services or database requests.
+
+- `/index.html`: language selection.
+- `/it/index.html` and `/en/index.html`: translated catalogs.
+- `/{language}/products/{model-ian}/index.html`: translated product records.
+- `/{language}/method/index.html`: methodology.
+- `/{language}/data/catalog.json`: localized data export.
+- `/data/catalog.json`: canonical source data.
+- `/data/markdown/`: original Italian Markdown records.
+
+The IT/EN switch opens the equivalent page in the other language. Search parameters, selected filters and the section fragment are retained. Filter values are shared canonical values, so the same category remains selected after switching.
+
+The current canonical product text is Italian. English text is stored separately in `locales/en-content.json`, keyed by the exact source string. Manufacturer names, model codes, IANs, document URLs and numerical specifications are shared, not translated into different facts. Original documents remain the reference for declarations and safety instructions.
+
+Missing UI keys and missing product translations fail the build instead of silently falling back to the wrong language. Numerical or language-neutral specification values are retained; translated specification values are listed explicitly.
+
+### Adding another language
+
+1. Add its code to `languages` in `scripts/i18n.mjs`.
+2. Create a complete UI dictionary in `locales/{code}.json`, keeping the same keys and placeholders.
+3. Add its product-content dictionary and register it in `scripts/i18n.mjs`.
+4. Add the language to the root selection page in `scripts/generate.mjs`.
+5. Run the build and tests. Routes, language switches and alternate-language metadata are generated for all configured languages.
+
+## Adding or updating a record
+
+Copy `templates/product.md` to `content/products/model-name-IAN.md`. Replace every example value. Keep the IAN as a string, including leading zeroes. Record the full batch suffix in the evidence when known.
+
+For English, add translations of any new title, note, evidence, category, role, power description and specification labels to `locales/en-content.json`. Then run:
+
+```sh
+npm run build
+npm test
 ```
 
-Il generatore usa un sottoinsieme esplicito di Markdown: paragrafi e titoli di secondo livello. Il frontmatter usa campi YAML semplici con valori JSON (validi anche in YAML). Le specifiche sono un oggetto JSON. Non sono necessarie installazioni di pacchetti: il primo avvio funziona senza `npm install`.
+A model with three IANs gets three records. Related IANs are linked automatically. The build rejects missing required fields, non-HTTPS sources, duplicate identities and missing translations.
 
-## Nuova scheda
+## Provenance rules
 
-Copia `templates/product.md` in `content/products/nome-modello-IAN.md`. Compila tutti i campi richiesti. Il codice IAN è una stringa: non rimuovere eventuali zeri. Il suffisso completo, se presente, si annota nelle prove. La build rifiuta campi mancanti, fonti non HTTPS e identità duplicate.
+| Field | Meaning |
+| --- | --- |
+| `manufacturer` | Company explicitly documented as the declared manufacturer for this IAN; otherwise `null` |
+| `oem` | Physical factory or OEM, only when directly established; otherwise `null` |
+| `company` | Company linked by the document or catalog |
+| `role` | Precisely the relationship established by the source |
+| `source` | Primary source supporting that relationship |
+| `technical_source` | Source of specifications when different |
+| `evidence` | Verified facts, document pages, full IAN and limits of the evidence |
+| `checked` | Actual consultation date, not manufacturing date |
+| `specifications` | Explicit technical data only |
 
-Un modello con tre IAN occupa tre schede. La pagina mostra automaticamente le altre varianti con lo stesso modello.
+A spare parts listing does **not** establish the legal manufacturer or the physical factory. Evidence is never automatically extended to another IAN, even when the model name is identical.
 
-## Provenienza: regole editoriali
+The initial collection contains **127 records for 92 distinct models**, mainly from the official Grizzly Tools and Kompernaß catalogs. Most records are intentionally incomplete. Three records have a verified declared manufacturer: Grizzly for PAMRC 250 A1 (IAN 507557) and PWD 25 C4 (IAN 458741), and Scheppach for PKS 1500 C4 (IAN 465511). The PIFDS 120 B2 (IAN 472024) record documents C.M.C. as conformity declarant and service provider without assuming the physical OEM.
 
-- `manufacturer`: ragione sociale del produttore **dichiarato** da un documento pertinente a quell'IAN. Lascia `null` se non verificato. Non equivale alla fabbrica fisica.
-- `oem`: stabilimento o produttore fisico, solo con prova esplicita. Al momento non sono stati identificati stabilimenti OEM.
-- `company`: azienda collegata dal documento o catalogo.
-- `role`: ruolo dimostrato dalla fonte; per una semplice presenza in catalogo usare `Catalogo ricambi` o `Catalogo e ricambi`.
-- `source`: fonte primaria della relazione con l'azienda.
-- `technical_source`: fonte delle specifiche quando diversa.
-- `evidence`: che cosa è stato verificato, pagina, IAN completo e limiti della prova.
-- `checked`: data reale della consultazione, non la data di produzione.
-- `specifications`: solo dati espliciti; non trasformare numeri nel modello in potenze o capacità.
+The PWDL 40 A1 record includes official Lidl specifications. Categories and power descriptions derived from catalog titles are editorial classifications, not additional technical evidence. Historical Grizzly records can include non-Italian market variants.
 
-Le prime schede provengono dai cataloghi ufficiali Grizzly Tools e Kompernaß. La presenza in questi cataloghi **non dimostra chi fabbrica materialmente l'utensile**. La maggior parte delle schede è volutamente parziale. Il PWDL 40 A1 dispone delle specifiche Lidl. I manuali verificati documentano Grizzly per PAMRC 250 A1 (IAN 507557) e PWD 25 C4 (IAN 458741), Scheppach per PKS 1500 C4 (IAN 465511), e C.M.C. come dichiarante e assistenza per PIFDS 120 B2 (IAN 472024).
+## GitHub workflow and hosting
 
-Le categorie e le alimentazioni dei prodotti Kompernaß sono classificazioni editoriali ricavate dai titoli. Non vengono inventati dati dove i titoli non li esplicitano. I vecchi IAN Grizzly includono varianti extra-Italia: il mercato viene mantenuto se il catalogo lo indica.
+Edit Markdown and translation files through GitHub or a normal Git checkout. Every push to `main` runs the build, checks records and translations, and uploads the `catalogo-statico` artifact. The website never requests private repository data from a visitor's browser and contains no GitHub tokens.
 
-## GitHub come archivio
+The repository remains private. Publication is separate from building. To use GitHub Pages, first verify that your plan supports Pages for private repositories and confirm the site's intended audience. Configure **Settings → Pages → Source: GitHub Actions**, then run the workflow manually with `publish_pages: true`.
 
-Repository previsto: https://github.com/informagico/parkside-catalog (privato).
+**A private repository does not necessarily mean a private Pages website.** Ordinary pushes only build and validate; the workflow does not automatically publish.
 
-Modifica un file `content/products/*.md` attraverso GitHub o con un normale commit. Il workflow esegue i controlli e genera l'intero sito. La build produce anche `data/catalog.json` e copie scaricabili delle schede Markdown. Non c'è alcuna chiamata al repository privato dal browser e non servono token nel sito.
+The generated files can also be hosted by another static provider connected to the repository. A separately created Sites preview is not automatically synchronized by GitHub pushes.
 
-Per pubblicare su GitHub Pages, l'account deve supportare Pages da repository privati; configura `Settings > Pages > Source: GitHub Actions`, poi avvia manualmente il workflow con `publish_pages: true`. **La privacy della repo non garantisce che il sito Pages sia privato.** Il workflow non pubblica automaticamente: il push esegue solo controlli e build. Prima dell'attivazione della pubblicazione verificare audience e piano GitHub. Il pacchetto statico funziona anche su altri hosting.
+## Design and trademarks
 
-La sincronizzazione con un'eventuale anteprima Sites è separata: aggiornare GitHub non aggiorna automaticamente Sites. Per avere GitHub come unica sorgente in produzione, collegare il repository al provider di hosting scelto o usare Pages dopo averne configurato accesso e disponibilità.
+Officina Index uses an original green/charcoal identity, its own logo and original category illustrations. The drawings are not product photographs. No Parkside or Lidl logos are reproduced.
 
-## Grafica e marchi
+Brand names identify the cataloged products. The site states that it is not affiliated with Lidl or Parkside. Fonts have system fallbacks, so the site remains usable if Google Fonts is unavailable.
 
-Identità originale verde/antracite, logo Officina Index e illustrazioni vettoriali originali di categoria. Nessun logo Parkside o Lidl riprodotto. I nomi dei marchi identificano i prodotti; il progetto dichiara di non essere affiliato. I font hanno fallback di sistema, quindi il sito rimane utilizzabile anche senza Google Fonts.
+## Validation limits
+
+Automated checks cover metadata, provenance rules, translation completeness, matching language catalogs, generated product pages and local links. Desktop/mobile visual QA still needs to be completed in an environment where the browser can reach the preview.
