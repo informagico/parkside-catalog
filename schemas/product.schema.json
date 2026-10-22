@@ -31,15 +31,17 @@
     "category": {
       "type": "string",
       "enum": [
-        "Dust extraction",
-        "Drilling and fastening",
-        "Garden",
-        "Cutting",
-        "Sanding and grinding",
-        "Workshop",
-        "Welding"
+        "Gardening",
+        "Drilling & Fastening",
+        "Sawing & Cutting",
+        "Sanding & Grinding",
+        "Cleaning & Extraction",
+        "Welding & Soldering",
+        "Measuring & Detection",
+        "Workshop Equipment",
+        "Batteries & Accessories"
       ],
-      "description": "Controlled category list. Proposed replacements are awaiting maintainer approval."
+      "description": "Choose one exact canonical English category from content/categories.json."
     },
     "power": {
       "type": "string"

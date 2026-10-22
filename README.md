@@ -38,7 +38,7 @@ The optional image step bundles successful remote downloads. Static output is in
 | templates/product.md | Contributor template |
 | templates/translation.json | Optional translation scaffold |
 | .github/pull_request_template.md | PR fields and checkboxes |
-| docs/categories-proposal.md | Proposed taxonomy awaiting approval |
+| docs/categories.md | Approved categories, scope and classification rules |
 | schemas/ | Product and translation JSON Schemas |
 | site/ | Eleventy data, pages and Nunjucks layouts |
 | lib/ | Validation, loading, translations and category icons |
@@ -66,7 +66,7 @@ The language switch preserves the current page and filters. Search uses both pro
 
 The 31 photo references are now in their product Markdown. Each has a source and credit. Local files can be included in a PR; remote HTTPS photos are cached during builds when available. Original category icons are the fallback. Attribution does not itself grant a reuse license.
 
-Categories use an exact allowlist. The existing seven are retained until approval of the proposed replacement; no bulk reclassification has been applied.
+Categories use an exact allowlist of nine approved function-based groups. All 127 records have been reclassified; shared Italian labels are centralized. Category-only edits do not invalidate product prose translations. See docs/categories.md for definitions and examples.
 
 ## Technology and checks
 

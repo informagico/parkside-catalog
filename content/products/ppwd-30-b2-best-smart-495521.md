@@ -2,7 +2,7 @@
 model: "PPWD 30 B2 Best Smart"
 ian: "495521"
 title: "Wet and dry vacuum cleaner"
-category: "Dust extraction"
+category: "Cleaning & Extraction"
 power: "Unverified"
 company: "Grizzly Tools"
 role: "Spare parts catalog"

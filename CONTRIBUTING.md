@@ -26,7 +26,7 @@ The build bundles local files and successfully downloaded remote photos. If the 
 
 ## Categories
 
-Use only exact values from content/categories.json. The current seven categories are retained during the migration. A proposed function-based replacement list is in [docs/categories-proposal.md](docs/categories-proposal.md), awaiting maintainer approval. Do not create an ad hoc category or reclassify existing records without agreement.
+Use one exact canonical English value from [content/categories.json](content/categories.json). The nine approved function-based categories and classification examples are documented in [docs/categories.md](docs/categories.md). Shared Italian category labels are maintained centrally. Do not invent an ad hoc category; ask the maintainer if a tool does not fit.
 
 ## Optional translations — maintainer workflow
 

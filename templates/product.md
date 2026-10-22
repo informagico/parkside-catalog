@@ -3,7 +3,7 @@ model: "MODEL A1"
 ian: "123456"
 title: "Descriptive tool name"
 # Use an exact value from content/categories.json.
-category: "Workshop"
+category: "Workshop Equipment"
 power: "To be verified"
 company: "Company named in the source"
 # Keep null unless the source explicitly names the manufacturer.
