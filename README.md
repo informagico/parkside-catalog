@@ -10,7 +10,7 @@ npm run build
 npm run dev
 ```
 
-Apri http://127.0.0.1:4173. La cartella `dist/` contiene il sito completo. Si può pubblicare su qualunque hosting statico, anche sotto un percorso come `/parkside-catalog/`: tutti i link interni sono relativi.
+Apri http://127.0.0.1:4173. La cartella `dist/` contiene il sito completo. Puoi anche aprire `dist/index.html` direttamente nel browser: i collegamenti includono il nome dei file e non richiedono un server. Si può pubblicare su qualunque hosting statico, anche sotto un percorso come `/parkside-catalog/`: tutti i link interni sono relativi.
 
 ## Organizzazione
 
@@ -45,7 +45,7 @@ Un modello con tre IAN occupa tre schede. La pagina mostra automaticamente le al
 - `checked`: data reale della consultazione, non la data di produzione.
 - `specifications`: solo dati espliciti; non trasformare numeri nel modello in potenze o capacità.
 
-Le prime schede provengono dai cataloghi ufficiali Grizzly Tools e Kompernaß. La presenza in questi cataloghi **non dimostra chi fabbrica materialmente l'utensile**. La maggior parte delle schede è volutamente parziale. Il PWDL 40 A1 dispone delle specifiche Lidl; il PAMRC 250 A1, IAN 507557, della dichiarazione UE Grizzly.
+Le prime schede provengono dai cataloghi ufficiali Grizzly Tools e Kompernaß. La presenza in questi cataloghi **non dimostra chi fabbrica materialmente l'utensile**. La maggior parte delle schede è volutamente parziale. Il PWDL 40 A1 dispone delle specifiche Lidl. I manuali verificati documentano Grizzly per PAMRC 250 A1 (IAN 507557) e PWD 25 C4 (IAN 458741), Scheppach per PKS 1500 C4 (IAN 465511), e C.M.C. come dichiarante e assistenza per PIFDS 120 B2 (IAN 472024).
 
 Le categorie e le alimentazioni dei prodotti Kompernaß sono classificazioni editoriali ricavate dai titoli. Non vengono inventati dati dove i titoli non li esplicitano. I vecchi IAN Grizzly includono varianti extra-Italia: il mercato viene mantenuto se il catalogo lo indica.
 

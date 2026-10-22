@@ -28,6 +28,9 @@ function build(){
  const cfg=JSON.parse(fs.readFileSync('config.json','utf8'));
  const products=fs.readdirSync('content/products').filter(f=>f.endsWith('.md')).map(file=>({...validate(parse(fs.readFileSync(`content/products/${file}`,'utf8'))),slug:file.slice(0,-3),file})).sort((a,b)=>a.ian==='544816'?-1:b.ian==='544816'?1:a.model.localeCompare(b.model));
  const keys=new Set();for(const p of products){const key=p.model+'|'+p.ian;if(keys.has(key))throw Error('Duplicato '+key);keys.add(key)}
+ const output=path.resolve('dist');
+ if(path.dirname(output)!==path.resolve('.'))throw Error('Cartella output non valida');
+ fs.rmSync(output,{recursive:true,force:true});
  fs.mkdirSync('dist/assets',{recursive:true});fs.mkdirSync('dist/data',{recursive:true});
  for(const f of ['style.css','app.js'])fs.copyFileSync(`src/${f}`,`dist/assets/${f}`);
  const categories=[...new Set(products.map(p=>p.category))].sort();
@@ -50,6 +53,18 @@ function build(){
  fs.mkdirSync('dist/metodo',{recursive:true});
  fs.writeFileSync('dist/metodo/index.html',shell('Il metodo',`<article class="method detail"><a class="back" href="../#catalogo">← Torna al catalogo</a><span class="eyebrow">IL METODO / VERSIONE 1.0</span><h1>La fonte viene prima<br>dell'etichetta.</h1><p class="lead">Officina Index raccoglie prodotti Parkside e documenta le aziende collegate. È un archivio in costruzione: ${products.length} schede, ${manufacturerCount} con produttore dichiarato verificato.</p><section class="panel"><h2>Quattro ruoli, quattro cose diverse.</h2><dl><dt>Produttore dichiarato</dt><dd>L'azienda che assume questo ruolo nel manuale o nella dichiarazione di conformità.</dd><dt>Importatore</dt><dd>L'azienda indicata come responsabile dell'importazione.</dd><dt>Catalogo e ricambi</dt><dd>Il prodotto è elencato in un catalogo ufficiale. Questa relazione non prova chi lo fabbrica.</dd><dt>Stabilimento / OEM</dt><dd>La fabbrica fisica. Si indica soltanto quando una fonte ne dimostra l'identità per il prodotto preciso.</dd></dl></section><section class="panel"><h2>Ogni IAN ha la sua scheda.</h2><p>Un modello può avere varianti, lotti e mercati diversi. Le schede sono identificate da modello e IAN; le conferme non vengono estese automaticamente agli altri IAN. Quando disponibile, il suffisso completo dell'IAN è annotato nelle prove.</p><h2>Le informazioni mancanti restano mancanti.</h2><p>Nessuna attribuzione per somiglianza, colore o voce di forum. Alimentazione e categorie ricavate dai titoli del catalogo sono una classificazione editoriale; le specifiche richiedono documentazione esplicita. Non indichiamo prezzi o disponibilità senza un controllo attuale.</p><h2>Come contribuire</h2><p>Aggiungi o correggi un file in content/products nel repository. Allega un link al manuale o a una fonte primaria, il codice IAN e la data della verifica. La build controlla i campi obbligatori e le schede duplicate.</p><a class="primary" href="${esc(cfg.repository)}">Apri repository privato ↗</a></section><p class="muted">PARKSIDE e Lidl sono marchi dei rispettivi titolari. Questo progetto non è affiliato, sponsorizzato o approvato da Lidl. Il nome viene usato per identificare i prodotti catalogati. Il logo e le illustrazioni di Officina Index sono originali.</p></article>`,'../'));
  fs.writeFileSync('dist/data/catalog.json',JSON.stringify(products,null,2));fs.writeFileSync('dist/.nojekyll','');
+ const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
+ for(const file of walk('dist').filter(f=>f.endsWith('.html'))){
+  let html=fs.readFileSync(file,'utf8');
+  html=html.replace('PRODUTTORI DOCUMENTATI','SCHEDE CON PRODUTTORE');
+  html=html.replace('Trova il tuo prossimo dettaglio.','Tutti gli utensili. Ogni dettaglio.');
+  html=html.replace(/href="([^"]+)"/g,(whole,url)=>{
+   if(/^(https?:|data:|#)/.test(url))return whole;
+   const m=url.match(/^([^?#]*)(.*)$/);
+   return m[1].endsWith('/')?`href="${m[1]}index.html${m[2]}"`:whole;
+  });
+  fs.writeFileSync(file,html);
+ }
  console.log(`Build completata: ${products.length} schede, ${new Set(products.map(p=>p.model)).size} modelli, ${manufacturerCount} produttori dichiarati.`);
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))build();
