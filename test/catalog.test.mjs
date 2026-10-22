@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {parse,validate,esc} from '../scripts/build.mjs';
+import {parse,validate,esc} from '../lib/product.mjs';
 test('Tutte le schede hanno metadati validi e identità univoche',()=>{
  const ids=new Set();for(const f of fs.readdirSync('content/products')){const p=validate(parse(fs.readFileSync('content/products/'+f,'utf8')));const k=p.model+'|'+p.ian;assert(!ids.has(k),'Duplicato '+k);ids.add(k);assert(!p.manufacturer||p.role==='Produttore dichiarato');assert.equal(p.oem,null)}assert(ids.size>100);
 });

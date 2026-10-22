@@ -2,3 +2,4 @@ dist/
 node_modules/
 *.zip
 work-seed.json
+.cache/

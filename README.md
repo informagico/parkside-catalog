@@ -1,116 +1,129 @@
 # Officina Index
 
-An independent, multilingual Parkside tool catalog, built as a fully static website from Markdown files. No database, application server or npm dependencies.
+An independent Parkside tool catalog built with **[Eleventy (11ty)](https://www.11ty.dev/)**, standard Markdown/YAML frontmatter and Nunjucks templates. The output is plain static HTML, CSS and JavaScript. There is no database or application server.
 
 Repository: https://github.com/informagico/parkside-catalog (private).
 
 ## Quick start
 
-Requires Node.js 22 or later.
+Use Node.js 22.
 
 ```sh
-npm run build
-npm test
+npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:4173 and choose Italian or English. No `npm install` is required. You can also open `dist/index.html` directly in a browser: internal links include explicit file names, and filtering uses data already embedded in the page.
-
-The complete output is in `dist/`. Relative links support static hosting at either a domain root or a subpath such as `/parkside-catalog/`.
-
-## Architecture
-
-| Path | Purpose |
-| --- | --- |
-| `content/products/*.md` | One canonical record per model and IAN |
-| `locales/it.json`, `locales/en.json` | Interface translations |
-| `locales/en-content.json` | English translations of product text and specification labels |
-| `scripts/model.mjs` | Markdown frontmatter parsing, validation and category illustrations |
-| `scripts/i18n.mjs` | Translation lookup, interpolation and localized records |
-| `scripts/generate.mjs` | Static catalog, product and methodology page generation |
-| `scripts/build.mjs` | Build entry point |
-| `src/` | Shared styles and small browser scripts |
-| `templates/product.md` | Template for a new product record |
-| `test/` | Data integrity, provenance, translation and internal-link checks |
-| `.github/workflows/pages.yml` | CI build and optional GitHub Pages deployment |
-
-The generator supports a deliberately small Markdown subset: paragraphs and level-two headings. Frontmatter is flat YAML with JSON-formatted values, which are valid YAML. Specifications use an inline JSON object.
-
-## Languages
-
-Both Italian and English are generated at build time. There are no runtime translation services or database requests.
-
-- `/index.html`: language selection.
-- `/it/index.html` and `/en/index.html`: translated catalogs.
-- `/{language}/products/{model-ian}/index.html`: translated product records.
-- `/{language}/method/index.html`: methodology.
-- `/{language}/data/catalog.json`: localized data export.
-- `/data/catalog.json`: canonical source data.
-- `/data/markdown/`: original Italian Markdown records.
-
-The IT/EN switch opens the equivalent page in the other language. Search parameters, selected filters and the section fragment are retained. Filter values are shared canonical values, so the same category remains selected after switching.
-
-The current canonical product text is Italian. English text is stored separately in `locales/en-content.json`, keyed by the exact source string. Manufacturer names, model codes, IANs, document URLs and numerical specifications are shared, not translated into different facts. Original documents remain the reference for declarations and safety instructions.
-
-Missing UI keys and missing product translations fail the build instead of silently falling back to the wrong language. Numerical or language-neutral specification values are retained; translated specification values are listed explicitly.
-
-### Adding another language
-
-1. Add its code to `languages` in `scripts/i18n.mjs`.
-2. Create a complete UI dictionary in `locales/{code}.json`, keeping the same keys and placeholders.
-3. Add its product-content dictionary and register it in `scripts/i18n.mjs`.
-4. Add the language to the root selection page in `scripts/generate.mjs`.
-5. Run the build and tests. Routes, language switches and alternate-language metadata are generated for all configured languages.
-
-## Adding or updating a record
-
-Copy `templates/product.md` to `content/products/model-name-IAN.md`. Replace every example value. Keep the IAN as a string, including leading zeroes. Record the full batch suffix in the evidence when known.
-
-For English, add translations of any new title, note, evidence, category, role, power description and specification labels to `locales/en-content.json`. Then run:
+Eleventy builds the site and starts its local preview server. For the production output:
 
 ```sh
+npm run images
 npm run build
 npm test
 ```
 
-A model with three IANs gets three records. Related IANs are linked automatically. The build rejects missing required fields, non-HTTPS sources, duplicate identities and missing translations.
+The image step is optional locally. The complete website is generated in `dist/`. You can deploy that directory to any static host, or open `dist/index.html` directly. All internal links include explicit filenames and work under a project subpath.
 
-## Provenance rules
+If a new checkout does not yet contain a lockfile, use `npm install` once instead of `npm ci`.
 
-| Field | Meaning |
+## Technology and conventions
+
+| Concern | Technology |
 | --- | --- |
-| `manufacturer` | Company explicitly documented as the declared manufacturer for this IAN; otherwise `null` |
-| `oem` | Physical factory or OEM, only when directly established; otherwise `null` |
-| `company` | Company linked by the document or catalog |
-| `role` | Precisely the relationship established by the source |
-| `source` | Primary source supporting that relationship |
-| `technical_source` | Source of specifications when different |
-| `evidence` | Verified facts, document pages, full IAN and limits of the evidence |
-| `checked` | Actual consultation date, not manufacturing date |
-| `specifications` | Explicit technical data only |
+| Static site generation, pagination, data cascade and dev server | Eleventy 3 |
+| Layouts and reusable UI components | Nunjucks, `.njk` |
+| Product records | Markdown with YAML frontmatter |
+| Frontmatter parsing | gray-matter |
+| Markdown rendering | markdown-it |
+| Interface and content translations | JSON dictionaries |
+| Documented product field structure | JSON Schema, draft 2020-12 |
+| Validation | Node.js test runner and project-specific provenance checks |
+| CI and downloadable static site | GitHub Actions |
 
-A spare parts listing does **not** establish the legal manufacturer or the physical factory. Evidence is never automatically extended to another IAN, even when the model name is identical.
+Eleventy replaces the original custom generator. The project follows Eleventy’s standard configuration, input-directory, data-file, layout and pagination conventions. Category drawings, provenance rules, translations and catalog filters are specific to this catalog.
 
-The initial collection contains **127 records for 92 distinct models**, mainly from the official Grizzly Tools and Kompernaß catalogs. Most records are intentionally incomplete. Three records have a verified declared manufacturer: Grizzly for PAMRC 250 A1 (IAN 507557) and PWD 25 C4 (IAN 458741), and Scheppach for PKS 1500 C4 (IAN 465511). The PIFDS 120 B2 (IAN 472024) record documents C.M.C. as conformity declarant and service provider without assuming the physical OEM.
+This is a technology/conventions choice, not a claim of certification against every accessibility, security or data standard. The JSON Schema documents the data contract; provenance and translation rules are enforced by the build and tests.
 
-The PWDL 40 A1 record includes official Lidl specifications. Categories and power descriptions derived from catalog titles are editorial classifications, not additional technical evidence. Historical Grizzly records can include non-Italian market variants.
+## Project structure
 
-## GitHub workflow and hosting
+```text
+eleventy.config.js             Eleventy configuration and template filters
+site/
+  _data/catalog.js             Loads and localizes the product records
+  _includes/layouts/base.njk   Shared page layout
+  _includes/components/       Reusable components, including photo/icon fallback
+  catalog.njk                 Catalog pages, paginated by language
+  products.njk                Product pages, paginated by record and language
+  method.njk                  Methodology pages
+  index.njk                   Language selection
+content/
+  products/*.md               One canonical record per model + IAN
+  images.json                 Official photo URLs, source pages and owner credits
+locales/                      Italian and English translation dictionaries
+lib/                          Catalog validation, translations and original SVG icons
+src/                          CSS and small browser scripts
+schemas/product.schema.json   Product frontmatter data contract
+templates/product.md          New-record template
+test/                         Integrity, translation, photo and link checks
+```
 
-Edit Markdown and translation files through GitHub or a normal Git checkout. Every push to `main` runs the build, checks records and translations, and uploads the `catalogo-statico` artifact. The website never requests private repository data from a visitor's browser and contains no GitHub tokens.
+## Languages
 
-The repository remains private. Publication is separate from building. To use GitHub Pages, first verify that your plan supports Pages for private repositories and confirm the site's intended audience. Configure **Settings → Pages → Source: GitHub Actions**, then run the workflow manually with `publish_pages: true`.
+Italian and English pages are generated at build time:
 
-**A private repository does not necessarily mean a private Pages website.** Ordinary pushes only build and validate; the workflow does not automatically publish.
+- `/index.html`: language selection.
+- `/it/index.html`, `/en/index.html`: localized catalogs.
+- `/{language}/products/{model-ian}/index.html`: product records.
+- `/{language}/method/index.html`: methodology.
+- `/{language}/data/catalog.json`: localized export.
+- `/data/catalog.json`: canonical data.
+- `/data/markdown/`: original Italian Markdown.
 
-The generated files can also be hosted by another static provider connected to the repository. A separately created Sites preview is not automatically synchronized by GitHub pushes.
+The language switch preserves the current product, query, filters and fragment. Search covers both Italian and English product names. There is no runtime translation service.
 
-## Design and trademarks
+UI strings live in `locales/it.json` and `locales/en.json`. English versions of canonical Italian product text are in `locales/en-content.json`, keyed by the exact source string. Missing translations fail the build. Model codes, IANs, company names, document URLs and numerical facts remain unchanged between languages.
 
-Officina Index uses an original green/charcoal identity, its own logo and original category illustrations. The drawings are not product photographs. No Parkside or Lidl logos are reproduced.
+To add a language, register it in `lib/i18n.mjs`, provide complete UI and content dictionaries, and update the root language label. Eleventy’s pagination generates the matching routes.
 
-Brand names identify the cataloged products. The site states that it is not affiliated with Lidl or Parkside. Fonts have system fallbacks, so the site remains usable if Google Fonts is unavailable.
+## Product data and evidence
 
-## Validation limits
+There are 127 records for 92 distinct models. Most records are deliberately partial. A spare-parts listing does **not** establish the legal manufacturer or the physical factory.
 
-Automated checks cover metadata, provenance rules, translation completeness, matching language catalogs, generated product pages and local links. Desktop/mobile visual QA still needs to be completed in an environment where the browser can reach the preview.
+A model with three IANs gets three records. Keep IANs as strings and record the complete batch suffix in the evidence when available. Do not copy evidence automatically to another IAN.
+
+The `manufacturer` field names the manufacturer explicitly documented for that IAN, or stays `null`. The archived `role` and `oem` fields preserve source information, but are not displayed as fields on product pages. Source links and evidence remain visible.
+
+Three records have verified declared manufacturers: Grizzly for PAMRC 250 A1 (IAN 507557) and PWD 25 C4 (IAN 458741), and Scheppach for PKS 1500 C4 (IAN 465511). PIFDS 120 B2 (IAN 472024) documents C.M.C. as conformity declarant and service provider. PWDL 40 A1 includes official Lidl specifications.
+
+## Product photos
+
+31 records currently have an official product-photo reference matched to their IAN. The registry stores the original URL, source page, publisher and consultation date. Photos appear in cards, product pages and the featured item. Original category icons are used when no photo is available or an image fails to load.
+
+`npm run images` attempts to cache the photos in `.cache/product-images/`. The build bundles successful downloads into `dist/assets/products/`, so the GitHub ZIP can contain the photos themselves. Failed downloads retain the original URL and browser icon fallback. Image caches are not committed.
+
+Photos belong to their respective owners. Credits and source links do not themselves grant a reuse license; verify permissions before public publication. Officina Index's logo and category illustrations are original.
+
+## Contribution workflow
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
+
+1. Copy `templates/product.md` to `content/products/model-IAN.md`.
+2. Add primary-source evidence and only verified facts.
+3. Add translations for new text.
+4. Add an exact-IAN photo reference where available.
+5. Run the build and tests, then submit a pull request.
+
+Standard YAML syntax, including multiline values, is supported by gray-matter. Product descriptions use normal Markdown rendered by markdown-it, with embedded HTML disabled.
+
+## GitHub and hosting
+
+Every push to `main` installs the locked dependencies, caches available photos, runs Eleventy and the tests, and uploads the `catalogo-statico` artifact. The migration lockfile is reviewed and committed as an ordinary source update; later builds use `npm ci`. GitHub Actions retains read-only repository access and never pushes source changes.
+
+The repository remains private. The generated website never fetches private GitHub data from a visitor’s browser and contains no credentials.
+
+To use GitHub Pages, first confirm that your plan supports Pages for private repositories and check the intended site audience. Select **Settings → Pages → Source: GitHub Actions**, then run the workflow manually with `publish_pages: true`. A private repository does not necessarily mean a private Pages site. Normal pushes build and validate without publishing.
+
+The output can instead be deployed by any static hosting provider connected to the repository.
+
+## Validation
+
+Checks cover required metadata, duplicate identities, provenance constraints, translation completeness, matching locale catalogs, product pages, photo-source associations, browser fallback behavior and internal links. Visual QA still needs an environment where the browser can reach the preview.

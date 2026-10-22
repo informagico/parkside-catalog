@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang }}/method/index.html"
+---
+<article class="method detail"><a class="back" href="{{ (lang + '/index.html') | rel(page.outputPath) }}#catalogue">← {{ 'back' | t(lang) }}</a><span class="eyebrow">{{ 'methodEyebrow' | t(lang) }}</span><h1>{{ 'methodTitle' | t(lang) }}</h1><p class="lead">{{ 'methodLead' | t(lang,{count:catalog.count,verified:catalog.verified}) }}</p><section class="panel"><h2>{{ 'rolesTitle' | t(lang) }}</h2><dl>{% for key,value in [['manufacturer','manufacturerDefinition'],['importer','importerDefinition'],['spares','sparesDefinition'],['oem','oemDefinition']] %}<dt>{{ key | t(lang) }}</dt><dd>{{ value | t(lang) }}</dd>{% endfor %}</dl></section><section class="panel">{% for heading,text in [['ianTitle','ianText'],['missingTitle','missingText'],['contribute','contributeText']] %}<h2>{{ heading | t(lang) }}</h2><p>{{ text | t(lang) }}</p>{% endfor %}<a class="primary" href="{{ site.repository }}">{{ 'repository' | t(lang) }} ↗</a></section><p class="muted">{{ 'translationNote' | t(lang) }}</p><p class="muted">{{ 'methodLegal' | t(lang) }}</p></article>

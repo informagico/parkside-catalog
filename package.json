@@ -1,5 +1,6 @@
 {
   "name": "officina-index", "version": "1.0.0", "private": true, "type": "module",
-  "scripts": {"build": "node scripts/build.mjs", "test": "node --test", "dev": "node scripts/serve.mjs"},
-  "engines": {"node": ">=22"}
+  "scripts": {"build": "node scripts/clean.mjs && eleventy", "test": "node --test", "dev": "eleventy --serve", "images": "node scripts/cache-images.mjs"},
+  "engines": {"node": ">=22"},
+  "devDependencies": {"@11ty/eleventy": "3.1.7", "gray-matter": "4.0.3", "markdown-it": "14.1.0"}
 }

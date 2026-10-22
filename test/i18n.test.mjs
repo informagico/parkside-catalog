@@ -1,8 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {parse} from '../scripts/model.mjs';
-import {languages,localize,t,translate,uiDictionary} from '../scripts/i18n.mjs';
+import {parse} from '../lib/product.mjs';
+import {languages,localize,t,translate,uiDictionary} from '../lib/i18n.mjs';
 
 test('Every UI language has the same keys and interpolation placeholders',()=>{
  const source=uiDictionary('it');

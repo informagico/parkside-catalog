@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="{{ 'description' | t(lang) | escape }}">
+  <title>{% if title %}{{ title | escape }}{% else %}{{ 'catalog' | t(lang) }}{% endif %} · Officina Index</title>
+  {% for code in languages %}<link rel="alternate" hreflang="{{ code }}" href="{{ page.outputPath | localeTarget(code) | rel(page.outputPath) }}">{% endfor %}
+  <link rel="stylesheet" href="{{ 'assets/style.css' | rel(page.outputPath) }}">
+  <link rel="stylesheet" href="{{ 'assets/locales.css' | rel(page.outputPath) }}">
+  <link rel="stylesheet" href="{{ 'assets/refinements.css' | rel(page.outputPath) }}">
+</head>
+<body>
+<a class="skip" href="#main">{{ 'skip' | t(lang) }}</a>
+<header>
+  <a class="brand" href="{{ (lang + '/index.html') | rel(page.outputPath) }}"><span class="brandmark">OI<span>↗</span></span><span>OFFICINA<span class="brand-sub">INDEX / {{ 'archive' | t(lang) }}</span></span></a>
+  <nav aria-label="{{ 'navigation' | t(lang) }}">
+    <a href="{{ (lang + '/index.html') | rel(page.outputPath) }}#catalogue">{{ 'catalog' | t(lang) }}</a>
+    <a class="method-nav" href="{{ (lang + '/method/index.html') | rel(page.outputPath) }}">{{ 'method' | t(lang) }}</a>
+    <div class="language-switch" aria-label="{{ 'language' | t(lang) }}">{% for code in languages %}<a class="language-link{% if code == lang %} active{% endif %}" data-language-link="{{ code }}" href="{{ page.outputPath | localeTarget(code) | rel(page.outputPath) }}" lang="{{ code }}" hreflang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ code | upper }}</a>{% endfor %}</div>
+    <a class="repo-link" href="{{ site.repository }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </nav>
+</header>
+<main id="main">{{ content | safe }}</main>
+<footer><a class="footer-brand" href="{{ (lang + '/index.html') | rel(page.outputPath) }}">OFFICINA INDEX ↗</a><p>{{ 'footer' | t(lang) }}</p><small>{{ 'trademark' | t(lang) }}<br>{{ 'illustrations' | t(lang) }} {{ 'lastCollection' | t(lang) }}</small><a href="{{ (lang + '/method/index.html') | rel(page.outputPath) }}">{{ 'sourcesCriteria' | t(lang) }} ↗</a></footer>
+<script src="{{ 'assets/language.js' | rel(page.outputPath) }}" defer></script>
+<script src="{{ 'assets/photos.js' | rel(page.outputPath) }}" defer></script>
+{% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script>{% endif %}
+</body></html>

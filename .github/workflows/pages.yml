@@ -24,8 +24,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+      - run: npm run images
       - run: npm run build
       - run: npm test
+      - name: Report dependency lockfile
+        run: node -e "console.log('LOCKFILE_JSON:' + JSON.stringify(require('fs').readFileSync('package-lock.json','utf8')))"
       - uses: actions/upload-artifact@v4
         with:
           name: catalogo-statico
