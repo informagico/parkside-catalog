@@ -1,4 +1,4 @@
-# Officina Index
+# Tooltrace
 
 An independent Parkside tool catalog built with **[Eleventy (11ty)](https://www.11ty.dev/)**, standard Markdown/YAML frontmatter and Nunjucks templates. The output is plain static HTML, CSS and JavaScript. There is no database or application server.
 
@@ -100,7 +100,7 @@ Three records have verified declared manufacturers: Grizzly for PAMRC 250 A1 (IA
 
 `npm run images` attempts to cache the photos in `.cache/product-images/`. The build bundles successful downloads into `dist/assets/products/`, so the GitHub ZIP can contain the photos themselves. Failed downloads retain the original URL and browser icon fallback. Image caches are not committed.
 
-Photos belong to their respective owners. Credits and source links do not themselves grant a reuse license; verify permissions before public publication. Officina Index's logo and category illustrations are original.
+Photos belong to their respective owners. Credits and source links do not themselves grant a reuse license; verify permissions before public publication. Tooltrace's logo and category illustrations are original.
 
 ## Contribution workflow
 
