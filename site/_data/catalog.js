@@ -1,9 +1,10 @@
 import {loadProducts} from '../../lib/catalog.mjs';
 import {languages,localize,translate} from '../../lib/i18n.mjs';
 import {modelIndex} from '../../lib/identity.mjs';
+import {previewMetadata} from '../../lib/preview.mjs';
 export default function(){
  const products=loadProducts();
- const localized=Object.fromEntries(languages.map(lang=>[lang,products.map(p=>localize(p,lang))]));
+ const localized=Object.fromEntries(languages.map(lang=>[lang,products.map(p=>({...localize(p,lang),preview:previewMetadata(p)}))]));
  const options=Object.fromEntries(languages.map(lang=>[lang,{
   categories:[...new Set(products.map(p=>p.category))].sort().map(value=>({value,label:translate(value,lang)})),
   power:[...new Set(products.map(p=>p.power))].sort().map(value=>({value,label:translate(value,lang)})),

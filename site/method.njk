@@ -8,8 +8,8 @@ permalink: "{{ lang }}/method/index.html"
 ---
 <article class="method detail">
  <a class="back" href="{{ (lang + '/index.html') | rel(page.outputPath) }}#catalogue">← {{ 'back' | t(lang) }}</a>
- <span class="eyebrow">{{ 'methodEyebrow' | t(lang) }}</span><h1>{{ 'methodTitle' | t(lang) }}</h1><p class="lead">{{ 'methodLead' | t(lang,{count:catalog.count,verified:catalog.verified}) }}</p>
- <section class="panel" id="ian"><h2>{{ 'ianTitle' | t(lang) }}</h2><p>{{ 'ianText' | t(lang) }}</p><h3>{{ 'ianFindTitle' | t(lang) }}</h3><ul>{% for key in ['ianBox','ianProduct','ianManual'] %}<li>{{ key | t(lang) }}</li>{% endfor %}</ul><p>{{ 'ianExample' | t(lang) }}</p><a href="https://www.kompernass.com/{% if lang == 'it' %}it{% else %}gb{% endif %}/" target="_blank" rel="noopener noreferrer">{{ 'ianHelp' | t(lang) }} ↗</a><h3>{{ 'ianVariantsTitle' | t(lang) }}</h3><p>{{ 'ianVariantsText' | t(lang) }}</p></section>
+ <span class="eyebrow">{{ 'methodEyebrow' | t(lang) }}</span><h1>{{ 'methodTitle' | t(lang) }}</h1><p class="lead">{{ 'methodLead' | t(lang) }}</p>
+ <section class="panel" id="ian"><h2>{{ 'ianTitle' | t(lang) }}</h2><p>{{ 'ianText' | t(lang) }}</p><h3>{{ 'ianFindTitle' | t(lang) }}</h3><ul>{% for key in ['ianBox','ianProduct','ianManual'] %}<li>{{ key | t(lang) }}</li>{% endfor %}</ul><p>{{ 'ianExample' | t(lang) }}</p><h3>{{ 'ianVariantsTitle' | t(lang) }}</h3><p>{{ 'ianVariantsText' | t(lang) }}</p></section>
  <section class="panel"><h2>{{ 'companyMeaningTitle' | t(lang) }}</h2><p>{{ 'companyMeaningText' | t(lang) }}</p><p>{{ 'companyMeaningExample' | t(lang) }}</p></section>
  <section class="panel">{% for heading,text in [['missingTitle','missingText'],['contribute','contributeText']] %}<h2>{{ heading | t(lang) }}</h2><p>{{ text | t(lang) }}</p>{% endfor %}<a class="primary" href="{{ site.repository }}">{{ 'repository' | t(lang) }} ↗</a></section><p class="muted">{{ 'translationNote' | t(lang) }}</p><p class="muted">{{ 'methodLegal' | t(lang) }}</p>
 </article>

@@ -56,3 +56,16 @@ header nav a.contribute-nav{display:inline-block}.variant-table th{white-space:n
 .variant-ian-link:focus-visible,.model-variants .table-scroll:focus-visible{outline:3px solid #5c8230;outline-offset:3px}
 .model-variants .variant-scroll-hint{display:none}
 @media(max-width:760px){.model-variants{padding:20px 16px;margin:24px 0}.model-variants .model-variants-heading h2{font-size:27px;max-width:260px}.model-variants .variant-table th,.model-variants .variant-table td{padding:12px;min-width:145px}.model-variants .variant-scroll-hint{display:block;font-size:12px;margin-bottom:10px;color:var(--green)}.model-variants-heading{align-items:flex-start}.model-variants .table-scroll{max-height:420px}}
+
+/* Preview badges wrap in both grid and list views. */
+.card-link{display:flex;flex-direction:column}
+.card-art{flex-shrink:0}
+.card-info{display:flex;flex-direction:column;flex:1}
+.card-badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:14px;grid-column:1/-1}
+.list .card-info{grid-template-rows:auto auto 1fr auto}
+.list .card-badges{align-self:end}
+@media(max-width:760px){.list .card-info{display:flex;flex-direction:column}.list .card-badges{align-self:stretch}}
+.card-badges .badge{margin:0;padding:4px 8px;border:1px solid transparent;font-weight:600;line-height:1.5}
+.card-badges .badge-range{background:var(--green);color:white}
+.card-badges .badge-manual{background:#e3efdb;color:#375c2c}
+.card-badges .badge-models{background:#fff2d5;color:#745014;border-color:#e4c887}
