@@ -2,20 +2,16 @@
 model: "MODEL A1"
 ian: "123456"
 title: "Descriptive tool name"
-# Use an exact value from content/categories.json.
+# Choose an exact value from content/categories.json.
 category: "Workshop Equipment"
-power: "To be verified"
-company: "Company named in the source"
-# Keep null unless the source explicitly names the manufacturer.
+power: "Unverified"
+# Keep null when the manufacturer is unknown.
 manufacturer: null
-source: "https://example.com/primary-source"
-evidence: "Source document title and relevant page numbers for this model and IAN."
 specifications: {}
-# Optional: delete the image block to use the category icon.
+# Optional: remove the manual and image blocks when unavailable.
+manual: "https://example.com/product-manual.pdf"
 image:
-  url: "https://example.com/official-product-photo.jpg"
-  source: "https://example.com/product-page"
-  credit: "Photo publisher or owner"
+  url: "https://example.com/product-photo.jpg"
 ---
 
-Write a concise English description of the tool, its use and documented features. Keep source notes in the evidence field above.
+Write a concise English description of the tool and its documented features.

@@ -9,11 +9,8 @@
     "title",
     "category",
     "power",
-    "company",
     "manufacturer",
-    "source",
-    "specifications",
-    "evidence"
+    "specifications"
   ],
   "properties": {
     "model": {
@@ -47,7 +44,10 @@
       "type": "string"
     },
     "company": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "minLength": 1
     },
     "role": {
@@ -67,7 +67,10 @@
       ]
     },
     "source": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^https://"
     },
     "technical_source": {
@@ -88,7 +91,7 @@
     },
     "evidence": {
       "type": "string",
-      "minLength": 1
+      "minLength": 0
     },
     "manufacturer_basis": {
       "type": "string",
@@ -104,14 +107,12 @@
         "null"
       ],
       "required": [
-        "url",
-        "source",
-        "credit"
+        "url"
       ],
       "properties": {
         "url": {
           "type": "string",
-          "description": "HTTPS URL or assets/products/<filename>.jpg, .jpeg, .png or .webp"
+          "description": "HTTPS URL or assets/products/<filename>.jpg, .jpeg, .png, .webp or .svg"
         },
         "source": {
           "type": "string",
@@ -123,6 +124,11 @@
         }
       },
       "additionalProperties": false
+    },
+    "manual": {
+      "type": "string",
+      "pattern": "^https://",
+      "description": "Optional product manual PDF URL."
     }
   }
 }

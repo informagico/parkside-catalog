@@ -49,7 +49,7 @@ The optional image step bundles successful remote downloads. Static output is in
 
 ## Languages
 
-The site generates Italian and English pages. Identity, source, image and technical facts come from the English record. Product translations use stable fields, never whole sentences as keys. Shared labels are translated centrally.
+The site generates Italian and English pages. Identity, image and technical facts come from the English record. Product translations use stable fields, never whole sentences as keys. Shared labels are translated centrally.
 
 Missing translations fall back to English with a notice. A fingerprint of the English title, body, evidence and specifications detects outdated translations. Stale translations are held back until reviewed; image-only edits do not invalidate prose. The fingerprint is maintenance metadata, not a checked date. There is no checked field in products or photos.
 
@@ -64,9 +64,9 @@ The language switch preserves the current page and filters. Search uses both pro
 
 ## Data and provenance
 
-129 records cover 93 identified models plus one IAN-only record whose model code is not yet legible. Unknown manufacturers and physical factories remain null. A spare parts catalog does not establish manufacture. Explicit owner confirmations are labeled separately from documentary evidence. PWDL 40 A1, IAN 544816, is attributed to Grizzly Tools following owner confirmation and uses the owner-selected Lidl photo.
+The catalog stores one English Markdown file per IAN, with optional Italian translations, technical specifications, photographs and PDF manuals. Unknown manufacturers remain null.
 
-The 31 photo references are now in their product Markdown. Each has a source and credit. Local files can be included in a PR; remote HTTPS photos are cached during builds when available. Original category icons are the fallback. Attribution does not itself grant a reuse license.
+Product photos are defined inline in the product Markdown. Local JPG, JPEG, PNG, WebP and SVG assets are bundled directly; HTTPS photos can be cached during builds. Original category icons are the fallback.
 
 Categories use an exact allowlist of nine approved function-based groups. All product records use the approved classification; shared Italian labels are centralized. Category-only edits do not invalidate product prose translations. See docs/categories.md for definitions and examples.
 

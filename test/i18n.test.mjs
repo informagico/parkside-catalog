@@ -24,7 +24,7 @@ test('Canonical English product records have complete Italian translations',()=>
   const en=localize(original,'en');const it=localize(original,'it');
   assert.equal(en.model,original.model);assert.equal(en.ian,original.ian);
   assert.equal(en.manufacturer,original.manufacturer);assert.equal(en.oem,original.oem);
-  assert.equal(en.title,original.title);assert.equal(en.evidence,original.evidence);assert.notEqual(it.title,original.title);assert.notEqual(it.evidence,original.evidence);
+  assert.equal(en.title,original.title);assert.equal(en.evidence,original.evidence||'');assert.equal(it.translationMissing,false);assert.equal(it.translationNeedsReview,false);
   assert.equal(en.categoryKey,original.category);assert.equal(en.powerKey,original.power);
   assert.equal(Object.keys(en.specifications).length,Object.keys(original.specifications).length);
   assert.deepEqual(localize(original,'it').searchTitles,en.searchTitles);
