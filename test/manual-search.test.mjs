@@ -71,7 +71,8 @@ test('Session configuration refreshes once after 401 and never accompanies PDF r
  assert(calls.filter(c=>c.url.startsWith(api)).every(c=>c.headers.Authorization==='test-session'));
 });
 test('Candidate URLs reject credentials, foreign hosts and non-PDF responses',async()=>{
- for(const url of ['http://media.sit-connect.com/public/articlemanual/example.pdf','https://user:pass@media.sit-connect.com/public/articlemanual/example.pdf','https://127.0.0.1/example.pdf',pdf+'?token=example',pdf.replace('.pdf','.zip')])assert.equal(isOfficialPdf(url),false);
+ for(const url of [pdf,'https://media.sit-connect.com/public/articlemanual/95178735/100131_IT_PT.pdf','https://media.sit-connect.com/bsionlyarticlemanuals/bsiarticlemanual/346160/346160_CH_DE_FR_IT.pdf'])assert.equal(isOfficialPdf(url),true);
+ for(const url of ['http://media.sit-connect.com/public/articlemanual/example.pdf','https://user:pass@media.sit-connect.com/public/articlemanual/example.pdf','https://127.0.0.1/example.pdf','https://media.sit-connect.com/unrelated/example.pdf',pdf+'?token=example',pdf.replace('.pdf','.zip')])assert.equal(isOfficialPdf(url),false);
  const {client}=fixture(()=>new Response('<html>temporary error</html>'));
  await assert.rejects(client.download(pdf),/not a PDF/);
  const large=fixture(()=>new Response('%PDF-1.7',{headers:{'content-length':String(33*1024*1024)}}));

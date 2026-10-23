@@ -33,7 +33,7 @@ Everything is written under the ignored `.cache/manual-search/` directory:
 
 - `report.md` and `report.json`: the latest batch, catalog gaps, official search links, candidate PDFs and errors.
 - `results/IAN.json`: individual searches, so interrupted work can resume. Successful searches, including empty results, are reused for seven days. Errors and ambiguous responses are searched again.
-- `pdfs/IAN/`: candidate PDFs downloaded with `--download`, with content hashes in the result records. Only official `media.sit-connect.com/public/articlemanual/` PDF URLs are downloaded. Unexpected hosts or mismatched IANs require review.
+- `pdfs/IAN/`: candidate PDFs downloaded with `--download`, with content hashes in the result records. Only PDF URLs under the official `media.sit-connect.com/public/articlemanual/` and legacy `media.sit-connect.com/bsionlyarticlemanuals/bsiarticlemanual/` paths are downloaded. Unexpected hosts or mismatched IANs require review.
 
 Rerun the same command after an interruption to reuse saved results; `Ctrl+C` stops after the current IAN. The batch report covers that invocation, while individual results from earlier batches remain in `results/`. Downloads are size-limited and must start with a PDF signature. They are research files and are not bundled into the website.
 
@@ -51,3 +51,5 @@ A result means the official search returned candidate documents for the exact IA
 4. Keep page references in optional `source`, `evidence`, `technical_source` and `technical_evidence` metadata. Product prose should describe the tool concisely; research notes are not rendered.
 5. Review corresponding translations after changing English prose. Leave unreviewed translations stale; only a human-reviewed translation may receive a new fingerprint via `npm run translation -- IAN it --reviewed`.
 6. Run `npm run build`, `npm test` and `npm run audit`, then open a pull request using the normal checklist. Search caches and downloaded research PDFs must remain uncommitted.
+
+The [23 October 2026 local review](manual-search-review-2026-10-23.md) records the first complete queue run, its verified catalog updates and the documents still awaiting content review.

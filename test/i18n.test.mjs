@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {parse} from '../lib/product.mjs';
 import {languages,localize,t,translate,uiDictionary} from '../lib/i18n.mjs';
+import {readTranslation,translationHash} from '../lib/translations.mjs';
 
 test('Every UI language has the same keys and interpolation placeholders',()=>{
  const source=uiDictionary('it');
@@ -17,18 +18,26 @@ test('Every UI language has the same keys and interpolation placeholders',()=>{
  assert.equal(translate('New shared label','it'),'New shared label');
 });
 
-test('Canonical English product records have complete Italian translations',()=>{
+test('Catalog localization preserves identities and falls back for missing or stale Italian translations',()=>{
  const files=fs.readdirSync('content/products').filter(f=>f.endsWith('.md'));
  for(const file of files){
   const original=parse(fs.readFileSync('content/products/'+file,'utf8'));
   const en=localize(original,'en');const it=localize(original,'it');
   assert.equal(en.model,original.model);assert.equal(en.ian,original.ian);
   assert.equal(en.manufacturer,original.manufacturer);assert.equal(en.oem,original.oem);
-  assert.equal(en.title,original.title);assert.equal(en.evidence,original.evidence||'');assert.equal(it.translationMissing,false);assert.equal(it.translationNeedsReview,false);
+  assert.equal(en.title,original.title);assert.equal(en.evidence,original.evidence||'');
+  const candidate=readTranslation(original.ian,'it');
+  const stale=!!candidate&&candidate._sourceHash!==translationHash(original);
+  assert.equal(it.translationNeedsReview,stale);
+  for(const key of ['title','body','evidence']){
+   const translated=!stale&&candidate?.[key]?.trim();
+   assert.equal(it[key],translated?candidate[key]:(original[key]||''));
+   assert.equal(it.textLanguages[key],translated?'it':'en');
+  }
   assert.equal(en.categoryKey,original.category);assert.equal(en.powerKey,original.power);
   assert.equal(Object.keys(en.specifications).length,Object.keys(original.specifications).length);
   assert.deepEqual(localize(original,'it').searchTitles,en.searchTitles);
-  assert.equal(localize({...original,title:original.title+' updated'},'it').translationNeedsReview,true);
+  if(candidate)assert.equal(localize({...original,title:original.title+' updated'},'it').translationNeedsReview,true);
  }
 });
 
