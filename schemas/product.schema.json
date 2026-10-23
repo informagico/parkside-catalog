@@ -12,6 +12,25 @@
     "manufacturer",
     "specifications"
   ],
+  "allOf": [
+    {
+      "if": {"properties": {"category": {"const": "Batteries"}}, "required": ["category"]},
+      "then": {
+        "properties": {
+          "specifications": {
+            "required": ["Battery capacity"],
+            "properties": {"Battery capacity": {"type": "string", "pattern": "^[0-9]+\\.[0-9] Ah(?: / [0-9]+\\.[0-9] Ah)*$"}}
+          }
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"power": {"enum": ["12 V battery", "20 V battery", "40 V battery"]}}, "required": ["power"]},
+            "then": {"properties": {"specifications": {"required": ["Battery system"], "properties": {"Battery system": {"type": "string", "minLength": 1}}}}}
+          }
+        ]
+      }
+    }
+  ],
   "properties": {
     "model": {
       "type": [
@@ -40,7 +59,8 @@
         "Welding & Soldering",
         "Measuring & Detection",
         "Workshop Equipment",
-        "Batteries & Accessories"
+        "Batteries",
+        "Accessories"
       ],
       "description": "Choose one exact canonical English category from content/categories.json."
     },

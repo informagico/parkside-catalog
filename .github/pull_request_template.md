@@ -22,7 +22,10 @@
 - [ ] I copied templates/product.md or edited an existing product record.
 - [ ] The canonical product text is in English.
 - [ ] I checked the model and IAN; this is not a duplicate.
+- [ ] The filename is lowercase model-ian.md, or ian.md for an unknown model; existing page URLs are retained with `npm run filenames -- --write` after a rename.
+- [ ] I checked other IANs for the same full model and category; the generated multi-IAN badge and comparison table include the related records without copying their data.
 - [ ] I selected an exact category from content/categories.json.
+- [ ] For Batteries records, I included capacity in `#.# Ah` format and the documented battery system where applicable; standalone chargers use Accessories.
 - [ ] I linked a primary source and explained what it confirms.
 - [ ] Unknown manufacturer information remains null.
 - [ ] If I supplied a photo, it matches this model/IAN and includes its source and credit.

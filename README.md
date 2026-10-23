@@ -27,11 +27,14 @@ For production output:
 
 The optional image step bundles successful remote downloads. Static output is in dist and works under a project subpath or by opening index.html directly.
 
+Product filenames use lowercase `model-ian.md`, or `ian.md` when the model is unknown. After a model correction, run `npm run filenames -- --write` to align filenames, update source links and preserve previous public URLs. Use `npm run filenames` for a read-only check.
+
 ## Structure
 
 | Path | Purpose |
 | --- | --- |
 | content/products/*.md | English records; one IAN per file, image included |
+| content/product-redirects.json | Previous product URL slugs mapped to their IANs |
 | content/translations/it/IAN.json | Optional translated title, body, evidence and textual specification values |
 | content/categories.json | Exact allowed category values |
 | locales/fields/it.json | Shared field labels and enum translations |
@@ -68,7 +71,7 @@ The catalog stores one English Markdown file per IAN, with optional Italian tran
 
 Product photos are defined inline in the product Markdown. Local JPG, JPEG, PNG, WebP and SVG assets are bundled directly; HTTPS photos can be cached during builds. Original category icons are the fallback.
 
-Categories use an exact allowlist of nine approved function-based groups. All product records use the approved classification; shared Italian labels are centralized. Category-only edits do not invalidate product prose translations. See docs/categories.md for definitions and examples.
+Categories use an exact allowlist of ten approved groups, with Batteries separate from Accessories. Battery records include capacity in `#.# Ah` format and the documented battery system where applicable. Shared Italian labels are centralized. Category-only edits do not invalidate product prose translations. See docs/categories.md for definitions and examples.
 
 ## Technology and checks
 

@@ -3,7 +3,7 @@
 ## Add a product without installing anything
 
 1. Open [templates/product.md](templates/product.md) on GitHub and copy its raw contents.
-2. Open content/products and choose **Add file → Create new file**. Name it model-IAN.md, for example pwdl-40-a1-544816.md. If that IAN already exists, edit its file instead.
+2. Open content/products and choose **Add file → Create new file**. Use a lowercase model-ian.md name, for example pwdl-40-a1-544816.md. Replace spaces and punctuation in the model with hyphens. If the model is unknown, use only the IAN, for example 478092.md. If that IAN already exists, edit its file instead.
 3. Paste the template. Replace the examples with English product information. Choose an exact category from [content/categories.json](content/categories.json). Remove the optional image block when no photo is available.
 4. Choose **Propose changes** on a new branch, or work in a fork if you do not have write access. Open a pull request and fill in the prepared product fields and checkboxes.
 5. GitHub Actions builds and tests the proposal. The maintainer reviews the evidence and merges it.
@@ -12,11 +12,13 @@ One English Markdown file is enough. Translations are optional and may be added 
 
 ## Product fields
 
-The template and [JSON Schema](schemas/product.schema.json) document the fields. Required: model, ian, title, category, power, manufacturer (null is valid) and specifications (an empty object is valid). Use model: null when the model code is unknown; never put the IAN or a guessed code in model. Existing product filenames and URLs remain stable after model corrections. The manual, company, source and evidence fields are optional. Use strings for IANs and specification values. Product descriptions are normal Markdown after the frontmatter. Describe the tool, its intended use and documented features in concise, factual prose. Omit drafting history, contributor decisions, analysis notes and promises to verify missing data. Keep references and page numbers in evidence; this metadata is not displayed as product prose. Available PDF manuals are linked on product pages; collection-site citations and research notes are not displayed.
+The template and [JSON Schema](schemas/product.schema.json) document the fields. Required: model, ian, title, category, power, manufacturer (null is valid) and specifications (an empty object is valid). Use model: null when the model code is unknown; never put the IAN or a guessed code in model. Filenames follow the current model and IAN; model corrections retain old public URLs through redirects. The manual, company, source and evidence fields are optional. Use strings for IANs and specification values. Product descriptions are normal Markdown after the frontmatter. Describe the tool, its intended use and documented features in concise, factual prose. Omit drafting history, contributor decisions, analysis notes and promises to verify missing data. Keep references and page numbers in evidence; this metadata is not displayed as product prose. Available PDF manuals are linked on product pages; collection-site citations and research notes are not displayed.
 
 Do not infer manufacturers from appearance or a spare parts catalog. Keep manufacturer null unless evidence explicitly supports it. If confirmed in a manufacturer document, give the relevant passage in evidence. The maintainer can explicitly record owner_confirmation provenance; keep this provenance in the metadata, separate from documentary evidence. Never carry manufacturer claims or specifications across IANs.
 
 Check the scope of the manual before adding data: a supplied charger's input power is not the cordless tool's power, and a component manual does not establish the identity of a whole kit. Record technical page references in optional technical_source and technical_evidence metadata. Model codes can be reused for unrelated products; comparisons group the same normalized model code within its functional category.
+
+When adding or correcting a model code, check the other IANs for that full model and category. The site automatically displays their IAN count and comparison table in both languages. Keep each IAN's own specifications, manual and manufacturer provenance; a shared model is not permission to copy data between records. Different generations, kits and reused codes in different categories remain separate.
 
 ### Photos in the same Markdown
 
@@ -30,7 +32,9 @@ The build bundles local files and successfully downloaded remote photos. If the 
 
 ## Categories
 
-Use one exact canonical English value from [content/categories.json](content/categories.json). The nine approved function-based categories and classification examples are documented in [docs/categories.md](docs/categories.md). Shared Italian category labels are maintained centrally. Do not invent an ad hoc category; ask the maintainer if a tool does not fit.
+Use one exact canonical English value from [content/categories.json](content/categories.json). The ten approved categories and classification examples are documented in [docs/categories.md](docs/categories.md). Batteries and battery/charger kits belong to Batteries; standalone chargers, battery adapters and general accessories belong to Accessories. Shared Italian category labels are maintained centrally. Do not invent an ad hoc category; ask the maintainer if a tool does not fit.
+
+For Batteries records, include `Battery capacity` in specifications using `#.# Ah`, such as `2.0 Ah` or `2.5 Ah`. List separate documented capacities for alternatives under one IAN, such as `2.0 Ah / 4.0 Ah`. Include the documented `Battery system` (for example `X20V-Team` or `X12V-Team`) when applicable. Power banks need their cell capacity converted from mAh to Ah and do not receive a tool battery platform. Verify these facts for the exact IAN in its own source.
 
 ## Optional translations — maintainer workflow
 
@@ -61,7 +65,9 @@ Use Node.js 22. Run npm ci, npm run dev. Before submitting code changes, run npm
 
 Maintainers can discover candidate manuals for incomplete records with `npm run manuals -- --limit 25 --download`. See [the manual search workflow](docs/manual-search.md) for selection, cached reports and document review. Discovery does not edit product records; verify each exact IAN and document scope before contributing its data.
 
-Run `npm run audit` to list missing data and spelling variants of model codes. IANs remain unique; model comparisons never combine different generations or copy facts between IANs. Model corrections preserve existing filenames and public URLs. Set an unknown model to null, and link only a product operating manual in manual (not warranty sheets, accessory-only instructions or data-access notices).
+Run `npm run audit` to list missing data and spelling variants of model codes. IANs remain unique; model comparisons never combine different generations or copy facts between IANs. After correcting a model, run `npm run filenames -- --write` to rename its file and preserve the previous public URL. Set an unknown model to null, and link only a product operating manual in manual (not warranty sheets, accessory-only instructions or data-access notices).
+
+Run `npm run filenames` to check the naming convention without changing files. The write command updates Markdown source links and records old page slugs in `content/product-redirects.json`, keyed by old slug with the IAN as its string value. Keep these entries when a model changes again: every old URL redirects directly to the current product page in the same language. Product translations and images stay keyed by IAN.
 
 ## Consistency checks
 

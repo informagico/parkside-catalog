@@ -77,41 +77,41 @@ The original full run and the historical-path retry are consolidated in `.cache/
 | --- | --- |
 | [546429](../content/products/pabs-20-li-i9-546429.md) | manual added; manufacturer declaration; specifications; description |
 | [546419](../content/products/pbssa-20-li-b1-546419.md) | manual added; manufacturer declaration; specifications; description |
-| [546416](../content/products/pkll-7-f6-plem-20-b5-20-546416.md) | manual edition; model; specifications; description; power |
+| [546416](../content/products/plem-20-b5-546416.md) | manual edition; model; specifications; description; power |
 | [545261](../content/products/pap-202-a1-plg-20-c1-545261.md) | manual added; specifications |
-| [545252](../content/products/ian-545252-545252.md) | specifications; description; power |
+| [545252](../content/products/gs-17545-545252.md) | specifications; description; power |
 | [540704](../content/products/pws-115-c3-540704.md) | manual added; manufacturer declaration; specifications; description |
 | [540257](../content/products/psbsa-20-li-c3-540257.md) | manual added; manufacturer declaration; specifications; description |
-| [540173](../content/products/ian-540173-540173.md) | manual added; model |
+| [540173](../content/products/hg14524-540173.md) | manual added; model |
 | [527933](../content/products/pat-4-d6-527933.md) | manual added |
 | [523333](../content/products/pmcdp-a1-523333.md) | manual added |
-| [523320](../content/products/ian-523320-523320.md) | manual added; model; specifications; description |
+| [523320](../content/products/wws-hkp15-f01-523320.md) | manual added; model; specifications; description |
 | [523313](../content/products/pmfw-250-a1-523313.md) | manual added; manufacturer declaration; specifications; description |
 | [523312](../content/products/psbm-500-e5-523312.md) | manual added; manufacturer declaration; specifications; description |
 | [523160](../content/products/peps-3-c2-523160.md) | manual added |
 | [523156](../content/products/phlgd-2000-e5-523156.md) | manual added |
-| [523143](../content/products/ian-523143-523143.md) | manual added; model; specifications; description; power |
+| [523143](../content/products/hg14911-523143.md) | manual added; model; specifications; description; power |
 | [523095](../content/products/plkla-20-li-a1-523095.md) | manual added; manufacturer declaration; specifications; description |
 | [523087](../content/products/pwsa-20-li-d4-523087.md) | manual added |
-| [521603](../content/products/ian-521603-521603.md) | manual added; model; specifications; description; power |
+| [521603](../content/products/hg13534-521603.md) | manual added; model; specifications; description; power |
 | [521214](../content/products/paukgb-a1-521214.md) | manual added |
 | [521199](../content/products/paal-6000-e1-521199.md) | manual added |
-| [521188](../content/products/ian-521188-521188.md) | manual added; power |
-| [520945](../content/products/pms-220-a1-pss-270-c3-pexs-300-c3-520945.md) | manual edition; model; specifications; description |
+| [521188](../content/products/wws-ut50-h01-521188.md) | manual added; power |
+| [520945](../content/products/pexs-300-c3-520945.md) | manual edition; model; specifications; description |
 | [518627](../content/products/pmfw-15-a1-518627.md) | manual added |
 | [518529](../content/products/ppeps-3-a1-518529.md) | manufacturer declaration |
-| [516655](../content/products/pzm-2-b4-psm-2-b4-516655.md) | model; specifications; description; power |
-| [516654](../content/products/pmfd-a3-pfmg-a3-516654.md) | model; specifications; description; power |
+| [516655](../content/products/pzm-2-516655.md) | model; specifications; description; power |
+| [516654](../content/products/pfmg-a3-516654.md) | model; specifications; description; power |
 | [516385](../content/products/prsk-6-b2-516385.md) | manual added |
 | [514445](../content/products/ppmfwa-12-b2-514445.md) | manual added; manufacturer declaration; specifications; description |
 | [513979](../content/products/pelsb-2600-a1-513979.md) | manual added |
-| [509736](../content/products/ian-509736-509736.md) | manual added; power |
-| [509622](../content/products/pkll-7-f7-plem-20-b6-509622.md) | manual edition; model; specifications; description; power |
+| [509736](../content/products/kt-17283-509736.md) | manual added; power |
+| [509622](../content/products/plem-20-b6-509622.md) | manual edition; model; specifications; description; power |
 | [505110](../content/products/paps-208-a1-505110.md) | manual added |
 | [505105](../content/products/paps-2012-a1-505105.md) | manual added |
 | [502239](../content/products/plgs-2012-a1-502239.md) | manual added |
 | [496304](../content/products/papp-208-a1-496304.md) | manufacturer declaration |
-| [492558](../content/products/ian-492558-492558.md) | manual added; manufacturer declaration; model; specifications; description |
+| [492558](../content/products/paps-208-a1-492558.md) | manual added; manufacturer declaration; model; specifications; description |
 | [492555](../content/products/paps-204-b1-492555.md) | manual added |
 | [492260](../content/products/pkllp-3360-a1-492260.md) | manual added |
 | [482911](../content/products/ppaghs-20-li-a1-482911.md) | manual added |

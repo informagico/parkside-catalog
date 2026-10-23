@@ -10,6 +10,7 @@
     "images": "node scripts/cache-images.mjs",
     "translation": "node scripts/translation.mjs",
     "audit": "node scripts/audit.mjs",
+    "filenames": "node scripts/filenames.mjs",
     "manuals": "node scripts/find-manuals.mjs"
   },
   "engines": {
