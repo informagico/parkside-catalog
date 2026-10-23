@@ -1,6 +1,9 @@
 {
   "title": "Chiave ad impulsi cordless",
   "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "b06b37305c2990c477d5b49c023f9dbeaac49d73392ceb4ae1f1117d360c7072",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 480897."
+  "_sourceHash": "83bf5391fa5643abfe4d64598127d8695119d3b4e08bb8ec8f396e4c7007dfdf",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 480897.",
+  "specifications": {
+    "Tool holder": "1/2 pollice, attacco quadro"
+  }
 }

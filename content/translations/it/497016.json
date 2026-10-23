@@ -1,6 +1,9 @@
 {
   "title": "Avvitatore a percussione ricaricabile",
   "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "7dd9c1e8e375e312d246d03ec3f8b9efa5e4051fb82014c4cc45555cad17acca",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 24; IAN 497016."
+  "_sourceHash": "248a344d02075a10297a17945edb1340b3e7c4f7d793b7ff14aec8e6f6f57560",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 24; IAN 497016.",
+  "specifications": {
+    "Tool holder": "1/2 pollice, attacco quadro"
+  }
 }

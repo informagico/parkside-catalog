@@ -1,6 +1,9 @@
 {
-  "title": "Avvitatore a impulsi 20 V",
-  "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "b9e486159cfa9b5be933c589f335fb3cda33c4a7643dd0f96a72b9faa5c05652",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 41; IAN 354238."
+  "title": "Avvitatore a impulsi 20 V con attacco quadro",
+  "body": "Avvitatore a impulsi a batteria con attacco quadro da mezzo pollice.",
+  "_sourceHash": "e9ba576ccaab3faec65433459e9b8c7afec6df8917747d6c4551c99c73b06a71",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 41; IAN 354238.",
+  "specifications": {
+    "Tool holder": "1/2 pollice, attacco quadro"
+  }
 }

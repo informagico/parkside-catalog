@@ -1,6 +1,9 @@
 {
-  "title": "Avvitatore a impatto cordless 20 V",
-  "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "ebaeb19587555f1ca8206fa5195a82c499a3c71642cf7d3784e122db7e408e67",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 37; IAN 391002."
+  "title": "Avvitatore a impulsi 20 V con attacco quadro",
+  "body": "Avvitatore a impulsi a batteria con attacco quadro da mezzo pollice e tre livelli di coppia.",
+  "_sourceHash": "f92993c4fcefbe0ca4fbe570fbb280d2177e24c5cab6400980ed2061a425ce6b",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 37; IAN 391002.",
+  "specifications": {
+    "Tool holder": "1/2 pollice, attacco quadro"
+  }
 }

@@ -60,3 +60,7 @@ Use Node.js 22. Run npm ci, npm run dev. Before submitting code changes, run npm
 ## Quality checks
 
 Run `npm run audit` to list missing data and spelling variants of model codes. IANs remain unique; model comparisons never combine different generations or copy facts between IANs. Model corrections preserve existing filenames and public URLs. Set an unknown model to null, and link only a product operating manual in manual (not warranty sheets, accessory-only instructions or data-access notices).
+
+## Consistency checks
+
+Run `npm run audit` alongside the build and tests. The audit checks high-confidence contradictions in IANs, numeric dimensions, power sources and attachment types. Keep tightening and breakaway torque separate, retain the original tool-specific scope of kit specifications, and verify square versus hex drives and SDS-Plus versus SDS-Max directly in the relevant IAN manual. A shared model name or photo does not establish accessory compatibility across IANs.

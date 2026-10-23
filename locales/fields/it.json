@@ -122,5 +122,11 @@
   "Luminous flux": "Flusso luminoso",
   "Fan diameter": "Diametro della ventola",
   "Engine idle speed": "Regime minimo del motore",
-  "Recommended torque": "Coppia consigliata"
+  "Recommended torque": "Coppia consigliata",
+  "Spindle thread": "Filettatura dell'alberino",
+  "Disc bore": "Foro del disco",
+  "Chuck mount": "Cono di attacco del mandrino",
+  "Breakaway torque": "Coppia massima di svitamento",
+  "Battery for rated performance": "Batterie per le prestazioni dichiarate",
+  "Reciprocating saw stroke length": "Corsa del seghetto a gattuccio"
 }

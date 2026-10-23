@@ -1,6 +1,9 @@
 {
   "title": "Avvitatore a impulsi 20 V",
   "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "91cb4d5cec41cf7148fbb194efb7d16516324664705554c3b71f7de256de42b7",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 364886."
+  "_sourceHash": "c70170c7f4f30f8eea4a42c0e16b185d49f400ea0c96d74414103d5549900f45",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 364886.",
+  "specifications": {
+    "Tool holder": "6.35 mm (1/4 pollice), attacco esagonale"
+  }
 }

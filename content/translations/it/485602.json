@@ -1,5 +1,8 @@
 {
-  "title": "Avvitatore ad impulsi cordless premium",
-  "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "ee11c918bd0417aa9cac01ac9e8230c2715f2d8cde9e92856aa89e2ec042982a"
+  "title": "Avvitatore a impulsi 20 V con attacco esagonale",
+  "body": "Avvitatore a impulsi a batteria con attacco esagonale da un quarto di pollice per inserti.",
+  "_sourceHash": "0adad8e37d86675e178cc2f768fb0a5bb70d73f687e30acc574d970878ba0a75",
+  "specifications": {
+    "Tool holder": "6.35 mm (1/4 pollice), attacco esagonale"
+  }
 }
