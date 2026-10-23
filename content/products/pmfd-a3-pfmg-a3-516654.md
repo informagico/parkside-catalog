@@ -1,13 +1,15 @@
 ---
-model: "PMFD A3 / PFMG A3"
+model: "PFMG A3"
 ian: "516654"
-title: "Multi-Purpose Detector or Moisture Meter"
+title: "Moisture meter"
 category: "Measuring & Detection"
-power: "Unverified"
+power: "Replaceable batteries"
 manufacturer: null
-specifications: {"Full IAN":"516654_2510"}
+specifications: {"Full IAN":"516654_2510","Resolution":"0.1%","Ingress protection":"IP20","Power supply":"2 LR03 (AAA) batteries, 3 V total","Temperature range":"0–40 °C (operation)"}
 manual: "https://media.sit-connect.com/public/articlemanual/968c794e-b5c2-480c-b59b-88dcdc40b727.pdf"
 image: {"url":"assets/products/516-2/516654.svg"}
+technical_source: "https://media.sit-connect.com/public/articlemanual/968c794e-b5c2-480c-b59b-88dcdc40b727.pdf#page=13"
+technical_evidence: {"Resolution":{"page":13},"Ingress protection":{"page":13},"Power supply":{"page":13},"Temperature range":{"page":13}}
 ---
 
-Multi-Purpose Detector or Moisture Meter.
+Moisture meter for wood and building materials, powered by two AAA batteries. Displays moisture readings with 0.1% resolution.

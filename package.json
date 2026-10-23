@@ -9,7 +9,8 @@
     "dev": "eleventy --serve",
     "images": "node scripts/cache-images.mjs",
     "translation": "node scripts/translation.mjs",
-    "audit": "node scripts/audit.mjs"
+    "audit": "node scripts/audit.mjs",
+    "manuals": "node scripts/find-manuals.mjs"
   },
   "engines": {
     "node": ">=22"

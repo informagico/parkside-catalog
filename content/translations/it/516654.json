@@ -1,5 +1,9 @@
 {
-  "title": "Rilevatore multifunzione o misuratore di umidità",
-  "body": "Rilevatore multifunzione o misuratore di umidità.",
-  "_sourceHash": "06be10e659598561ee3efcba8b52122f5552058642a430ea80e2a4908224b73e"
+  "title": "Misuratore di umidità",
+  "body": "Misuratore di umidità per legno e materiali da costruzione, alimentato da due pile AAA. Visualizza i valori di umidità con una risoluzione dello 0,1%.",
+  "_sourceHash": "79a78f5a99e6a00611918f824287456da03ba18dca420cf0a6af1d74d85f2447",
+  "specifications": {
+    "Power supply": "2 pile LR03 (AAA), 3 V totali",
+    "Temperature range": "0–40 °C (funzionamento)"
+  }
 }

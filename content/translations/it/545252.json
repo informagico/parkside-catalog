@@ -1,5 +1,8 @@
 {
-  "title": "Tubo da giardino flessibile 30 m",
-  "body": "Tubo da giardino flessibile 30 m.",
-  "_sourceHash": "46a4d50ae0e0a4265d9c7b558238b3e5ebb0d566b254999bb5e3636aa8f3fae4"
+  "title": "Set tubo da giardino flessibile, 30 m",
+  "body": "Tubo da giardino flessibile che si estende da 10 m quando è vuoto fino a 30 m quando è pieno. Include una pistola per irrigazione, raccordi per rubinetto e una borsa per riporlo.",
+  "_sourceHash": "cc3ab5eb6628d1bfe169b10788c8c9af9f38b799d790a7da4ba54888dbac84d8",
+  "specifications": {
+    "Length": "10 m da vuoto; fino a 30 m da pieno"
+  }
 }
