@@ -1,4 +1,5 @@
 ---
+# Use null if the model code is unknown; never use the IAN as a model.
 model: "MODEL A1"
 ian: "123456"
 title: "Descriptive tool name"

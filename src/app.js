@@ -1,33 +1,38 @@
 const $=s=>document.querySelector(s);
-const container=$('#cards');
-const original=[...container.querySelectorAll('.card')];
-const messages=JSON.parse($('#client-i18n').textContent);
-const locale=document.documentElement.lang;
+const container=$('#cards'),original=[...container.querySelectorAll('.card')];
+const messages=JSON.parse($('#client-i18n').textContent),locale=document.documentElement.lang;
 const message=(key,values={})=>messages[key].replace(/\{(\w+)\}/g,(_,name)=>String(values[name]));
 const controls={q:$('#search'),category:$('#category'),company:$('#company'),power:$('#power'),confirmed:$('#confirmed'),sort:$('#sort')};
-let limit=24,filtered=[];
-const params=new URLSearchParams(location.search);
-for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=params.get(k)==='1';else if(params.has(k))e.value=k==='sort'&&params.get(k)==='featured'?'model':params.get(k)}
+const params=new URLSearchParams(location.search),storageKey='parkside:catalog:'+locale;
+const pageSize=24;
+let limit=Math.max(pageSize,Math.min(original.length,Number(params.get('limit'))||pageSize)),filtered=[],timer;
+const list=params.get('view')==='list';container.classList.toggle('list',list);
+$('#view').setAttribute('aria-pressed',String(list));$('#view').setAttribute('aria-label',message(list?'gridView':'listView'));
+for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=params.get(k)==='1';else if(params.has(k))e.value=k==='sort'&&params.get(k)==='featured'?'model':params.get(k);}
+const normalize=s=>s.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase(locale);
+const searchText=new Map(original.map(c=>[c,normalize(c.dataset.search)]));
+function save(){try{sessionStorage.setItem(storageKey,JSON.stringify({url:location.href,scroll:scrollY}));}catch{}}
 function update(reset=true){
- if(reset)limit=24;
- const q=controls.q.value.trim().toLocaleLowerCase(locale);
- filtered=original.filter(c=>(!q||q.split(/\s+/).every(term=>c.dataset.search.includes(term)))&&['category','company','power'].every(k=>!controls[k].value||c.dataset[k]===controls[k].value)&&(!controls.confirmed.checked||c.dataset.confirmed==='true'));
- if(controls.sort.value==='model')filtered.sort((a,b)=>a.dataset.model.localeCompare(b.dataset.model));
- if(controls.sort.value==='company')filtered.sort((a,b)=>a.dataset.company.localeCompare(b.dataset.company)||a.dataset.model.localeCompare(b.dataset.model));
- original.forEach(c=>c.hidden=true);
- filtered.forEach((c,i)=>{container.append(c);c.hidden=i>=limit});
- $('#result-count').textContent=message(filtered.length===1?'resultOne':'resultMany',{count:filtered.length});
- $('#empty').hidden=filtered.length!==0;
- $('#more').hidden=filtered.length<=limit;
- $('#shown').textContent=filtered.length?message('shown',{shown:Math.min(filtered.length,limit),count:filtered.length}):'';
- const query=new URLSearchParams();for(const [k,e] of Object.entries(controls)){const v=k==='confirmed'?(e.checked?'1':''):e.value;if(v&&!(k==='sort'&&v==='model'))query.set(k,v)}
- history.replaceState(null,'',location.pathname+(query.size?'?'+query:'')+location.hash);
+ if(reset)limit=pageSize;
+ const terms=normalize(controls.q.value.trim()).split(/\s+/).filter(Boolean);
+ filtered=original.filter(c=>terms.every(t=>searchText.get(c).includes(t))&&['category','company','power'].every(k=>!controls[k].value||c.dataset[k]===controls[k].value)&&(!controls.confirmed.checked||c.dataset.confirmed==='true'));
+ const compare=(a,b)=>(controls.sort.value==='company'?a.dataset.company.localeCompare(b.dataset.company,locale):0)||a.dataset.model.localeCompare(b.dataset.model,locale,{numeric:true})||a.dataset.search.localeCompare(b.dataset.search,locale);
+ filtered.sort(compare);
+ const visible=filtered.slice(0,limit);visible.forEach(c=>c.hidden=false);container.replaceChildren(...visible);
+ $('#result-count').textContent=message(filtered.length===1?'resultOne':'resultMany',{count:filtered.length});$('#empty').hidden=filtered.length!==0;$('#more').hidden=filtered.length<=limit;$('#shown').textContent=filtered.length?message('shown',{shown:visible.length,count:filtered.length}):'';
+ const query=new URLSearchParams();for(const [k,e] of Object.entries(controls)){const v=k==='confirmed'?(e.checked?'1':''):e.value;if(v&&!(k==='sort'&&v==='model'))query.set(k,v);}
+ if(limit>pageSize)query.set('limit',String(limit));if(container.classList.contains('list'))query.set('view','list');
+ history.replaceState(history.state,'',location.pathname+(query.size?'?'+query:'')+location.hash);
  for(const link of document.querySelectorAll('[data-language-link]')){const target=new URL(link.href,location.href);target.search=location.search;target.hash=location.hash;link.href=target.href;}
 }
-for(const e of Object.values(controls))e.addEventListener(e.type==='search'?'input':'change',()=>update());
-function reset(){for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=false;else e.value=k==='sort'?'model':''}update()}
+for(const e of Object.values(controls))e.addEventListener(e.type==='search'?'input':'change',()=>{clearTimeout(timer);if(e.type==='search')timer=setTimeout(()=>update(),120);else update();});
+function reset(){clearTimeout(timer);for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=false;else e.value=k==='sort'?'model':'';}update();}
 $('#reset').addEventListener('click',reset);$('#empty-reset').addEventListener('click',reset);
-$('#more').addEventListener('click',()=>{limit+=24;update(false)});
-$('#view').addEventListener('click',()=>{const list=container.classList.toggle('list');$('#view').setAttribute('aria-pressed',list);$('#view').setAttribute('aria-label',message(list?'gridView':'listView'))});
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();controls.q.focus()}});
-update();
+$('#more').addEventListener('click',()=>{limit+=pageSize;update(false);});
+$('#view').addEventListener('click',()=>{const list=container.classList.toggle('list');$('#view').setAttribute('aria-pressed',String(list));$('#view').setAttribute('aria-label',message(list?'gridView':'listView'));update(false);});
+container.addEventListener('click',save);addEventListener('pagehide',save);
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();controls.q.focus();}});
+let saved;try{saved=JSON.parse(sessionStorage.getItem(storageKey)||'null');}catch{}
+const restore=params.get('restore')==='1'||performance.getEntriesByType('navigation')[0]?.type==='back_forward';
+update(false);
+if(restore&&saved){const u=new URL(saved.url,location.href);if(u.origin===location.origin&&u.pathname===location.pathname&&u.search===location.search){const restoreScroll=()=>requestAnimationFrame(()=>scrollTo({top:Number(saved.scroll)||0,behavior:'instant'}));if(document.readyState==='complete')restoreScroll();else addEventListener('load',restoreScroll,{once:true});}}

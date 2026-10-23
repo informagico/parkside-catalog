@@ -1,0 +1,2 @@
+const back=document.querySelector('a.back');
+if(back){try{const saved=JSON.parse(sessionStorage.getItem('parkside:catalog:'+document.documentElement.lang)||'null');if(saved){const target=new URL(saved.url,location.href),fallback=new URL(back.href);if(target.origin===location.origin&&target.pathname===fallback.pathname){target.searchParams.set('restore','1');target.hash='catalogue';back.href=target.href;}}}catch{}}

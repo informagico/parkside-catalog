@@ -4,6 +4,7 @@ import MarkdownIt from 'markdown-it';
 import {art} from './lib/product.mjs';
 import {loadProducts} from './lib/catalog.mjs';
 import {t,uiDictionary,languages} from './lib/i18n.mjs';
+import {sameModel,variantDifferences} from './lib/identity.mjs';
 const markdown=new MarkdownIt({html:false,linkify:false});
 export default function(eleventyConfig){
  eleventyConfig.addPassthroughCopy({'src':'assets'});
@@ -24,7 +25,13 @@ export default function(eleventyConfig){
  eleventyConfig.addFilter('clientMessages',lang=>Object.fromEntries(['resultOne','resultMany','shown','listView','gridView'].map(key=>[key,uiDictionary(lang)[key]])));
  eleventyConfig.addFilter('unique',values=>[...new Set(values)]);
  eleventyConfig.addFilter('keys',value=>Object.keys(value||{}));
- eleventyConfig.addFilter('sameModel',(products,model,slug)=>products.filter(p=>p.model===model&&p.slug!==slug));
+ eleventyConfig.addFilter('sameModel',(products,model,slug)=>sameModel(products,model).filter(p=>p.slug!==slug));
+ eleventyConfig.addFilter('modelVariants',(products,model)=>sameModel(products,model));
+ eleventyConfig.addFilter('variantDifferences',variantDifferences);
+ eleventyConfig.addFilter('correctionUrl',p=>{
+  const q=new URLSearchParams({template:'product-correction.yml',title:`Correction: IAN ${p.ian}`,ian:p.ian,model:p.model||''});
+  return JSON.parse(fs.readFileSync('config.json','utf8')).repository+'/issues/new?'+q;
+ });
  eleventyConfig.addFilter('pad',value=>String(value).padStart(3,'0'));
  eleventyConfig.addFilter('primaryLabel',p=>p.source==='https://www.owim.com/'?'companyWebsite':((p.manufacturer&&p.manufacturer_basis!=='owner_confirmation')||/\.pdf(?:[?#]|$)/.test(p.source))?'manual':'officialCatalog');
  eleventyConfig.addGlobalData('languages',languages);

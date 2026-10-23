@@ -12,7 +12,7 @@ One English Markdown file is enough. Translations are optional and may be added 
 
 ## Product fields
 
-The template and [JSON Schema](schemas/product.schema.json) document the fields. Required: model, ian, title, category, power, manufacturer (null is valid) and specifications (an empty object is valid). The manual, company, source and evidence fields are optional. Use strings for IANs and specification values. Product descriptions are normal Markdown after the frontmatter. Describe the tool, its intended use and documented features in concise, factual prose. Omit drafting history, contributor decisions, analysis notes and promises to verify missing data. Keep references and page numbers in evidence; this metadata is not displayed as product prose. Available PDF manuals are linked on product pages; collection-site citations and research notes are not displayed.
+The template and [JSON Schema](schemas/product.schema.json) document the fields. Required: model, ian, title, category, power, manufacturer (null is valid) and specifications (an empty object is valid). Use model: null when the model code is unknown; never put the IAN or a guessed code in model. Existing product filenames and URLs remain stable after model corrections. The manual, company, source and evidence fields are optional. Use strings for IANs and specification values. Product descriptions are normal Markdown after the frontmatter. Describe the tool, its intended use and documented features in concise, factual prose. Omit drafting history, contributor decisions, analysis notes and promises to verify missing data. Keep references and page numbers in evidence; this metadata is not displayed as product prose. Available PDF manuals are linked on product pages; collection-site citations and research notes are not displayed.
 
 Do not infer manufacturers from appearance or a spare parts catalog. Keep manufacturer null unless evidence explicitly supports it. If confirmed in a manufacturer document, give the relevant passage in evidence. The maintainer can explicitly record owner_confirmation provenance; keep this provenance in the metadata, separate from documentary evidence. Never carry manufacturer claims or specifications across IANs.
 
@@ -54,3 +54,7 @@ This preserves the translation and records the new fingerprint. Only run it afte
 ## Optional local preview
 
 Use Node.js 22. Run npm ci, npm run dev. Before submitting code changes, run npm run build and npm test. Run npm run images if you want remote photos bundled locally. The static website is generated in dist.
+
+## Quality checks
+
+Run `npm run audit` to list missing data and spelling variants of model codes. IANs remain unique; model comparisons never combine different generations or copy facts between IANs. Model corrections preserve existing filenames and public URLs. Set an unknown model to null, and link only a product operating manual in manual (not warranty sheets, accessory-only instructions or data-access notices).

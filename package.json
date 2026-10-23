@@ -8,7 +8,8 @@
     "test": "node --test",
     "dev": "eleventy --serve",
     "images": "node scripts/cache-images.mjs",
-    "translation": "node scripts/translation.mjs"
+    "translation": "node scripts/translation.mjs",
+    "audit": "node scripts/audit.mjs"
   },
   "engines": {
     "node": ">=22"

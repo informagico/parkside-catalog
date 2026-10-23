@@ -1,5 +1,5 @@
 ---
-model: "IAN 521182"
+model: null
 ian: "521182"
 title: "Combination spanner set, 25 pieces"
 category: "Drilling & Fastening"

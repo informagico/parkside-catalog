@@ -15,6 +15,7 @@
   <a class="brand" href="{{ (lang + '/index.html') | rel(page.outputPath) }}"><span class="brandmark">PA<span>↗</span></span><span>PARKSIDE ATLAS<span class="brand-sub">{{ 'brandSubtitle' | t(lang) }}</span></span></a>
   <nav aria-label="{{ 'navigation' | t(lang) }}">
     <a href="{{ (lang + '/index.html') | rel(page.outputPath) }}#catalogue">{{ 'catalog' | t(lang) }}</a>
+    <a class="contribute-nav" href="{{ (lang + '/contribute/index.html') | rel(page.outputPath) }}">{{ 'contribute' | t(lang) }}</a>
     <a class="method-nav" href="{{ (lang + '/method/index.html') | rel(page.outputPath) }}">{{ 'method' | t(lang) }}</a>
     <div class="language-switch" aria-label="{{ 'language' | t(lang) }}">{% for code in languages %}<a class="language-link{% if code == lang %} active{% endif %}" data-language-link="{{ code }}" href="{{ page.outputPath | localeTarget(code) | rel(page.outputPath) }}" lang="{{ code }}" hreflang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}>{{ code | upper }}</a>{% endfor %}</div>
     <a class="repo-link" href="{{ site.repository }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -25,4 +26,6 @@
 <script src="{{ 'assets/language.js' | rel(page.outputPath) }}" defer></script>
 <script src="{{ 'assets/photos.js' | rel(page.outputPath) }}" defer></script>
 {% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script>{% endif %}
+{% if pageType != 'catalog' %}<script src="{{ 'assets/return.js' | rel(page.outputPath) }}" defer></script>{% endif %}
+{% if pageType == 'contribute' %}<script src="{{ 'assets/contribute.js' | rel(page.outputPath) }}" defer></script>{% endif %}
 </body></html>

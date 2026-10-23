@@ -1,0 +1,32 @@
+name: Product correction
+description: Correct or complete a product record.
+title: "Correction: IAN "
+body:
+  - type: input
+    id: ian
+    attributes:
+      label: IAN
+      description: Include the full suffix when available.
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: State the current information and the correct value.
+    validations:
+      required: true
+  - type: input
+    id: document
+    attributes:
+      label: Supporting public document
+      description: A manual, declaration of conformity or official product page for this exact IAN.
+  - type: textarea
+    id: location
+    attributes:
+      label: Relevant page or passage
+      description: For manufacturer claims, identify the explicit manufacturer statement. A spare parts listing alone is insufficient.

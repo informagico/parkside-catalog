@@ -1,6 +1,6 @@
 {% macro media(p, lang, outputPath, loading='lazy') %}
 <div class="product-media{% if p.image %} has-photo{% endif %}">
-  {% if p.image %}<img class="product-photo" data-product-photo src="{% if p.image.local %}{{ p.image.local | rel(outputPath) }}{% else %}{{ p.image.url | escape }}{% endif %}" alt="{{ p.model | escape }} — {{ p.title | escape }}" loading="{{ loading }}" decoding="async" width="720" height="560">{% endif %}
+  {% if p.image %}<img class="product-photo" data-product-photo src="{% if p.image.local %}{{ p.image.local | rel(outputPath) }}{% else %}{{ p.image.url | escape }}{% endif %}" alt="{% if p.model %}{{ p.model | escape }} — {% endif %}{{ p.title | escape }}" loading="{{ loading }}" decoding="async" width="720" height="560">{% endif %}
   <div class="photo-fallback">{{ p.categoryKey | art | safe }}</div>
 </div>
 {% endmacro %}

@@ -31,6 +31,7 @@ jobs:
       - run: npm run images
       - run: npm run build
       - run: npm test
+      - run: npm run audit
       - uses: actions/upload-artifact@v4
         with:
           name: catalogo-statico

@@ -1,5 +1,6 @@
 import {loadProducts} from '../../lib/catalog.mjs';
 import {languages,localize,translate} from '../../lib/i18n.mjs';
+import {modelIndex} from '../../lib/identity.mjs';
 export default function(){
  const products=loadProducts();
  const localized=Object.fromEntries(languages.map(lang=>[lang,products.map(p=>localize(p,lang))]));
@@ -8,5 +9,5 @@ export default function(){
   power:[...new Set(products.map(p=>p.power))].sort().map(value=>({value,label:translate(value,lang)})),
   companies:[...new Set(products.map(p=>p.manufacturer).filter(Boolean))].sort().map(value=>({value,label:value}))
  }]));
- return {products,localized,options,entries:languages.flatMap(lang=>localized[lang].map(product=>({lang,product}))),count:products.length,models:new Set(products.filter(p=>!p.model.startsWith('IAN ')).map(p=>p.model)).size,verified:products.filter(p=>p.manufacturer).length,photoCount:products.filter(p=>p.image).length};
+ return {products,localized,options,entries:languages.flatMap(lang=>localized[lang].map(product=>({lang,product}))),count:products.length,models:modelIndex(products).size,verified:products.filter(p=>p.manufacturer).length,photoCount:products.filter(p=>p.image).length};
 }
