@@ -26,3 +26,8 @@ body{font-size:16px}nav{font-size:14px}.eyebrow{font-size:11px}.hero-copy>p{font
   footer{grid-template-columns:minmax(0,1fr)}
   footer>a:last-child{grid-column:1;grid-row:4}
 }
+
+/* The introduction has no featured-product column. */
+.hero{grid-template-columns:minmax(0,1fr)}
+.hero-copy{max-width:820px}
+.hero-copy>p{max-width:620px}

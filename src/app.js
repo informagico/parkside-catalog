@@ -7,7 +7,7 @@ const message=(key,values={})=>messages[key].replace(/\{(\w+)\}/g,(_,name)=>Stri
 const controls={q:$('#search'),category:$('#category'),company:$('#company'),power:$('#power'),confirmed:$('#confirmed'),sort:$('#sort')};
 let limit=24,filtered=[];
 const params=new URLSearchParams(location.search);
-for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=params.get(k)==='1';else if(params.has(k))e.value=params.get(k)}
+for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=params.get(k)==='1';else if(params.has(k))e.value=k==='sort'&&params.get(k)==='featured'?'model':params.get(k)}
 function update(reset=true){
  if(reset)limit=24;
  const q=controls.q.value.trim().toLocaleLowerCase(locale);
@@ -20,12 +20,12 @@ function update(reset=true){
  $('#empty').hidden=filtered.length!==0;
  $('#more').hidden=filtered.length<=limit;
  $('#shown').textContent=filtered.length?message('shown',{shown:Math.min(filtered.length,limit),count:filtered.length}):'';
- const query=new URLSearchParams();for(const [k,e] of Object.entries(controls)){const v=k==='confirmed'?(e.checked?'1':''):e.value;if(v&&!(k==='sort'&&v==='featured'))query.set(k,v)}
+ const query=new URLSearchParams();for(const [k,e] of Object.entries(controls)){const v=k==='confirmed'?(e.checked?'1':''):e.value;if(v&&!(k==='sort'&&v==='model'))query.set(k,v)}
  history.replaceState(null,'',location.pathname+(query.size?'?'+query:'')+location.hash);
  for(const link of document.querySelectorAll('[data-language-link]')){const target=new URL(link.href,location.href);target.search=location.search;target.hash=location.hash;link.href=target.href;}
 }
 for(const e of Object.values(controls))e.addEventListener(e.type==='search'?'input':'change',()=>update());
-function reset(){for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=false;else e.value=k==='sort'?'featured':''}update()}
+function reset(){for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=false;else e.value=k==='sort'?'model':''}update()}
 $('#reset').addEventListener('click',reset);$('#empty-reset').addEventListener('click',reset);
 $('#more').addEventListener('click',()=>{limit+=24;update(false)});
 $('#view').addEventListener('click',()=>{const list=container.classList.toggle('list');$('#view').setAttribute('aria-pressed',list);$('#view').setAttribute('aria-label',message(list?'gridView':'listView'))});
