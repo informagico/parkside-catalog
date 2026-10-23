@@ -47,7 +47,7 @@ test('Both static catalogs have identical identities and translated product page
  assert.deepEqual(en.map(p=>p.model+'|'+p.ian),it.map(p=>p.model+'|'+p.ian));
  for(const lang of languages){
   const home=fs.readFileSync(`dist/${lang}/index.html`,'utf8');
-  assert(home.includes(`<html lang="${lang}">`));
+  assert(home.includes(`<html lang="${lang}"`));
   assert(home.includes('hreflang="it"'));assert(home.includes('hreflang="en"'));
   const page=fs.readFileSync(`dist/${lang}/products/pwdl-40-a1-544816/index.html`,'utf8');
   const other=lang==='it'?'en':'it';

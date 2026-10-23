@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="{{ lang }}"{% if pageType == 'catalog' %} class="catalog-document"{% endif %}>
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="{{ 'description' | t(lang) | escape }}">
@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="{{ 'assets/style.css' | rel(page.outputPath) }}">
   <link rel="stylesheet" href="{{ 'assets/locales.css' | rel(page.outputPath) }}">
   <link rel="stylesheet" href="{{ 'assets/refinements.css' | rel(page.outputPath) }}">
+  {% if pageType == 'catalog' %}<link rel="stylesheet" href="{{ 'assets/catalog.css' | rel(page.outputPath) }}">{% endif %}
 </head>
-<body>
+<body{% if pageType == 'catalog' %} class="catalog-page"{% endif %}>
 <a class="skip" href="#main">{{ 'skip' | t(lang) }}</a>
 <header>
   <a class="brand" href="{{ (lang + '/index.html') | rel(page.outputPath) }}"><span class="brandmark">PA<span>↗</span></span><span>PARKSIDE ATLAS<span class="brand-sub">{{ 'brandSubtitle' | t(lang) }}</span></span></a>
@@ -22,7 +23,7 @@
   </nav>
 </header>
 <main id="main">{{ content | safe }}</main>
-<footer><a class="footer-brand" href="{{ (lang + '/index.html') | rel(page.outputPath) }}">PARKSIDE ATLAS ↗</a><p>{{ 'footer' | t(lang) }}</p><small>{{ 'trademark' | t(lang) }}<br>{{ 'illustrations' | t(lang) }} {{ 'lastCollection' | t(lang) }}</small><a href="{{ (lang + '/method/index.html') | rel(page.outputPath) }}">{{ 'sourcesCriteria' | t(lang) }} ↗</a></footer>
+{% if pageType != 'catalog' %}{% include 'components/footer.njk' %}{% endif %}
 <script src="{{ 'assets/language.js' | rel(page.outputPath) }}" defer></script>
 <script src="{{ 'assets/photos.js' | rel(page.outputPath) }}" defer></script>
 {% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script>{% endif %}

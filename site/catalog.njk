@@ -10,13 +10,17 @@ permalink: "{{ lang }}/index.html"
 {% from 'components/media.njk' import media %}
 {% set products = catalog.localized[lang] %}
 {% set options = catalog.options[lang] %}
+<div class="home-intro">
 <section class="hero">
  <div class="hero-copy"><div class="eyebrow"><i></i>{{ 'eyebrow' | t(lang) }}</div><h1>{{ 'heroTitle' | t(lang) }}<br><em>{{ 'heroAccent' | t(lang) }}</em></h1><p>{{ 'heroText' | t(lang) }}</p><a class="primary" href="#catalogue">{{ 'explore' | t(lang) }} ↓</a><div class="hero-numbers"><div><b>{{ catalog.count }}</b><span>{{ 'records' | t(lang) }}</span></div><div><b>{{ catalog.models }}</b><span>{{ 'models' | t(lang) }}</span></div><div><b>{{ catalog.verified }}</b><span>{{ 'documented' | t(lang) }}</span></div></div></div>
 </section>
 <div class="manifesto"><span>{{ 'traceability' | t(lang) }}</span><p>{{ 'manifesto' | t(lang) }}</p><a href="{{ (lang + '/method/index.html') | rel(page.outputPath) }}#ian">{{ 'ianFindTitle' | t(lang) }} ↗</a></div>
-<section id="catalogue" class="catalog">
- <div class="section-heading"><div><span class="eyebrow">{{ 'openArchive' | t(lang) }}</span><h2>{{ 'catalogHeading' | t(lang) }}</h2></div><a href="{{ (lang + '/data/catalog.json') | rel(page.outputPath) }}" download>{{ 'export' | t(lang) }} ↓</a></div>
+</div>
+<section id="catalogue" class="catalog" aria-labelledby="catalog-heading">
+ <div class="catalog-controls">
+ <div class="section-heading"><div><span class="eyebrow">{{ 'openArchive' | t(lang) }}</span><h2 id="catalog-heading">{{ 'catalogHeading' | t(lang) }}</h2></div><a href="{{ (lang + '/data/catalog.json') | rel(page.outputPath) }}" download>{{ 'export' | t(lang) }} ↓</a></div>
  <div class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="{{ 'search' | t(lang) }}" placeholder="{{ 'search' | t(lang) }}"><kbd>/</kbd></div>
+ </div>
  <div class="catalog-layout">
   <aside class="filters" aria-label="{{ 'filters' | t(lang) }}">
    <div class="filter-heading">{{ 'filters' | t(lang) }}<button id="reset" type="button">{{ 'reset' | t(lang) }}</button></div>
@@ -28,6 +32,7 @@ permalink: "{{ lang }}/index.html"
   </aside>
   <div class="results">
    <div class="results-toolbar"><span id="result-count" aria-live="polite">{{ 'resultMany' | t(lang, {count: catalog.count}) }}</span><label class="sort-label">{{ 'sort' | t(lang) }}<select id="sort" aria-label="{{ 'sort' | t(lang) }}"><option value="model">{{ 'modelSort' | t(lang) }}</option><option value="company">{{ 'companySort' | t(lang) }}</option></select></label><button class="view-toggle" id="view" aria-label="{{ 'listView' | t(lang) }}" aria-pressed="false">☷</button></div>
+   <div id="catalog-results" class="results-scroll" tabindex="0" role="region" aria-labelledby="catalog-heading">
    <div id="cards" class="cards">
     {% for p in products %}
     <article class="card" data-model="{{ (p.model or p.title) | escape }}" data-search="{{ ((p.model or '') + ' ' + p.ian + ' ' + (p.searchTitles | join(' ')) + ' ' + (p.manufacturer or '')) | lower | escape }}" data-category="{{ p.categoryKey | escape }}" data-company="{{ p.manufacturer | default('',true) | escape }}" data-power="{{ p.powerKey | escape }}" data-confirmed="{% if p.manufacturer %}true{% else %}false{% endif %}">
@@ -36,6 +41,8 @@ permalink: "{{ lang }}/index.html"
     {% endfor %}
    </div>
    <div id="empty" class="empty" hidden><h3>{{ 'emptyTitle' | t(lang) }}</h3><p>{{ 'emptyText' | t(lang) }}</p><button id="empty-reset">{{ 'resetFilters' | t(lang) }}</button></div><div class="more-wrap"><button id="more" class="secondary" hidden>{{ 'more' | t(lang) }} ↓</button><p id="shown"></p></div>
+   {% include 'components/footer.njk' %}
+   </div>
   </div>
  </div>
 </section>
