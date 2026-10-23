@@ -125,5 +125,7 @@
   "anyMissing": "Any missing information",
   "openProduct": "View product",
   "contributionGuide": "Contribution guide",
-  "product": "Product"
+  "product": "Product",
+  "currentVariant": "Current product",
+  "variantScrollHint": "Scroll to compare all details"
 }

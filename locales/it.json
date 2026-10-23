@@ -125,5 +125,7 @@
   "anyMissing": "Qualsiasi dato mancante",
   "openProduct": "Apri scheda",
   "contributionGuide": "Guida ai contributi",
-  "product": "Prodotto"
+  "product": "Prodotto",
+  "currentVariant": "Scheda attuale",
+  "variantScrollHint": "Scorri per confrontare tutti i dati"
 }
