@@ -25,8 +25,8 @@ export default function(eleventyConfig){
  eleventyConfig.addFilter('clientMessages',lang=>Object.fromEntries(['resultOne','resultMany','shown','listView','gridView'].map(key=>[key,uiDictionary(lang)[key]])));
  eleventyConfig.addFilter('unique',values=>[...new Set(values)]);
  eleventyConfig.addFilter('keys',value=>Object.keys(value||{}));
- eleventyConfig.addFilter('sameModel',(products,model,slug)=>sameModel(products,model).filter(p=>p.slug!==slug));
- eleventyConfig.addFilter('modelVariants',(products,model)=>sameModel(products,model));
+ eleventyConfig.addFilter('sameModel',(products,model,slug,category)=>sameModel(products,model,category).filter(p=>p.slug!==slug));
+ eleventyConfig.addFilter('modelVariants',(products,model,category)=>sameModel(products,model,category));
  eleventyConfig.addFilter('variantDifferences',variantDifferences);
  eleventyConfig.addFilter('correctionUrl',p=>{
   const q=new URLSearchParams({template:'product-correction.yml',title:`Correction: IAN ${p.ian}`,ian:p.ian,model:p.model||''});

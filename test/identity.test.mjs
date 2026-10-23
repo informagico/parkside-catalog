@@ -13,3 +13,9 @@ test('Records support an unknown model but reject an IAN disguised as a model',(
  const p={model:null,ian:'123456',title:'Tool',category:'Workshop Equipment',power:'Manual',manufacturer:null,specifications:{}};
  assert.equal(validate(p).model,null);assert.throws(()=>validate({...p,model:'IAN 123456'}));
 });
+test('Reused model codes in different product functions remain separate',()=>{
+ const rows=[{ian:'361688',model:'PLSA 20-Li A1',category:'Welding & Soldering'},{ian:'517555',model:'PLSA 20-Li A1',category:'Workshop Equipment'}];
+ assert.equal(modelIndex(rows).size,2);
+ assert.deepEqual(sameModel(rows,'PLSA 20-Li A1','Welding & Soldering').map(p=>p.ian),['361688']);
+ assert.deepEqual(sameModel(rows,'PLSA 20-Li A1','Workshop Equipment').map(p=>p.ian),['517555']);
+});

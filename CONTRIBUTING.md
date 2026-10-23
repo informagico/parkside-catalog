@@ -16,6 +16,8 @@ The template and [JSON Schema](schemas/product.schema.json) document the fields.
 
 Do not infer manufacturers from appearance or a spare parts catalog. Keep manufacturer null unless evidence explicitly supports it. If confirmed in a manufacturer document, give the relevant passage in evidence. The maintainer can explicitly record owner_confirmation provenance; keep this provenance in the metadata, separate from documentary evidence. Never carry manufacturer claims or specifications across IANs.
 
+Check the scope of the manual before adding data: a supplied charger's input power is not the cordless tool's power, and a component manual does not establish the identity of a whole kit. Record technical page references in optional technical_source and technical_evidence metadata. Model codes can be reused for unrelated products; comparisons group the same normalized model code within its functional category.
+
 ### Photos in the same Markdown
 
 Images shared privately with the assistant in chat must never be uploaded to this repository, embedded on the website or published as evidence/reference files. Use official public product imagery instead.
