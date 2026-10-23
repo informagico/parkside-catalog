@@ -11,3 +11,5 @@
 - Never include credentials in source, content, builds or logs. The user approved a public repository and a public GitHub Pages site. Successful pushes to main publish automatically; pull requests must never deploy. Preserve this approved scope.
 - Run npm run build and npm test after content or generator changes. Use Eleventy, Nunjucks and standard YAML/Markdown parsing; keep data, translations, templates and styles separate.
 - Keep the contribution guide and PR checklist aligned. New design, naming and taxonomy decisions require the user's approval before applying.
+
+- NEVER upload, publish, embed, attach or cite photographs supplied by the user in chat, including as evidence or reference files. Inspect them privately only to transcribe facts. Use externally sourced official product photos for public assets. This applies to repository files, history, website output and source links.

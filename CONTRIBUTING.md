@@ -18,6 +18,8 @@ Do not infer manufacturers from appearance or a spare parts catalog. Keep manufa
 
 ### Photos in the same Markdown
 
+Images shared privately with the assistant in chat must never be uploaded to this repository, embedded on the website or published as evidence/reference files. Use official public product imagery instead.
+
 Use image.url, image.source and image.credit in the product frontmatter. The URL can be an HTTPS official photo or a file included in the PR, for example assets/products/544816.jpg. Local filenames may contain letters, numbers, hyphens and underscores; supported formats are JPG, JPEG, PNG and WebP.
 
 Keep the source page and publisher/owner credit. Confirm that the photo shows the exact model and IAN, and that reuse is permitted. Upload local files with **Add file → Upload files**, on the same branch as the product change. Do not paste a GitHub attachment URL for an image you intend to include as a repository asset.
