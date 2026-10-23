@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "a3cbee45b1a45498c76a7fdf3b7e44cfd966fe6f83790b5eeb45347704b8bce3",
+  "_sourceHash": "fc45567532e384d7cc7c83e81e14f0940860e25ef6ceaca679690e2bd75b9071",
   "title": "Aspiratore solidi e liquidi",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
+  "evidence": "Catalogo ricambi ufficiale Grizzly Tools: PNTS 1500 B3, IAN 275083."
 }

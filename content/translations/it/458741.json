@@ -1,8 +1,8 @@
 {
-  "_sourceHash": "e8011a5a71907943fc54792a727292a22928aae51c02d7dba98f0febb863e0a3",
+  "_sourceHash": "0890f0e2d0476bd1550a54825feadeb2f66479895c656561b3d73f260550340e",
   "title": "Aspiratore solidi e liquidi",
-  "body": "Aspiratore solidi e liquidi. Il manuale di questo IAN identifica Grizzly Tools GmbH & Co. KG come produttore dichiarato. La fabbrica OEM non è identificata.",
-  "evidence": "Manuale ufficiale Lidl, IAN completo 458741_2401: dichiarazione UE di conformità a pagina stampata DE 99, con Grizzly Tools GmbH & Co. KG nel ruolo di produttore. Dati tecnici a DE 85. La conferma riguarda questo IAN e non viene estesa agli altri IAN del PWD 25 C4.",
+  "body": "Aspiratore per solidi e liquidi con potenza assorbita di 1400 W e cavo di alimentazione da 4 m. Costruzione a doppio isolamento e grado di protezione IPX4.",
+  "evidence": "Manuale ufficiale Lidl, IAN 458741_2401: dati tecnici a pagina DE 85; dichiarazione UE di conformità a pagina DE 99.",
   "specifications": {
     "Electrical protection class": "II, doppio isolamento"
   }

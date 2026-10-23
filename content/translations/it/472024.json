@@ -1,8 +1,8 @@
 {
-  "_sourceHash": "9fbf6e71ae69dad932f9fe344a373f5635669fd2fced0ccd4f6f263a76eb8afa",
+  "_sourceHash": "37aad3d9a3333b13f7b2c7edf172bf72eb425716970307333fff3ab921933660",
   "title": "Saldatrice inverter a filo animato",
-  "body": "Saldatrice inverter a filo animato autoprotetto. Il documento identifica C. M. C. GmbH Holding come dichiarante della conformità e fornitore di garanzia e assistenza.\n\nLa scheda distingue questi ruoli dall'identificazione del produttore fisico, che rimane non verificata.",
-  "evidence": "Manuale ufficiale Lidl, IAN completo 472024_2407: C. M. C. GmbH Holding firma la dichiarazione di conformità a pagine GB 24–25 e fornisce garanzia e assistenza a GB 25–27. Dati tecnici a GB 9. Il ruolo è mantenuto come documentato; non viene attribuita una fabbrica OEM.",
+  "body": "Saldatrice inverter a filo animato autoprotetto, con corrente di saldatura regolabile da 20 a 120 A. Non richiede una fornitura esterna di gas di protezione.",
+  "evidence": "Manuale ufficiale Lidl, IAN 472024_2407: dati tecnici a pagina GB 9; dichiarazione UE di conformità alle pagine GB 24–25; garanzia e assistenza alle pagine GB 25–27.",
   "specifications": {
     "Process": "Filo animato autoprotetto, senza gas esterno"
   }

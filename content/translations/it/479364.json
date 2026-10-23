@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "172385b9365df6bab6dbc8f6077ca689a5131c98945d10ef7f380f83c599b300",
+  "_sourceHash": "f2ac051cf1196ae4817af5dd69337bb1f147a5fc0c225ccb985fa5258cb69f8d",
   "title": "Avvitatore ad impulsi a batteria 20 v",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Avvitatore a impulsi con alimentazione a batteria da 20 V.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PDSSA 20-Li B2, IAN 479364."
 }

@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "cd544305f089b88db34319bb0e6b247e207313e3f1b6b2f60593611c5eddd3a0",
+  "_sourceHash": "0c050c7ce09aa85a8c79949d2b1ffc43ba4da3f082d753bd0c5f0dc7180dd95f",
   "title": "Cricchetto a batteria 20v",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Cricchetto a batteria da 20 V per serrare e allentare elementi di fissaggio.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PARP 20-Li B2, IAN 516377."
 }

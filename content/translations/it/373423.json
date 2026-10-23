@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "a3cbee45b1a45498c76a7fdf3b7e44cfd966fe6f83790b5eeb45347704b8bce3",
+  "_sourceHash": "dbb6f6003776fd2bf3a900eddc6c20ad3b39c441601715b5d41a2d7a04b69e8c",
   "title": "Aspiratore solidi e liquidi",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Aspiratore per solidi e liquidi con alimentazione a batteria da 20 V.",
+  "evidence": "Catalogo ricambi ufficiale Grizzly Tools: PWDA 20-Li A2, IAN 373423."
 }

@@ -12,9 +12,9 @@ One English Markdown file is enough. Translations are optional and may be added 
 
 ## Product fields
 
-The template and [JSON Schema](schemas/product.schema.json) document the fields. Required: model, ian, title, category, power, company, manufacturer (null is valid), source, evidence and specifications (an empty object is valid). Use strings for IANs and specification values. Product descriptions are normal Markdown after the frontmatter.
+The template and [JSON Schema](schemas/product.schema.json) document the fields. Required: model, ian, title, category, power, company, manufacturer (null is valid), source, evidence and specifications (an empty object is valid). Use strings for IANs and specification values. Product descriptions are normal Markdown after the frontmatter. Describe the tool, its intended use and documented features in concise, factual prose. Omit drafting history, contributor decisions, analysis notes and promises to verify missing data. Keep references and page numbers in evidence; this metadata is not displayed as product prose. Source links remain available on each product page.
 
-Do not infer manufacturers from appearance or a spare parts catalog. Keep manufacturer null unless evidence explicitly supports it. If confirmed in a manufacturer document, give the relevant passage in evidence. The maintainer can explicitly record owner_confirmation provenance; it is displayed separately from documentary evidence. Never carry manufacturer claims or specifications across IANs.
+Do not infer manufacturers from appearance or a spare parts catalog. Keep manufacturer null unless evidence explicitly supports it. If confirmed in a manufacturer document, give the relevant passage in evidence. The maintainer can explicitly record owner_confirmation provenance; keep this provenance in the metadata, separate from documentary evidence. Never carry manufacturer claims or specifications across IANs.
 
 ### Photos in the same Markdown
 

@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "1566ee32c3cad6c8e2dba0c7591b10c8c33c8b4c4e30a1d073a73b0c723a7394",
+  "_sourceHash": "ecbabcfc517db6df9aacc40065845c2b7f6cdf97ef5304bdf1b854738019ac19",
   "title": "Avvitatore ad impulsi a batteria 12v",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Avvitatore a impulsi con alimentazione a batteria da 12 V.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PDSSAP 12 A1, IAN 480898."
 }

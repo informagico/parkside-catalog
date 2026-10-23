@@ -9,7 +9,7 @@ company: "Company named in the source"
 # Keep null unless the source explicitly names the manufacturer.
 manufacturer: null
 source: "https://example.com/primary-source"
-evidence: "Explain exactly what this source confirms for this model and IAN."
+evidence: "Source document title and relevant page numbers for this model and IAN."
 specifications: {}
 # Optional: delete the image block to use the category icon.
 image:
@@ -18,6 +18,4 @@ image:
   credit: "Photo publisher or owner"
 ---
 
-Describe the product in English. Include only facts supported by the source.
-
-Replace all example values before opening a PR. Translations are optional and can be added by the maintainer later.
+Write a concise English description of the tool, its use and documented features. Keep source notes in the evidence field above.

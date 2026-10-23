@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "fe4ccf80f25bb9d79df67fd7e49216543cdfc6b1d1f6ecdc3b74ad3b948aa610",
+  "_sourceHash": "b6156dbd24d5a626de705317e6100a3cbb8e0c7bbc457e8907cfa826306214d2",
   "title": "Soffiatore per foglie a benzina",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Soffiatore a benzina per la raccolta delle foglie.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PBLG 52 A1, IAN 479065."
 }

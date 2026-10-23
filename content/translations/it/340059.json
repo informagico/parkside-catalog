@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "a3cbee45b1a45498c76a7fdf3b7e44cfd966fe6f83790b5eeb45347704b8bce3",
+  "_sourceHash": "78a2b8abb5c70f29b3b201178a8f0edfe6a53b29edb58c1df1a4d0aaf6a959ac",
   "title": "Aspiratore solidi e liquidi",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
+  "evidence": "Catalogo ricambi ufficiale Grizzly Tools: PWD 30 A1, IAN 340059."
 }

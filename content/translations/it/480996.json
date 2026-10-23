@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "cfe229ffd50556739f5e99ae7321a33dfea6d623775d2e6242f2d4707f7bd89a",
+  "_sourceHash": "6102466ff96228bfc8eb2dbd470e2e44009e65532e1c384a36dfddfee82610ef",
   "title": "Potatore ricaricabile 20 v",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Potatore a batteria da 20 V.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PAHE 20-Li E5, IAN 480996."
 }

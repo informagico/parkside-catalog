@@ -1,10 +1,10 @@
 {
   "title": "Set di chiavi combinate, 25 pezzi",
-  "evidence": "La pagina ufficiale Lidl conferma un set di 25 chiavi combinate in acciaio al cromo vanadio, teste lucidate e le misure elencate da 6 a 32 mm. Lo IAN completo 521182_2601 e il collegamento a OWIM sono stati forniti dal curatore; la pagina Lidl non conferma direttamente quello IAN o un produttore. Il codice modello separato resta non identificato.",
-  "body": "Set di 25 chiavi combinate in un supporto verde. Lidl documenta acciaio al cromo vanadio, teste lucidate e misure da 6 a 28 mm, poi 30 e 32 mm.\n\nLa scheda usa lo IAN come identificativo visualizzato perché il codice modello separato non è ancora noto. Lo IAN completo 521182_2601 è stato fornito dal curatore del catalogo. L’immagine proviene dalla pagina ufficiale Lidl.",
+  "evidence": "Catalogo prodotti Lidl: set di 25 chiavi combinate. Etichetta del prodotto: IAN 521182_2601, OWIM GmbH & Co. KG.",
+  "body": "Set di 25 chiavi combinate in un supporto verde. Realizzate in acciaio al cromo vanadio con teste lucidate. Misure incluse: da 6 a 28 mm, 30 mm e 32 mm.",
   "specifications": {
     "Material": "Acciaio al cromo vanadio",
     "Finish": "Teste lucidate"
   },
-  "_sourceHash": "dd7e8f759a04fdf5ffaea9915ea682b429014fae82d449b5f50220dd91858a0b"
+  "_sourceHash": "cc7da1ef8d7e2aecb2f9e291b3d8aa039311f185393ba5059b5727c73a41830b"
 }

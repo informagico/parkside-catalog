@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "4eb4efc8c0c3419498543b8e62f378d53d9d9df81ca3413582c58b3f7a7eead9",
+  "_sourceHash": "d0ce9946eef34da75ac0ada16e15f78f23d1b8c6676fef06233058854d0e510e",
   "title": "Pompa per cisterna ricaricabile 20 v",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Pompa a batteria da 20 V per il prelievo dell’acqua da un serbatoio di raccolta piovana.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PRPA 20-Li B3, IAN 494223."
 }

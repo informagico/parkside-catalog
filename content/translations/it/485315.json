@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "f2f51176faf892976bd136c342f67e6a97dc94d01b065b6381250ce899fd4012",
+  "_sourceHash": "87d9c8331cfbdaf33e112d2549db1adfa8aed427b69f2cb156c1d9d866d0096f",
   "title": "Roditrice",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Roditrice per il taglio della lamiera.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PMK 550 C2, IAN 485315."
 }

@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "a3cbee45b1a45498c76a7fdf3b7e44cfd966fe6f83790b5eeb45347704b8bce3",
+  "_sourceHash": "11d25e1eb564b99ef1a73f4ebeae1f5b635dffbede326a6937727181f57395a9",
   "title": "Aspiratore solidi e liquidi",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Aspiratore per solidi e liquidi con alimentazione a batteria da 20 V.",
+  "evidence": "Catalogo ricambi ufficiale Grizzly Tools: PNTSA 20-Li A1, IAN 310656."
 }

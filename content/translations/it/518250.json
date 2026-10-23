@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "d957a323dc8c35e2d2dc69316163804ce5ea6bb3e218f6eb6dbc8557d360d0c1",
+  "_sourceHash": "3e04c17b73fbd65fa4fd1ff1833cdfd2ab4d68cc32beca5dda33f9f55e230b1b",
   "title": "Potatore telescopico senza fili 20v",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Potatore telescopico con alimentazione a batteria da 20 V.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PATA 20-Li A1, IAN 518250."
 }

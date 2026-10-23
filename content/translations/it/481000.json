@@ -1,6 +1,6 @@
 {
-  "_sourceHash": "5cae5367b81eb8bb0a024abab7628a751a93d679ede925dc1d518e67ef7421c9",
+  "_sourceHash": "5c863b7d4ed346e8edbe049ce000fcd20cf16f8c52c63c8cadf7cfbb6d8c8c82",
   "title": "Soffiatore a turbina a batteria 40v",
-  "body": "Scheda iniziale basata su una fonte primaria. Specifiche tecniche e produttore da integrare dopo la verifica del manuale relativo a questo IAN.",
-  "evidence": "Presenza del modello e del relativo IAN nel catalogo ufficiale. Questa fonte conferma il rapporto di catalogo/ricambi, non il produttore legale né la fabbrica OEM."
+  "body": "Soffiatore a turbina per foglie con alimentazione a batteria da 40 V.",
+  "evidence": "Catalogo ricambi ufficiale Kompernaß: PPTLBA 40-Li C3, IAN 481000."
 }

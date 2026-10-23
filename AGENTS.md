@@ -13,3 +13,5 @@
 - Keep the contribution guide and PR checklist aligned. New design, naming and taxonomy decisions require the user's approval before applying.
 
 - NEVER upload, publish, embed, attach or cite photographs supplied by the user in chat, including as evidence or reference files. Inspect them privately only to transcribe facts. Use externally sourced official product photos for public assets. This applies to repository files, history, website output and source links.
+
+- Product descriptions must be concise, factual English prose about the tool and its documented features. Do not include drafting history, maintainer decisions, AI analysis, verification promises, or explanations of absent data. Keep source references in metadata and the source links; do not render evidence notes as product descriptions. Use a short unknown-manufacturer label where needed. Review corresponding translations whenever prose changes.
