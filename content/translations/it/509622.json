@@ -1,5 +1,10 @@
 {
-  "title": "Misuratore laser",
-  "body": "Misuratore laser.",
-  "_sourceHash": "d58cd9ca8347d86d8996077b205e25019a455c94687d1523dac832aa43b3662b"
+  "title": "Distanziometro laser, 20 m",
+  "body": "Distanziometro laser per ambienti interni, con portata fino a 20 m e risoluzione del display di 1 mm. Visualizza la misura corrente e quelle precedenti.",
+  "_sourceHash": "acb399d0a38acf622402d883a1b6e97c65f13bca78e98cc863a8880fde04c4dd",
+  "specifications": {
+    "Measuring range": "0,075–20 m (riferimento superiore); 0,175–20 m (riferimento inferiore)",
+    "Weight": "62,5 g (senza pile)",
+    "Power supply": "2 pile LR03 (AAA) da 1,5 V"
+  }
 }

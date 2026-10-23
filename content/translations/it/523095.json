@@ -1,5 +1,10 @@
 {
-  "title": "Lampada LED a morsetto a batteria 20 V - senza batteria",
-  "body": "Lampada LED a morsetto a batteria 20 V - senza batteria.",
-  "_sourceHash": "e5fbbae8334c560a1df3af14060c98b7d5ca040fd53a729e005b4c67d126636a"
+  "title": "Lampada LED a morsetto a batteria da 20 V, senza batteria",
+  "body": "Lampada LED a morsetto a batteria da 20 V, con due barre luminose orientabili e un flusso luminoso totale di 2000 lm. Include un’uscita USB-C da 5 V, 1,5 A.",
+  "_sourceHash": "5ec83a8f16bf5b89c94e9a50569a0403fa1aa10f7af2e98401ad24f846eb9106",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 15, rilasciata da Grizzly Tools GmbH & Co. KG per PLKLA 20-Li A1; IAN 523095_2601.",
+  "specifications": {
+    "Luminous flux": "2000 lm (1000 lm per barra luminosa)",
+    "Weight": "585 g (senza batteria)"
+  }
 }

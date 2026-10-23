@@ -1,5 +1,8 @@
 {
-  "title": "Pistola per colla a caldo o stick di colla",
-  "body": "Pistola per colla a caldo o stick di colla.",
-  "_sourceHash": "5ac0a664d41cc5e3ce3a00a7fa63c19d14b1afd8851f2bcbadac6611e7dc2042"
+  "title": "Pistola per colla a caldo",
+  "body": "Pistola per colla a caldo da 230 V, per incollare legno, plastica, ceramica, cartone, vetro e tessuti. Raggiunge circa 150 °C in circa quattro minuti.",
+  "_sourceHash": "69cdcaae183d53ee8381abf88b4ca894f1ac9bb74f36fdae7ca3e6aaed268263",
+  "specifications": {
+    "Input power": "15 W nominali; 60 W all’avvio"
+  }
 }

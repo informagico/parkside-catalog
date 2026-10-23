@@ -1,5 +1,8 @@
 {
-  "title": "Carrello da officina in metallo 2-in-1",
-  "body": "Carrello da officina in metallo 2-in-1.",
-  "_sourceHash": "2d8b4093d13bd8f9843eeda83efab46df16a9772cf0dcc29bac0431c21901760"
+  "title": "Lettino da meccanico e sgabello 2 in 1",
+  "body": "Lettino da officina trasformabile in sgabello, per lavorare in posizione sdraiata o seduta. La portata è di 150 kg come lettino e di 120 kg come sgabello.",
+  "_sourceHash": "e21f1b590415bdd588d5ac4292d34510f91254b3eb072ee504622ee2e6fc61a0",
+  "specifications": {
+    "Load capacity": "120 kg (sgabello); 150 kg (lettino)"
+  }
 }

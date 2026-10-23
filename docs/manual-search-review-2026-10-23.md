@@ -26,7 +26,9 @@ Updated 85 of the catalog's 2665 product files after checking the relevant docum
 
 The English changes initially made 44 existing Italian translations outdated. Their fingerprints were not refreshed during the manual review. The site holds outdated translations back and displays English with its review notice until a human reviews them. The catalog localization test now verifies this fallback rather than requiring all translations to be current.
 
-The maintainer subsequently approved the Italian titles and descriptions for IANs 546429, 546419, 546416, 540257 and 540704 in chat. Those five translations were updated and their fingerprints refreshed with `npm.cmd run translation -- IAN it --reviewed`. Optional documentary references remain in English. Of the original 44 outdated translations, 39 still await human review.
+The maintainer subsequently approved the Italian titles and descriptions for IANs 546429, 546419, 546416, 540257 and 540704 in chat. Those five translations were updated and their fingerprints refreshed with `npm.cmd run translation -- IAN it --reviewed`. Their optional documentary references remain in English. After this first batch, 39 translations remained outdated.
+
+The maintainer then explicitly authorized updating and approving all 39 remaining translations as a batch. They were aligned with the current English records: 14 titles/descriptions were updated, 31 documentary references were translated, and English qualifiers in specification values were translated where needed. The standard `--reviewed` command recorded the batch approval for each IAN. All 44 translations affected by this manual review are now current.
 
 ### Model identification
 
@@ -67,6 +69,7 @@ The original full run and the historical-path retry are consolidated in `.cache/
 - `npm.cmd run audit`: no consistency or classification warnings.
 - Checked the 170 generated pages for the 85 changed products in both languages: manual links, stale-translation notices, English fallback, the approved shared label and manufacturer-only identity sections. Research metadata was absent from page content.
 - Checked cached PDF signatures and hashes, exact source-URL membership, technical page bounds, unchanged IANs/categories/images/OEM values and the unchanged total of 2,665 products.
+- After the final translation approval, checked all 39 additional Italian pages, their translated specification values and unchanged English sources. No outdated Italian translation fingerprints remain.
 
 ## Updated records
 

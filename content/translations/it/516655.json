@@ -1,5 +1,9 @@
 {
-  "title": "Multimetro a penna o amperometro a pinza",
-  "body": "Multimetro a penna o amperometro a pinza.",
-  "_sourceHash": "aec96faee4c261520110d4906541484eeabc12513512f04f9340db81014e09d9"
+  "title": "Multimetro a pinza",
+  "body": "Multimetro a pinza per misurare corrente alternata, tensione alternata e continua, resistenza, capacità e frequenza, oltre a eseguire test di diodi e continuità. Alimentato da due pile AAA.",
+  "_sourceHash": "37d5e5364810368c5af767462b8839620458d4bde65f0d8ec23ff34d11403f68",
+  "specifications": {
+    "Power supply": "2 pile LR03 (AAA) da 1,5 V",
+    "Measuring range": "Tensione: fino a 600 V CA/CC"
+  }
 }
