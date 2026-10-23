@@ -26,7 +26,7 @@ export default function(eleventyConfig){
  eleventyConfig.addFilter('keys',value=>Object.keys(value||{}));
  eleventyConfig.addFilter('sameModel',(products,model,slug)=>products.filter(p=>p.model===model&&p.slug!==slug));
  eleventyConfig.addFilter('pad',value=>String(value).padStart(3,'0'));
- eleventyConfig.addFilter('primaryLabel',p=>((p.manufacturer&&p.manufacturer_basis!=='owner_confirmation')||/\.pdf(?:[?#]|$)/.test(p.source))?'manual':'officialCatalog');
+ eleventyConfig.addFilter('primaryLabel',p=>p.source.includes('/assets/evidence/')?'packagingPhoto':((p.manufacturer&&p.manufacturer_basis!=='owner_confirmation')||/\.pdf(?:[?#]|$)/.test(p.source))?'manual':'officialCatalog');
  eleventyConfig.addGlobalData('languages',languages);
  eleventyConfig.addGlobalData('site',JSON.parse(fs.readFileSync('config.json','utf8')));
  return {dir:{input:'site',includes:'_includes',data:'_data',output:'dist'},templateFormats:['njk','md','11ty.js'],markdownTemplateEngine:false,htmlTemplateEngine:'njk'};

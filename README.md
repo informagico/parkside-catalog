@@ -64,11 +64,11 @@ The language switch preserves the current page and filters. Search uses both pro
 
 ## Data and provenance
 
-127 records cover 92 distinct models. Unknown manufacturers and physical factories remain null. A spare parts catalog does not establish manufacture. Explicit owner confirmations are labeled separately from documentary evidence. PWDL 40 A1, IAN 544816, is attributed to Grizzly Tools following owner confirmation and uses the owner-selected Lidl photo.
+129 records cover 93 identified models plus one IAN-only record whose model code is not yet legible. Unknown manufacturers and physical factories remain null. A spare parts catalog does not establish manufacture. Explicit owner confirmations are labeled separately from documentary evidence. PWDL 40 A1, IAN 544816, is attributed to Grizzly Tools following owner confirmation and uses the owner-selected Lidl photo.
 
 The 31 photo references are now in their product Markdown. Each has a source and credit. Local files can be included in a PR; remote HTTPS photos are cached during builds when available. Original category icons are the fallback. Attribution does not itself grant a reuse license.
 
-Categories use an exact allowlist of nine approved function-based groups. All 127 records have been reclassified; shared Italian labels are centralized. Category-only edits do not invalidate product prose translations. See docs/categories.md for definitions and examples.
+Categories use an exact allowlist of nine approved function-based groups. All product records use the approved classification; shared Italian labels are centralized. Category-only edits do not invalidate product prose translations. See docs/categories.md for definitions and examples.
 
 ## Technology and checks
 

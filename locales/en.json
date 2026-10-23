@@ -115,5 +115,6 @@
   "manufacturerOwnerLabel": "Manufacturer",
   "manufacturerOwnerNote": "Confirmed by the catalog owner on 23 October 2026. The manufacturer document remains to be archived.",
   "translationMissing": "Translation is incomplete. Missing text is shown in English.",
-  "translationReview": "The English record has changed. Its translation needs review; original text is shown meanwhile."
+  "translationReview": "The English record has changed. Its translation needs review; original text is shown meanwhile.",
+  "packagingPhoto": "Packaging / label photograph"
 }
