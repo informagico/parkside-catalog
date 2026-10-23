@@ -69,3 +69,10 @@ header nav a.contribute-nav{display:inline-block}.variant-table th{white-space:n
 .card-badges .badge-range{background:var(--green);color:white}
 .card-badges .badge-manual{background:#e3efdb;color:#375c2c}
 .card-badges .badge-models{background:#fff2d5;color:#745014;border-color:#e4c887}
+
+/* Keep contribution identifiers and missing-field badges intact. */
+.contribution-table th:first-child,.contribution-table td:first-child{width:7rem;min-width:7rem;white-space:nowrap;overflow-wrap:normal;word-break:normal}
+.contribution-table th:nth-child(2),.contribution-table td:nth-child(2){min-width:14rem}
+.contribution-table th:nth-child(3),.contribution-table td:nth-child(3){white-space:nowrap;overflow-wrap:normal}
+.contribution-table td:nth-child(3) span{white-space:nowrap}
+#contribution-more{margin-top:24px}

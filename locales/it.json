@@ -36,7 +36,7 @@
   "allPower": "Tutte le alimentazioni",
   "onlyDocumented": "Solo produttori identificati",
   "oneSource": "UN DATO, UNA FONTE",
-  "filterNote": "Le lacune restano visibili. Nessuna attribuzione basata sulla sola somiglianza.",
+  "filterNote": "Cerca per modello o codice IAN e combina i filtri per restringere i risultati.",
   "readMethod": "Leggi il metodo",
   "sort": "Ordina",
   "featured": "In evidenza",
