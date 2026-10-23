@@ -4,10 +4,15 @@ ian: "514441"
 title: "Cordless random orbital sander or cordless finishing sander"
 category: "Sanding & Grinding"
 power: "12 V battery"
-manufacturer: null
+manufacturer: "OWIM GmbH & Co. KG"
 specifications: {"Product range":"Performance","Battery system":"X12V-Team","Battery and charger":"Not included","Full IAN":"514441_2510"}
 manual: "https://media.sit-connect.com/public/articlemanual/5ad4b090-a585-4af9-b825-449a12d6ee48.pdf"
 image: {"url":"assets/products/514-1/514441.svg"}
+manufacturer_basis: "documents"
+company: "OWIM GmbH & Co. KG"
+role: "Declared manufacturer"
+source: "https://media.sit-connect.com/public/articlemanual/5ad4b090-a585-4af9-b825-449a12d6ee48.pdf#page=23"
+evidence: "EU declaration of conformity, PDF page 23; IAN 514441."
 ---
 
 Sander for surface preparation and finishing.
