@@ -51,8 +51,6 @@
   "resultOne": "{count} record found",
   "resultMany": "{count} records found",
   "shown": "Showing {shown} of {count} records",
-  "manufacturerVerified": "Documented manufacturer",
-  "manufacturerUnknown": "Manufacturer not identified",
   "back": "Back to the catalog",
   "categoryArt": "CATEGORY ILLUSTRATION",
   "unknownMarket": "Market not specified",
@@ -106,7 +104,6 @@
   "ianVariantsTitle": "Why we use it in the catalog",
   "ianVariantsText": "The same model name may appear with different IANs. Before using a record, match both model and IAN against your tool: specifications or a manufacturer verified for one IAN are not automatically assigned to another. The complete suffix is kept in the notes when available.",
   "brandSubtitle": "INDEPENDENT PARKSIDE CATALOG",
-  "manufacturerOwnerConfirmed": "Manufacturer identified",
   "manufacturerOwnerLabel": "Manufacturer",
   "translationMissing": "Some descriptions are available in English only.",
   "translationReview": "Updated descriptions are available in English.",
@@ -129,5 +126,7 @@
   "variantScrollHint": "Scroll to compare all details",
   "manualAvailable": "Manual available",
   "multipleModelsForIan": "Multiple models per IAN",
-  "multipleModelsHint": "This IAN lists multiple model codes: match the full code against your product."
+  "multipleModelsHint": "This IAN lists multiple model codes: match the full code against your product.",
+  "multipleIansForModel": "{count} IANs for this model",
+  "multipleIansHint": "Compare the IANs in the product page table."
 }

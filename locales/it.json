@@ -51,8 +51,6 @@
   "resultOne": "{count} scheda trovata",
   "resultMany": "{count} schede trovate",
   "shown": "Mostrate {shown} di {count} schede",
-  "manufacturerVerified": "Produttore documentato",
-  "manufacturerUnknown": "Produttore non identificato",
   "back": "Torna al catalogo",
   "categoryArt": "ILLUSTRAZIONE DI CATEGORIA",
   "unknownMarket": "Mercato non specificato",
@@ -106,7 +104,6 @@
   "ianVariantsTitle": "Perché lo usiamo nel catalogo",
   "ianVariantsText": "Lo stesso nome di modello può comparire con IAN diversi. Prima di usare una scheda, confronta modello e IAN con quelli del tuo utensile: una specifica o un produttore verificato per un IAN non viene attribuito automaticamente agli altri. Il suffisso completo viene conservato nelle note quando disponibile.",
   "brandSubtitle": "CATALOGO INDIPENDENTE PARKSIDE",
-  "manufacturerOwnerConfirmed": "Produttore identificato",
   "manufacturerOwnerLabel": "Produttore",
   "translationMissing": "Alcune descrizioni sono disponibili solo in inglese.",
   "translationReview": "Le descrizioni aggiornate sono disponibili in inglese.",
@@ -129,5 +126,7 @@
   "variantScrollHint": "Scorri per confrontare tutti i dati",
   "manualAvailable": "Manuale disponibile",
   "multipleModelsForIan": "Più modelli per IAN",
-  "multipleModelsHint": "Questo IAN riporta più codici modello: confronta il codice completo con quello del tuo prodotto."
+  "multipleModelsHint": "Questo IAN riporta più codici modello: confronta il codice completo con quello del tuo prodotto.",
+  "multipleIansForModel": "{count} IAN dello stesso modello",
+  "multipleIansHint": "Confronta gli IAN nella tabella della scheda prodotto."
 }

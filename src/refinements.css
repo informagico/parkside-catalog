@@ -47,6 +47,7 @@ header nav a.contribute-nav{display:inline-block}.variant-table th{white-space:n
 .model-variants .variant-table{font-size:14px;line-height:1.5}
 .model-variants .variant-table thead th{background:var(--green);color:white;font-size:12px;font-weight:600;position:sticky;top:0;z-index:1}
 .model-variants .variant-table th,.model-variants .variant-table td{padding:15px 18px;min-width:145px}
+.model-variants .variant-table td.variant-long-value{min-width:20rem;max-width:28rem}
 .model-variants .variant-table tbody th{white-space:normal;min-width:155px}
 .model-variants .current-variant{background:#eaf2df}
 .variant-current-ian{display:block;font:700 15px var(--mono);padding:2px 0}
@@ -69,6 +70,7 @@ header nav a.contribute-nav{display:inline-block}.variant-table th{white-space:n
 .card-badges .badge-range{background:var(--green);color:white}
 .card-badges .badge-manual{background:#e3efdb;color:#375c2c}
 .card-badges .badge-models{background:#fff2d5;color:#745014;border-color:#e4c887}
+.detail-top .badge-ians{background:#fff2d5;color:#745014;border:1px solid #e4c887;font-size:12px;font-weight:600;padding:6px 10px;text-decoration:underline;text-underline-offset:3px}
 
 /* Keep contribution identifiers and missing-field badges intact. */
 .contribution-table th:first-child,.contribution-table td:first-child{width:7rem;min-width:7rem;white-space:nowrap;overflow-wrap:normal;word-break:normal}

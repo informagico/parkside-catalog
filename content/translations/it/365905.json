@@ -1,5 +1,9 @@
 {
-  "title": "Batteria smart X20V 4 Ah",
-  "body": "Batteria smart X20V 4 Ah.",
-  "_sourceHash": "e416d7f7aedb2994cb96b95d98f935c7b55faeaa4d985b6bda71f7204b4ce5e2"
+  "title": "Batteria smart X20V 4.0 Ah",
+  "body": "Batteria smart agli ioni di litio da 20 V e 4.0 Ah per il sistema X20V-Team. Dispone di connettività Bluetooth per monitorare e configurare la batteria. Caricabatterie non incluso.",
+  "evidence": "Dichiarazione CE di conformità, pagina 264: modello Smart PAPS 204 A1, con Grizzly Tools GmbH & Co. KG indicata come produttore. La copertina riporta IAN 365905_2101.",
+  "specifications": {
+    "Storage temperature": "−20–45 °C (fino a 3 mesi); 0–25 °C (fino a 1 anno)"
+  },
+  "_sourceHash": "98e4387b839e984c28d5a8f7f3423ce7c6a5c2d71bedd20c36cf3ec198ddcf2c"
 }
