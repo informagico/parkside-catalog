@@ -2,7 +2,9 @@
 
 An independent Parkside product catalog built with [Eleventy](https://www.11ty.dev/), Markdown/YAML frontmatter and Nunjucks templates. Static HTML, CSS and JavaScript; no database or application server.
 
-Repository: https://github.com/informagico/parkside-catalog (private).
+Repository: https://github.com/informagico/parkside-catalog (public).
+
+Website: https://informagico.github.io/parkside-catalog/
 
 ## Contribute a product
 
@@ -74,6 +76,6 @@ Eleventy handles generation, pagination and serving. Nunjucks provides layouts; 
 
 Pushes to main and pull requests install locked dependencies, cache photos, build both languages, run tests and upload the catalogo-statico ZIP. English-only records are valid. The workflow never automatically commits translations or source changes.
 
-PR builds have read-only repository and Pages access. Publishing remains limited to explicit workflow_dispatch with publish_pages enabled; only the deployment job has Pages write and identity-token permissions. Repository visibility remains private. Check plan and site audience before enabling Pages: a private repository does not necessarily mean a private website. Normal pushes and PRs do not publish.
+The repository and GitHub Pages site are public. Every successful push to main publishes the validated static output, including merged PRs. PR builds have read-only repository and Pages access and never deploy. Manual workflow_dispatch publication is also available on main with publish_pages enabled. Only the deployment job has Pages write and identity-token permissions. The workflow never pushes source commits.
 
 Visual verification requires a browser that can reach the preview; build and integrity checks run independently.

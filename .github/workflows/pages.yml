@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       publish_pages:
-        description: Pubblica su Pages (verificare prima privacy e piano)
+        description: Pubblica manualmente su GitHub Pages (solo main)
         type: boolean
         required: true
         default: false
@@ -36,16 +36,16 @@ jobs:
           name: catalogo-statico
           path: dist
       - uses: actions/configure-pages@v5
-        if: github.event_name == 'workflow_dispatch' && inputs.publish_pages
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_pages))
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name == 'workflow_dispatch' && inputs.publish_pages
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_pages))
         with:
           path: dist
   deploy:
     permissions:
       pages: write
       id-token: write
-    if: github.event_name == 'workflow_dispatch' && inputs.publish_pages
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_pages))
     needs: build
     runs-on: ubuntu-latest
     environment:

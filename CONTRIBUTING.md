@@ -8,7 +8,7 @@
 4. Choose **Propose changes** on a new branch, or work in a fork if you do not have write access. Open a pull request and fill in the prepared product fields and checkboxes.
 5. GitHub Actions builds and tests the proposal. The maintainer reviews the evidence and merges it.
 
-One English Markdown file is enough. Translations are optional and may be added later by the maintainer. No checked field or separate photo registry is used. For this private repository, contributors need access; visibility is not changed by this workflow.
+One English Markdown file is enough. Translations are optional and may be added later by the maintainer. No checked field or separate photo registry is used. The repository is public: external contributors can fork it and open a pull request. A merged change publishes automatically after the main-branch build and tests pass.
 
 ## Product fields
 
