@@ -32,6 +32,8 @@
 
 Translations are not a contributor requirement and do not block this PR.
 
+For candidate manual discovery, see [the manual search workflow](../docs/manual-search.md). Verify the exact IAN and document scope before using any result; keep search caches and research PDFs uncommitted.
+
 - [ ] Add or review content/translations/it/IAN.json.
 - [ ] Check shared field labels in locales/fields/it.json, if new labels were introduced.
 

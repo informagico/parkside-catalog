@@ -59,6 +59,8 @@ Use Node.js 22. Run npm ci, npm run dev. Before submitting code changes, run npm
 
 ## Quality checks
 
+Maintainers can discover candidate manuals for incomplete records with `npm run manuals -- --limit 25 --download`. See [the manual search workflow](docs/manual-search.md) for selection, cached reports and document review. Discovery does not edit product records; verify each exact IAN and document scope before contributing its data.
+
 Run `npm run audit` to list missing data and spelling variants of model codes. IANs remain unique; model comparisons never combine different generations or copy facts between IANs. Model corrections preserve existing filenames and public URLs. Set an unknown model to null, and link only a product operating manual in manual (not warranty sheets, accessory-only instructions or data-access notices).
 
 ## Consistency checks
