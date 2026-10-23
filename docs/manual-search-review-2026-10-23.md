@@ -24,7 +24,9 @@ Updated 85 of the catalog's 2665 product files after checking the relevant docum
 - Preserved IAN strings, file names, product-page URLs, categories, OEM values and images. Product prose describes the documented product; research metadata is not displayed on product pages.
 - Added the maintainer-approved shared power label `Replaceable batteries` / `Batterie sostituibili`; the individual battery types and quantities appear in specifications.
 
-The English changes make 44 existing Italian translations outdated. Their fingerprints were not refreshed. The site holds those translations back and displays English with its review notice until a human reviews them. The catalog localization test now verifies this fallback rather than requiring all translations to be current.
+The English changes initially made 44 existing Italian translations outdated. Their fingerprints were not refreshed during the manual review. The site holds outdated translations back and displays English with its review notice until a human reviews them. The catalog localization test now verifies this fallback rather than requiring all translations to be current.
+
+The maintainer subsequently approved the Italian titles and descriptions for IANs 546429, 546419, 546416, 540257 and 540704 in chat. Those five translations were updated and their fingerprints refreshed with `npm.cmd run translation -- IAN it --reviewed`. Optional documentary references remain in English. Of the original 44 outdated translations, 39 still await human review.
 
 ### Model identification
 
