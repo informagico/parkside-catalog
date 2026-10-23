@@ -1,5 +1,9 @@
 {
   "title": "Set cacciaviti a asta cordless",
   "body": "Set cacciaviti a asta cordless.",
-  "_sourceHash": "04e6f4e8ddd90d6b6707f82c690b5cd65c1cf5160fc3af889229027125e86e7b"
+  "_sourceHash": "c7e06971553de356502086199daa203e9dfad71e7e8de5299deb4fbc90f1d694",
+  "specifications": {
+    "Torque": "5 Nm (motore); 7 Nm (manuale)",
+    "Tool holder": "6.35 mm (1/4 pollici)"
+  }
 }

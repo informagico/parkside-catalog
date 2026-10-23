@@ -1,6 +1,9 @@
 {
   "title": "Valigetta con attrezzi e avvitatore cordless",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "d3e966ec5de0e7bf1030d4d0988ef2630d1cc4a07cefe75013d624ae26679746",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 36; IAN 509740."
+  "_sourceHash": "0f1619f31ffd2cd298c9ddd554e5705c0798ba8d6aeaec843f1e3eb84107bfd9",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 36; IAN 509740.",
+  "specifications": {
+    "Tool holder": "6.35 mm (1/4 pollici)"
+  }
 }

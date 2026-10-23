@@ -1,6 +1,9 @@
 {
   "title": "Cacciavite ricaricabile con selettore di coppia",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "879b1d52b25d6b25f128318ffd2bd3a4adfd1058b3fed6337ed87e3c34aefb59",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 34; IAN 494419."
+  "_sourceHash": "6e7064c900ba0d91f2251f6b08543a3573f66533083deb51f8757a2a748a5e28",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 34; IAN 494419.",
+  "specifications": {
+    "Torque": "3 Nm (motore); 8 Nm (manuale)"
+  }
 }

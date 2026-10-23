@@ -95,5 +95,13 @@
   "Compressed air": "Aria compressa",
   "Belt dimensions": "Dimensioni nastro",
   "4 V battery": "Batteria 4 V",
-  "USB": "USB"
+  "USB": "USB",
+  "Max. drilling diameter in wood": "Diametro massimo di foratura nel legno",
+  "Max. drilling diameter in metal": "Diametro massimo di foratura nel metallo",
+  "Max. drilling diameter in concrete": "Diametro massimo di foratura nel calcestruzzo",
+  "Max. drilling diameter in masonry": "Diametro massimo di foratura nella muratura",
+  "Gear 3 speed": "Velocità terza marcia",
+  "Impact rate": "Frequenza dei colpi",
+  "Drilling stroke": "Corsa di foratura",
+  "Tool holder": "Attacco utensile"
 }

@@ -14,9 +14,11 @@ Use one primary category based on the tool's main function. Avoid mixing materia
 | Welding & Soldering | Welders, soldering stations and related tools |
 | Measuring & Detection | Laser levels, measuring tools, detectors and inspection devices |
 | Workshop Equipment | Workbenches, clamping, compressors, inflators, lifting and workshop support equipment |
-| Batteries & Accessories | Batteries, chargers, separate attachments and consumables |
+| Batteries & Accessories | Batteries, chargers, battery adapters and general accessories without a specific tool function |
 
-A complete kit follows its main tool; a separately cataloged battery, charger or consumable goes under Batteries & Accessories. A combination tool follows its primary marketed function. For oscillating multi-tools, use Sawing & Cutting when cutting is the primary marketed function. Rain barrel pumps belong to Gardening; SUP inflators to Workshop Equipment; wall and floor finishing systems to Sanding & Grinding. If the primary function remains unclear, ask the maintainer before assigning a category.
+A complete kit follows its main tool. Dedicated attachments and consumables follow their function: cutting discs, saw blades and router bits belong to Sawing & Cutting; sanding sheets, grinding wheels and angle-grinder accessory assortments to Sanding & Grinding; drill bits, hole saws, driver bits and sockets to Drilling & Fastening; vacuum bags and pressure-washer attachments to Cleaning & Extraction; welding wire and welding helmets to Welding & Soldering; replacement trimmer spools and pruning-saw chains to Gardening. Mixed cutting/grinding disc assortments follow the angle grinder under Sanding & Grinding. Batteries and chargers remain in Batteries & Accessories, including when sold together.
+
+A combination tool follows its primary marketed function. For oscillating multi-tools, use Sawing & Cutting when cutting is the primary marketed function. Leaf blowers and leaf vacuums belong to Gardening. Pressure washers belong to Cleaning & Extraction even when marketed for garden use. Rain barrel pumps belong to Gardening; SUP inflators, work lights, heat guns, glue guns and electrical extension reels to Workshop Equipment; wall and floor finishing systems to Sanding & Grinding. If the primary function remains unclear, ask the maintainer before assigning a category. Do not classify by a model-code prefix alone: similar prefixes can identify unrelated products.
 
 Background: official Lidl DIY & Garden navigation distinguishes tools, garden and workshop/hardware, but mixes product types and use cases. The above list is an editorial taxonomy for this independent catalog, not an official Parkside classification.
 

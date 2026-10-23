@@ -1,6 +1,9 @@
 {
   "title": "Avvitatore ricaricabile",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "ce83fced9afcc5e4f7292fd9d4f6b780a5f631d6c3ef939258f23f7fe2796595",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 232; IAN 538420."
+  "_sourceHash": "893ca089453eddb801abd61207aa8865d8571addc6c2fe5edea6e246d48f0e4f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 232; IAN 538420.",
+  "specifications": {
+    "Tool holder": "6.35 mm (1/4 pollici)"
+  }
 }
