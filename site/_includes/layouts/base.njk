@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="{{ 'assets/style.css' | rel(page.outputPath) }}">
   <link rel="stylesheet" href="{{ 'assets/locales.css' | rel(page.outputPath) }}">
   <link rel="stylesheet" href="{{ 'assets/refinements.css' | rel(page.outputPath) }}">
-  {% if pageType == 'catalog' %}<link rel="stylesheet" href="{{ 'assets/catalog.css' | rel(page.outputPath) }}">{% endif %}
+  {% if pageType == 'catalog' %}<link rel="stylesheet" href="{{ 'assets/catalog.css' | rel(page.outputPath) }}"><link rel="stylesheet" href="{{ 'assets/scanner.css' | rel(page.outputPath) }}">{% endif %}
 </head>
 <body{% if pageType == 'catalog' %} class="catalog-page"{% endif %}>
 <a class="skip" href="#main">{{ 'skip' | t(lang) }}</a>
@@ -26,7 +26,7 @@
 {% if pageType != 'catalog' %}{% include 'components/footer.njk' %}{% endif %}
 <script src="{{ 'assets/language.js' | rel(page.outputPath) }}" defer></script>
 <script src="{{ 'assets/photos.js' | rel(page.outputPath) }}" defer></script>
-{% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script>{% endif %}
+{% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script><script type="module" src="{{ 'assets/scanner.js' | rel(page.outputPath) }}"></script>{% endif %}
 {% if pageType != 'catalog' %}<script src="{{ 'assets/return.js' | rel(page.outputPath) }}" defer></script>{% endif %}
 {% if pageType == 'contribute' %}<script src="{{ 'assets/contribute.js' | rel(page.outputPath) }}" defer></script>{% endif %}
 </body></html>

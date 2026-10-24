@@ -19,7 +19,7 @@ permalink: "{{ lang }}/index.html"
 <section id="catalogue" class="catalog" aria-labelledby="catalog-heading">
  <div class="catalog-controls">
  <div class="section-heading"><div><span class="eyebrow">{{ 'openArchive' | t(lang) }}</span><h2 id="catalog-heading">{{ 'catalogHeading' | t(lang) }}</h2></div><a href="{{ (lang + '/data/catalog.json') | rel(page.outputPath) }}" download>{{ 'export' | t(lang) }} ↓</a></div>
- <div class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="{{ 'search' | t(lang) }}" placeholder="{{ 'search' | t(lang) }}"><kbd>/</kbd></div>
+ <div class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="{{ 'search' | t(lang) }}" placeholder="{{ 'search' | t(lang) }}"><kbd>/</kbd><button id="scan-open" class="scan-open" type="button" aria-label="{{ 'scanOpen' | t(lang) }}" hidden aria-haspopup="dialog" aria-controls="label-scanner"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h4l2-3h4l2 3h4v15H4z"/><circle cx="12" cy="13" r="4"/></svg><span>{{ 'scanOpen' | t(lang) }}</span></button></div>
  </div>
  <div class="catalog-layout">
   <aside class="filters" aria-label="{{ 'filters' | t(lang) }}">
@@ -46,3 +46,5 @@ permalink: "{{ lang }}/index.html"
   </div>
  </div>
 </section>
+
+{% include 'components/scanner.njk' %}

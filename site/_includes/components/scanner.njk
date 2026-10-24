@@ -1,0 +1,17 @@
+<dialog id="label-scanner" class="label-scanner" aria-labelledby="scan-title" aria-describedby="scan-privacy">
+ <div class="scan-heading"><h2 id="scan-title">{{ 'scanTitle' | t(lang) }}</h2><button id="scan-close" type="button" aria-label="{{ 'scanClose' | t(lang) }}">×</button></div>
+ <p id="scan-privacy" class="scan-privacy">{{ 'scanPrivacy' | t(lang) }}</p>
+ <p>{{ 'scanHint' | t(lang) }}</p>
+ <div class="scan-actions"><button id="scan-camera" class="secondary" type="button">{{ 'scanCamera' | t(lang) }}</button><button id="scan-gallery" class="secondary" type="button">{{ 'scanGallery' | t(lang) }}</button></div>
+ <input id="scan-camera-file" type="file" accept="image/*" capture="environment" hidden>
+ <input id="scan-gallery-file" type="file" accept="image/*" hidden>
+ <section id="scan-image" hidden aria-label="{{ 'scanPreview' | t(lang) }}">
+  <p id="scan-crop-hint">{{ 'scanCropHint' | t(lang) }}</p>
+  <div class="scan-preview"><canvas id="scan-preview" aria-label="{{ 'scanPreview' | t(lang) }}" aria-describedby="scan-crop-hint"></canvas><div id="scan-selection" hidden aria-label="{{ 'scanSelection' | t(lang) }}"></div></div>
+  <div class="scan-actions"><button id="scan-rotate" type="button">↻ {{ 'scanRotate' | t(lang) }}</button><button id="scan-reset-crop" type="button">{{ 'scanResetCrop' | t(lang) }}</button><button id="scan-read" class="primary" type="button">{{ 'scanRead' | t(lang) }}</button></div>
+ </section>
+ <p id="scan-status" role="status" aria-live="polite"></p>
+ <progress id="scan-progress" max="1" hidden aria-label="{{ 'scanRead' | t(lang) }}"></progress>
+ <div id="scan-candidates" class="scan-candidates" role="group" aria-label="{{ 'scanCandidates' | t(lang) }}" hidden></div>
+ <form id="scan-form"><label for="scan-query">{{ 'scanQuery' | t(lang) }}</label><div class="scan-query-row"><input id="scan-query" type="text" required maxlength="100" autocomplete="off" spellcheck="false" placeholder="IAN 407702_2207 / PABS 20-Li D5"><button class="primary" type="submit">{{ 'scanSearch' | t(lang) }}</button></div><p class="scan-search-hint">{{ 'scanSearchHint' | t(lang) }}</p></form>
+</dialog>
