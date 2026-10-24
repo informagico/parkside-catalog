@@ -8,6 +8,14 @@ import {sameModel,variantDifferences} from './lib/identity.mjs';
 const markdown=new MarkdownIt({html:false,linkify:false});
 export default function(eleventyConfig){
  eleventyConfig.addPassthroughCopy({'src':'assets'});
+ // Self-host every OCR asset. No CDN or remote recognition endpoint.
+ eleventyConfig.addPassthroughCopy({'node_modules/tesseract.js/dist/tesseract.esm.min.js':'assets/ocr/tesseract.esm.min.js'});
+ eleventyConfig.addPassthroughCopy({'node_modules/tesseract.js/dist/worker.min.js':'assets/ocr/worker.min.js'});
+ eleventyConfig.addPassthroughCopy({'node_modules/@tesseract.js-data/eng/4.0.0_best_int/eng.traineddata.gz':'assets/ocr/eng.traineddata.gz'});
+ for(const file of fs.readdirSync('node_modules/tesseract.js-core').filter(file=>/\.wasm(?:\.js)?$/.test(file))){
+  eleventyConfig.addPassthroughCopy({['node_modules/tesseract.js-core/'+file]:'assets/ocr/core/'+file});
+ }
+ eleventyConfig.addPassthroughCopy({'node_modules/tesseract.js/dist/tesseract.min.js.LICENSE.txt':'assets/ocr/LICENSE-tesseract.txt','node_modules/tesseract.js-core/LICENSE':'assets/ocr/LICENSE-core.txt','node_modules/tesseract.js/dist/worker.min.js.LICENSE.txt':'assets/ocr/worker.min.js.LICENSE.txt'});
  if(fs.existsSync('assets/products'))eleventyConfig.addPassthroughCopy({'assets/products':'assets/products'});
  for(const p of loadProducts()){
   const cached='.cache/product-images/'+p.ian+'.jpg';
@@ -22,7 +30,7 @@ export default function(eleventyConfig){
  eleventyConfig.addFilter('localeTarget',(outputPath,lang)=>path.relative('dist',outputPath).replaceAll('\\','/').replace(/^(it|en)\//,lang+'/'));
  eleventyConfig.addFilter('json',value=>JSON.stringify(value));
  eleventyConfig.addFilter('jsonScript',value=>JSON.stringify(value).replace(/</g,'\\u003c'));
- eleventyConfig.addFilter('clientMessages',lang=>Object.fromEntries(['resultOne','resultMany','shown','listView','gridView'].map(key=>[key,uiDictionary(lang)[key]])));
+ eleventyConfig.addFilter('clientMessages',lang=>Object.fromEntries(['resultOne','resultMany','shown','listView','gridView',...Object.keys(uiDictionary(lang)).filter(key=>key.startsWith('scan'))].map(key=>[key,uiDictionary(lang)[key]])));
  eleventyConfig.addFilter('unique',values=>[...new Set(values)]);
  eleventyConfig.addFilter('keys',value=>Object.keys(value||{}));
  eleventyConfig.addFilter('sameModel',(products,model,slug,category)=>sameModel(products,model,category).filter(p=>p.slug!==slug));

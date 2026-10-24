@@ -82,3 +82,25 @@ Pushes to main and pull requests install locked dependencies, cache photos, buil
 The repository and GitHub Pages site are public. Every successful push to main publishes the validated static output, including merged PRs. PR builds have read-only repository and Pages access and never deploy. Manual workflow_dispatch publication is also available on main with publish_pages enabled. Only the deployment job has Pages write and identity-token permissions. The workflow never pushes source commits.
 
 Visual verification requires a browser that can reach the preview; build and integrity checks run independently.
+
+## Browser label scanner
+
+The catalog search includes **Scan label** in Italian and English. Take a photo or
+choose an image, optionally drag a crop around the label or rotate it, then run
+OCR. Confirm or edit the detected IAN/model before searching. IAN batch suffixes
+are shown for review but omitted from the catalog query; confirmed scans clear
+category, manufacturer, power and identified-manufacturer filters. No manufacturer
+is inferred from the photo.
+
+Images are decoded and processed in memory in the browser, never uploaded or
+stored. Tesseract.js, its Web Worker, WebAssembly cores and English OCR model are
+copied from locked npm dependencies into `assets/ocr/` during the Eleventy build.
+All OCR requests stay on the site's origin, including under a GitHub Pages
+project subpath. OCR loads only when the user presses **Read label**. The language
+model may be cached locally by Tesseract; photos are not cached. Closing the
+scanner releases the image and terminates an active recognition worker. The
+catalog itself remains online; this feature does not promise offline access.
+
+Supported browsers need modules, WebAssembly, Web Workers and native HTML dialogs.
+Camera capture uses the device's file picker; on desktop it may open a file
+chooser instead. Unsupported image formats can be retried as JPEG, PNG or WebP.
