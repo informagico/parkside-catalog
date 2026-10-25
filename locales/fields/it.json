@@ -220,5 +220,16 @@
   "Shrink ratio": "Rapporto di restringimento",
   "Measurement range": "Intervallo di misurazione",
   "Accuracy": "Precisione",
-  "Maximum flow rate": "Portata massima"
+  "Maximum flow rate": "Portata massima",
+  "Brand": "Marchio",
+  "Maximum engine speed": "Regime massimo del motore",
+  "Tightening torque": "Coppia di serraggio",
+  "Audio output": "Potenza audio",
+  "Maximum delivery height": "Prevalenza massima",
+  "Maximum suction height": "Altezza massima di aspirazione",
+  "Cut-out pressure": "Pressione di arresto",
+  "Maximum water temperature": "Temperatura massima dell’acqua",
+  "Maximum speed": "Velocità massima",
+  "Drive shaft diameter": "Diametro dell’albero di azionamento",
+  "Wrench sizes": "Misure delle chiavi"
 }

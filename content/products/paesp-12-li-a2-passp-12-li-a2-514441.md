@@ -13,6 +13,8 @@ company: "OWIM GmbH & Co. KG"
 role: "Declared manufacturer"
 source: "https://media.sit-connect.com/public/articlemanual/5ad4b090-a585-4af9-b825-449a12d6ee48.pdf#page=23"
 evidence: "EU declaration of conformity, PDF page 23; IAN 514441."
+technical_source: "https://media.sit-connect.com/public/articlemanual/5ad4b090-a585-4af9-b825-449a12d6ee48.pdf#page=10"
+technical_evidence: "IAN 514441: the document identifies this IAN and the documented model PAESP 12-Li A2. The technical section begins on PDF page 10."
 ---
 
 Sander for surface preparation and finishing.
