@@ -1,6 +1,9 @@
 {
   "title": "Trapano avvitatore a percussione 20 V",
   "body": "Trapano avvitatore a percussione a batteria con due marce e coppia regolabile.",
-  "_sourceHash": "0df2ca95baab724ffffe3953ee1f084812db86269d1296c7456d8d0c61bfff68",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 485603."
+  "_sourceHash": "3ae8d70d60a7aeaa3c8580a0a2c36187177d5f19a9d92c5edfc38adbe13f9496",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 485603.",
+  "specifications": {
+    "Weight": "1.67 kg (con impugnatura supplementare/senza batteria)"
+  }
 }

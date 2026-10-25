@@ -1,13 +1,13 @@
 {
   "title": "Avvitatore a impulsi a batteria",
   "body": "Avvitatore a impulsi a batteria da 20 V per serrare e allentare viti e dadi. Dispone di attacco quadro da 1/2 pollice, due livelli a impulsi, modalità precisione e legno, velocità variabile tramite grilletto e luce LED con due livelli di luminosità.",
-  "evidence": "Copertina del manuale d'uso: PPDSSA 20-Li B2, IAN 544754_2601. La dichiarazione UE di conformità, pagina 22 del PDF, identifica Grizzly Tools GmbH & Co. KG come fabbricante.",
+  "evidence": "Copertina del manuale d’uso: PPDSSA 20-Li B2, IAN 544754_2601. Dichiarazione UE di conformità, pagina PDF 22, identifica Grizzly Tools GmbH & Co. KG come produttore.",
   "specifications": {
     "Torque": "Livello 1: 120 Nm; livelli 2/A/B: 400 Nm",
     "No-load speed": "Livello 1: 0–1500 rpm; livelli 2/A/B: 0–3000 rpm",
     "Impact rate": "Livello 1: 0–1800 min⁻¹; livelli 2/A/B: 0–3550 min⁻¹",
-    "Tool holder": "1/2 pollice, attacco quadro",
-    "Weight": "Circa 1,3 kg (senza batteria)"
+    "Tool holder": "Attacco quadro da 1/2 pollice",
+    "Weight": "Ca. 1.3 kg (senza batteria)"
   },
-  "_sourceHash": "7eb77f6bf56156a3d2f6096ab4aabee1285ee241d23acddde6395971a2896af0"
+  "_sourceHash": "e679d2ef82263016718bae286fde91638f7ee8c4cb0c37d16b73424f44c5fa0a"
 }

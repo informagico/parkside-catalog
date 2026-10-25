@@ -1,6 +1,9 @@
 {
   "title": "Sega circolare portatile senza fili",
   "body": "Sega circolare per tagli rettilinei.",
-  "_sourceHash": "d792d5640f2bffb004e6e6711122bb054e7ecd1bd367e3ba3570a58047a3a265",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 20; IAN 506403."
+  "_sourceHash": "b6bd752006c371fb1e099aef1109e2931a0a142f9c25ce9e4405c54371b4cbc2",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 20; IAN 506403.",
+  "specifications": {
+    "Weight": "4.0 kg (senza batterie)"
+  }
 }

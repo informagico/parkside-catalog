@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "0ff537bd3b15f7865409d560dd63bcf53afe02906b0e15de92927e17c0410b3a",
+  "_sourceHash": "b6acd485364d34cdd6f7b490f89e410c328cf13de95aeb8f6d96f84b3d83fea0",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Catalogo ricambi ufficiale Grizzly Tools: PNTS 1500 B2, IAN 87778."
+  "evidence": "Grizzly Tools catalogo ufficiale dei ricambi: PNTS 1500 B2, IAN 87778.",
+  "specifications": {
+    "Weight": "9.5 kg (tutti gli accessori inclusi)"
+  }
 }

@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "4c3d2e4180480b0bd5c934f23fbc6c2f1a4a6986a3ea9db2323b2aadc8ebc872",
+  "_sourceHash": "0f5a20b2cb1468a11d4cf8fb7feeac840c96c259ae1796629bf8252a895c7352",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 43, rilasciata da Grizzly Tools GmbH & Co. KG per PPWD 30 A1; IAN 448851_2304."
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 43, rilasciata da Grizzly Tools GmbH & Co. KG per PPWD 30 A1; IAN 448851_2304.",
+  "specifications": {
+    "Weight": "15.8 kg (accessori inclusi)"
+  }
 }

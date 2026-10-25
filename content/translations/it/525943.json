@@ -1,6 +1,9 @@
 {
   "title": "Set trapano e avvitatore cordless",
   "body": "Set trapano e avvitatore cordless.",
-  "_sourceHash": "057e4c500143970d32be015b7efe08e4d6643e708e8de2dd48a6fd4b6b1d6ff4",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 525943."
+  "_sourceHash": "4ee2427de08b388c0e195058900087fa4df5ad8ac277a4b581d21cc1e9dc28c5",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 525943.",
+  "specifications": {
+    "Weight": "0.89 kg (senza batteria)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Trituratore a lama a batteria 40 V (senza batteria e senza caricabatterie",
   "body": "Trituratore a lama a batteria 40 V (senza batteria e senza caricabatterie.",
-  "_sourceHash": "e260b7edf4e06858a3f3c8f01cfca2b94486bec4f13ca655e10734e81a5de48d",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 518251."
+  "_sourceHash": "59dc329d0a910341fbf6c16e2b4bf9e7c5d3d794acff8db28f859ca716b7a89d",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 518251.",
+  "specifications": {
+    "Weight": "8.5 kg (senza batterie)"
+  }
 }

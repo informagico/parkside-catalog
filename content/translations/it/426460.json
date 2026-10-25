@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "995e0c4a0875b82cfe5d6a4384433160957c04241cc5a9514be388022dcfc061",
+  "_sourceHash": "5dd601b0b85b004fbfd0878ce0b7dc37ffeee617cdb1b52223b3ad58344d69d1",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 52, rilasciata da Grizzly Tools GmbH & Co. KG per PWD 25 C4; IAN 426460_2301."
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 52, rilasciata da Grizzly Tools GmbH & Co. KG per PWD 25 C4; IAN 426460_2301.",
+  "specifications": {
+    "Weight": "6.3 kg (accessori inclusi)"
+  }
 }

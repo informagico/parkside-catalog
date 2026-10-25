@@ -1,6 +1,9 @@
 {
   "title": "Tosaerba ricaricabile",
   "body": "Tagliaerba per la manutenzione del prato.",
-  "_sourceHash": "e5025d0a1a1183896f75bcdea551d7c71123c96bdfd9feef7cf8216f7a2299b7",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 46; IAN 507920."
+  "_sourceHash": "2aac4024ece044adeeeffc76491293e9cca7786463bd0ea8b66deb5cdf4d8c28",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 46; IAN 507920.",
+  "specifications": {
+    "Weight": "16 kg (con batterie da 12 Ah)"
+  }
 }

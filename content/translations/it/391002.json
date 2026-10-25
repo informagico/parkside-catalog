@@ -1,9 +1,9 @@
 {
   "title": "Avvitatore a impulsi 20 V con attacco quadro",
   "body": "Avvitatore a impulsi a batteria con attacco quadro da mezzo pollice e tre livelli di coppia.",
-  "_sourceHash": "f92993c4fcefbe0ca4fbe570fbb280d2177e24c5cab6400980ed2061a425ce6b",
+  "_sourceHash": "7c83873a5aa0bccca34f287287bff78807e4e9c36dd68de1fbae749e97f9b53c",
   "evidence": "Dichiarazione UE di conformità, pagina PDF 37; IAN 391002.",
   "specifications": {
-    "Tool holder": "1/2 pollice, attacco quadro"
+    "Tool holder": "Attacco quadro da 1/2 pollice"
   }
 }

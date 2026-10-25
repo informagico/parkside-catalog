@@ -1,5 +1,9 @@
 {
   "title": "Compressore e pompa ricaricabili",
   "body": "Compressore per la produzione di aria compressa.",
-  "_sourceHash": "726ec8173b1c07b683f1fea9f9a48a9950f23ba8419739e237c499302fe874af"
+  "_sourceHash": "2553a781609fafc09701b8a86a8d2074aac20486504162d7e73769d314454044",
+  "evidence": "",
+  "specifications": {
+    "Weight": "1.6 kg (senza batteria)"
+  }
 }

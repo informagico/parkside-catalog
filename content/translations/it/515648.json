@@ -1,6 +1,9 @@
 {
   "title": "Aspirapolvere ricaricabile",
   "body": "Aspirapolvere ricaricabile.",
-  "_sourceHash": "09e0e64374fdf3dcb8fcc04b57376d34c319b295d1139c7755ada63bbcf5eb0a",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 11; IAN 515648."
+  "_sourceHash": "e733140bb29aaad677f4d549744948e0ea6ad01eee3fb8c4ac812b8c91b24487",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 11; IAN 515648.",
+  "specifications": {
+    "Weight": "1.3 kg (accessori inclusi)"
+  }
 }

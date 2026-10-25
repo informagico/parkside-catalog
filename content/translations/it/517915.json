@@ -1,6 +1,9 @@
 {
   "title": "Tagliarami ricaricabile",
   "body": "Utensile da potatura per la manutenzione del giardino.",
-  "_sourceHash": "3c701f3fee0fb56437e33949871ed1247871457b1ede7e8c62faa188494b0ae7",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 23; IAN 517915."
+  "_sourceHash": "abc17a2a1ccaf05d337369956955dd54978b58b338e3747d79179d7382a38bb3",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 23; IAN 517915.",
+  "specifications": {
+    "Weight": "1.1 kg (pronto all’uso, senza batteria)"
+  }
 }

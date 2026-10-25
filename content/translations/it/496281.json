@@ -1,6 +1,9 @@
 {
   "title": "Seghetto alternativo orbitale senza fili 20V",
   "body": "Seghetto alternativo per tagli rettilinei e curvi.",
-  "_sourceHash": "c53ddbc0fbb3fe9a404388195c2b7a5bf98ba18b02508e58c233c99c3b51ceb9",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 496281."
+  "_sourceHash": "90e54e2027f2e6dc7f3020f111bb3373e9889b380b0b6bfaec60dea353ef897b",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 496281.",
+  "specifications": {
+    "Weight": "1.8 kg (senza batteria)"
+  }
 }

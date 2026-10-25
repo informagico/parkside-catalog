@@ -1,6 +1,9 @@
 {
   "title": "Faro LED ricaricabile da lavoro",
   "body": "Faro LED ricaricabile da lavoro.",
-  "_sourceHash": "9d01db366a83a6e011e3179abad4062178226c57c0ffef3f10370dd4944ad042",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 10; IAN 517555."
+  "_sourceHash": "6b87110258e64c50da1f64b37e66d4d8e4220ce2fdf6e7bb7ce17fa7517ef92e",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 10; IAN 517555.",
+  "specifications": {
+    "Weight": "1.03 kg (senza batteria)"
+  }
 }

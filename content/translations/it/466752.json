@@ -1,6 +1,10 @@
 {
   "title": "Radio da cantiere ricaricabile",
   "body": "Radio da cantiere ricaricabile.",
-  "_sourceHash": "655026238550ae1a2a3936e5fba04dda594e28e10defa5839aecebecea9d6bb3",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 466752."
+  "_sourceHash": "99d54c0e8fa6c7c7775b7f20e98779ae62b7c5b1555e086b2760c399699b21ae",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 466752.",
+  "specifications": {
+    "Weight": "3.1 kg (senza batteria)",
+    "Power supply": "Batteria 12 V / 20 V o adattatore 12 V DC"
+  }
 }

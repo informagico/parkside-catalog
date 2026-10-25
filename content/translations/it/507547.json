@@ -1,6 +1,9 @@
 {
   "title": "Pompa per acqua piovana",
   "body": "Pompa per acqua piovana.",
-  "_sourceHash": "db0fa78a160eca56c03071e113b95df9a0891601306d2f59bdaf2b2179d81aa1",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 507547."
+  "_sourceHash": "35e336dc13d65bb4779878b6e0d6fb76d93cdadea1321917ed5974946a1fbb8e",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 507547.",
+  "specifications": {
+    "Weight": "1.6 kg (senza batteria)"
+  }
 }

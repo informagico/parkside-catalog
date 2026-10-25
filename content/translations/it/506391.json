@@ -1,6 +1,9 @@
 {
   "title": "Idropulitrice ricaricabile",
   "body": "Idropulitrice per la pulizia delle superfici esterne.",
-  "_sourceHash": "28a0562e0d4c0d7866fa38581d0225e7b055899e26154118cfbac60299f16770",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 506391."
+  "_sourceHash": "2c009d9f350dea975db2468f029ff71f0a71db06b4ab3f8bc4870e078321907d",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 506391.",
+  "specifications": {
+    "Weight": "1.3 kg (senza batteria/accessori/ detergente)"
+  }
 }

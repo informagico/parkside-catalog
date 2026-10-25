@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "980d7ddb49c6f66854dc7a09fdceac1d6f48fc31bfa774c173b86f376729eb13",
+  "_sourceHash": "0fc6d7771e45e7c17ebc07100066d510f6e5709d811b70ec15c2daf5f275cb46",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Dichiarazione di conformità, pagina PDF 59, rilasciata da Grizzly Tools GmbH & Co. KG per PNTS 1500 B3; IAN 104474."
+  "evidence": "Dichiarazione di conformità, pagina PDF 59, rilasciata da Grizzly Tools GmbH & Co. KG per PNTS 1500 B3; IAN 104474.",
+  "specifications": {
+    "Weight": "8.8 kg (tutti gli accessori inclusi)"
+  }
 }

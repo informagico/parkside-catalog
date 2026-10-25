@@ -1,6 +1,9 @@
 {
   "title": "Apparecchio multifunzione ricaricabile 3 in 1",
   "body": "Apparecchio multifunzione ricaricabile 3 in 1.",
-  "_sourceHash": "67496756d73332abad2337807e368945f868e2417f67e8fc68ecb6d7bf8272fe",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 515852."
+  "_sourceHash": "651ff4bb1c521d1a8b2b59bcbe1e03c0f16517b2158122c75f483d5171dadc9d",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 515852.",
+  "specifications": {
+    "Weight": "0.65 kg (senza batteria)"
+  }
 }

@@ -1,5 +1,9 @@
 {
   "title": "Trapano avvitatore a percussione 20 V",
   "body": "Trapano avvitatore a batteria con mandrino autoserrante e percussione selezionabile.",
-  "_sourceHash": "33a7c434908c1140b93c3ec744db23fc23cef8ef68cbb0708831b376ca6e6da2"
+  "_sourceHash": "5a3ae923c6d725b079e361b449997aff313b2ee7f57d23514aaea3b7a289f472",
+  "evidence": "",
+  "specifications": {
+    "Weight": "1.45 kg (senza batteria/caricabatterie)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "R TRAPANO AVVITATORE RICARICBILE",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "2a3bcfb833aa400495c9df549ae5eefbbe3ade52a4491cdabfa6270cec6b313f",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 12; IAN 540689."
+  "_sourceHash": "ce78914ffc40b8aa35f0754281f01e81652c4d46858ddc6c9b160c9d0824e079",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 12; IAN 540689.",
+  "specifications": {
+    "Weight": "1.24 kg (senza batteria)"
+  }
 }

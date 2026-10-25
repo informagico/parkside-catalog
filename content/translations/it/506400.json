@@ -1,6 +1,9 @@
 {
   "title": "Motosega senza fili",
   "body": "Motosega senza fili.",
-  "_sourceHash": "a023e5a2c392fe2935457054132d891f1eb10dab98c398502247bf82c23c1e97",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 506400."
+  "_sourceHash": "ce190ead586e282373319e35af8b78a30c3482d87c71d1201501fd366a519f56",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 506400.",
+  "specifications": {
+    "Weight": "3.17 kg (senza barra, catena, copribarra, olio e batterie)"
+  }
 }

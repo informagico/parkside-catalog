@@ -1,6 +1,9 @@
 {
   "title": "Affilacatene elettrico",
   "body": "Affilacatene elettrico.",
-  "_sourceHash": "7083a5b8b49f11bc27b954a4677228c87ede360ed61230f8101269b4b89358f6",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 20; IAN 513971."
+  "_sourceHash": "4fe112305818ccddd8c58a96d7f259d5ca6a8d181ea1fd862881626cb72baaf6",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 20; IAN 513971.",
+  "specifications": {
+    "Weight": "2.1 kg (accessori inclusi)"
+  }
 }

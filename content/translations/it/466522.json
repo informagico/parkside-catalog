@@ -1,6 +1,9 @@
 {
   "title": "Motosega elettrica",
   "body": "Motosega elettrica.",
-  "_sourceHash": "5dcd8ce955827bd268ffc60c8c59ab48f7a72e1904f185cd8a9b2d74b3d12c42",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 29; IAN 466522."
+  "_sourceHash": "f978e40b9bec3b005b4ef49130a56119018c07ea763929232e3d786a2b226771",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 29; IAN 466522.",
+  "specifications": {
+    "Weight": "4.8 kg (con barra e catena della motosega)"
+  }
 }

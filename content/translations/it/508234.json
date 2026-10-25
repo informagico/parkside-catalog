@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "76bc7b812136c1bc0994ea07db574be66c821ef376335e891b7948f0efb409ab",
+  "_sourceHash": "b92f1ac3b8b45734ad045e67a9bdfc530bb3f3b6db6daa179dd3c5112c77d7c6",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Catalogo ricambi ufficiale Grizzly Tools: PWD 12 B1 KAT, IAN 508234."
+  "evidence": "Grizzly Tools catalogo ufficiale dei ricambi: PWD 12 B1 KAT, IAN 508234.",
+  "specifications": {
+    "Weight": "4 kg (accessori inclusi)"
+  }
 }

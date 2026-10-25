@@ -1,5 +1,9 @@
 {
   "title": "Spruzzatore a pressione ricaricabile",
   "body": "Spruzzatore a pressione ricaricabile.",
-  "_sourceHash": "34c327daf9f8f7ce1ec782fe149660082919af06c0fd232e000961e9e443f2b0"
+  "_sourceHash": "7889cc56a600e48c8c61f4f25e0ce8e5fcd2c728d558b05f2c25606ba009708f",
+  "evidence": "",
+  "specifications": {
+    "Weight": "1.8 kg (a vuoto, senza batteria)"
+  }
 }

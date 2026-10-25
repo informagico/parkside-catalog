@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "2fd655db60a2c7cee7335c4aaef3e09d663eb4b7f957c8879e1829d23854156d",
+  "_sourceHash": "15d29f51feb8e9e0f413c4fc39c30c7bc8aada0352abcbd452062899d9ecb4ce",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Catalogo ricambi ufficiale Grizzly Tools: PNTS 1400 C1, IAN 89964."
+  "evidence": "Grizzly Tools catalogo ufficiale dei ricambi: PNTS 1400 C1, IAN 89964.",
+  "specifications": {
+    "Weight": "7.7 kg (tutti gli accessori inclusi)"
+  }
 }

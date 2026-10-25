@@ -1,6 +1,9 @@
 {
   "title": "Avvolgitubo da parete",
   "body": "Avvolgitubo da parete.",
-  "_sourceHash": "65906a8f374351b000ceb4683d3f8df7f10bcbf982d1211b276a3b5cda5fb9e5",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 134; IAN 541236."
+  "_sourceHash": "84d61c6f13aea631553e6579f0fe3d1838a9fcfda2cc1bda2dd5ae99703dca44",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 134; IAN 541236.",
+  "specifications": {
+    "Weight": "6.12 kg (a vuoto)"
+  }
 }

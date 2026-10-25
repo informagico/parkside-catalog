@@ -1,6 +1,10 @@
 {
-  "_sourceHash": "a9d6594c5c7b2eff6e6b4a2f9fd7f820a3f35753614fc52a0d95654b311763b5",
+  "_sourceHash": "5b5bf93f78af1eee31f5fc6b91c1e7890edf1bb6b75a41ff502835d50ae69877",
   "title": "Pompa sup a batteria 20v",
   "body": "Pompa a batteria da 20 V per tavole SUP.",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 32; IAN 507512."
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 32; IAN 507512.",
+  "specifications": {
+    "Weight": "1.68 kg (senza batteria)",
+    "Power supply": "Batteria 20 V o alimentazione 12 V DC del veicolo"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Biotrituratore",
   "body": "Biotrituratore.",
-  "_sourceHash": "0252124cc7870511e832991d3f016e5ebf2664ff7584a1c4d5bad15b5178d71f",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 21; IAN 495950."
+  "_sourceHash": "d5fd3cf6890f7974651f24d5a1fd77de9ae2efed1ccb00646bfbf22808e74434",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 21; IAN 495950.",
+  "specifications": {
+    "Weight": "8.6 kg (senza accessori)"
+  }
 }

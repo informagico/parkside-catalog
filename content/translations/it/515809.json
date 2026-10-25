@@ -1,6 +1,9 @@
 {
   "title": "martello perforatore e scalpello demolitore",
   "body": "Trapano a percussione per lavori di foratura.",
-  "_sourceHash": "c20cc764f59a6c6f05c292b186c76c053588dafb99618d8191ec889bc0f98fe4",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 211; IAN 515809."
+  "_sourceHash": "1a5be922f14d54c4a7ce6f095f61fc82e351e41b03b0c5247d33d50733fa1eb6",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 211; IAN 515809.",
+  "specifications": {
+    "Weight": "4.9 kg (impugnatura supplementare inclusa)"
+  }
 }

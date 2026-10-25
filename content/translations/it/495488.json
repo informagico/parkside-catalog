@@ -1,6 +1,9 @@
 {
   "title": "Tosaerba a benzina",
   "body": "Tagliaerba per la manutenzione del prato.",
-  "_sourceHash": "69de690d684c8dec4bf4850e66304d262d7e21d04c3013b8f882d217e3760166",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 26; IAN 495488."
+  "_sourceHash": "e48ce3becff1ff2cefa721b26220ac6c46519778821d84c97f611284e57d608f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 26; IAN 495488.",
+  "specifications": {
+    "Weight": "21.5 kg (con serbatoio vuoto, completamente assemblato)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Set lucidatrice ricaricabile",
   "body": "Levigatrice per la preparazione e la finitura delle superfici.",
-  "_sourceHash": "f1854ff0cd41566c59b9ffa643bb940bd0170a5e2cd54f571a1dcbbd6fe56ab0",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508308."
+  "_sourceHash": "f5ed55781ecd637e29adb6dadabc9a08e8bccce308d94d60474d921d0b4d98ec",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508308.",
+  "specifications": {
+    "Weight": "0.7 kg (senza batteria)"
+  }
 }

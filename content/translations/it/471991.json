@@ -1,5 +1,9 @@
 {
   "title": "Sega 12 V",
   "body": "Sega 12 V.",
-  "_sourceHash": "e8249ed11d9ad4f65d93616a94ac3bf891c37c20c6bbb57ddbad756fa4eb17d2"
+  "_sourceHash": "c0e3d48a769e71ef272aa733da757f65a20ab4cde4deb5af7339a300a377dcb1",
+  "evidence": "",
+  "specifications": {
+    "Weight": "1.25 kg (senza batteria + caricabatterie)"
+  }
 }

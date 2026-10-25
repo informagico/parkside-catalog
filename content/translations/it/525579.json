@@ -1,6 +1,9 @@
 {
   "title": "Trapano avvitatore ricaricabile",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "8706ada31184e599e0d2853dae4fbb3364753a6ee7f0a6c2f2a77aea771c40e9",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 525579."
+  "_sourceHash": "a97f1b7e0509f946ac51a7f9382d1aece9466ca08147957e1253dbdbc7891fca",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 525579.",
+  "specifications": {
+    "Weight": "0.85 kg (senza batteria)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Trapano battente ricaricabile",
   "body": "Trapano a percussione per lavori di foratura.",
-  "_sourceHash": "6ba59657e8161c278c699d0ce1c648322d8050e82f44090ad5ab3034b30612e9",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508283."
+  "_sourceHash": "0690704e3a3d662038a18467d2599f804fed21b170b5e8f0069e233850f63699",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508283.",
+  "specifications": {
+    "Weight": "1.15 kg (senza batteria)"
+  }
 }

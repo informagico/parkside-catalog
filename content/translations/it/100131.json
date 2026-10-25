@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "988eaa6250c685c3a9ded2460ca1bfae44e6edc797d42f07e5d79902a18e46d3",
+  "_sourceHash": "e59f752efd4dc8da20b5f501dccf92f72fce5830f8e2e1efc339bec702efd4ad",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Il manuale primario identifica esplicitamente Grizzly Tools GmbH & Co. KG come produttore a pagina PDF 52. L’identità del prodotto corrisponde all’IAN 100131 e al modello PNTS 1400 D1."
+  "evidence": "Il manuale primario identifica esplicitamente Grizzly Tools GmbH & Co. KG come produttore a pagina PDF 52. L’identità del prodotto corrisponde all’IAN 100131 e al modello PNTS 1400 D1.",
+  "specifications": {
+    "Weight": "7.7 kg (tutti gli accessori inclusi)"
+  }
 }

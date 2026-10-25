@@ -1,6 +1,9 @@
 {
   "title": "Decespugliatore a benzina con avviamento elettrico",
   "body": "Decespugliatore a benzina con avviamento elettrico.",
-  "_sourceHash": "62412e94eea2a8280c375a864b2802917b384d06de67aa347d99857bf8ea46b8",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 29; IAN 495693."
+  "_sourceHash": "34fc174df0b2a0df852ca3201dc4bd7018d5460fcde954588d335405cc35dd7f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 29; IAN 495693.",
+  "specifications": {
+    "Weight": "6.2 kg (con serbatoio vuoto)"
+  }
 }

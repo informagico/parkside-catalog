@@ -1,6 +1,9 @@
 {
   "title": "Spazzola senza filo 20 V per pulizia delle fughe",
   "body": "Spazzola senza filo 20 V per pulizia delle fughe.",
-  "_sourceHash": "2f8098236360653a8e28110cc2376f7e7acbced6a5d81b24e565fb6300835a98",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 525922."
+  "_sourceHash": "df45b99d7a9e797330717fbd2b1ef8347352f6f1de33f88d5c59c62923593e67",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 525922.",
+  "specifications": {
+    "Weight": "1.9 kg (senza batteria)"
+  }
 }

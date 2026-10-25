@@ -1,6 +1,9 @@
 {
   "title": "Trapano a percussione scalpellatore",
   "body": "Trapano a percussione per lavori di foratura.",
-  "_sourceHash": "8b4cce962cbe5f1fa0834d18ae3bd27c5b759ff06801f67587e4e33f4d20d77e",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 25; IAN 479674."
+  "_sourceHash": "eefdbfb5c445161085996ca2d5fe7f91f103bcaab038b16b8c909315ccdcf285",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 25; IAN 479674.",
+  "specifications": {
+    "Weight": "4.9 kg (impugnatura supplementare inclusa)"
+  }
 }

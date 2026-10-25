@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "bf447316c0ca1472d44407e7af30346768a69ece5bf95df6ee13c73056e7d2fe",
+  "_sourceHash": "07f61affc80da6cb356fa1908c92a367427d8601088f0449c450ab9cbceefb5e",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 101; IAN 497446."
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 101; IAN 497446.",
+  "specifications": {
+    "Weight": "4.68 kg (tutti gli accessori inclusi)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Motosega ricaricabile",
   "body": "Motosega ricaricabile.",
-  "_sourceHash": "7bb813f2ff4f3b3d930ea776ef6291a1fb5d73e546d049188db5e1112d4e63ed",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 39; IAN 508282."
+  "_sourceHash": "ba340bb88d41d4f090489537c07954acbdffd6b67ec51d4356a2887c6d949286",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 39; IAN 508282.",
+  "specifications": {
+    "Weight": "1.18 kg (senza batteria + caricabatterie)"
+  }
 }

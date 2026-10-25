@@ -1,6 +1,9 @@
 {
   "title": "Sega circolare ricaricabile",
   "body": "Sega circolare per tagli rettilinei.",
-  "_sourceHash": "c7577344b8797814951e35a40ebbfe11a89d46bc238cfc78d4f47975016f1f76",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 19; IAN 496282."
+  "_sourceHash": "bfb690691bcfd1ca53f4910e33a4babdab5e8a384cb8bd90919cc880aa5f9f02",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 19; IAN 496282.",
+  "specifications": {
+    "Weight": "1.95 kg (senza batteria)"
+  }
 }

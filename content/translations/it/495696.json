@@ -1,6 +1,9 @@
 {
   "title": "Spruzzatore a pressione ricaricabile 16 L",
   "body": "Spruzzatore a pressione ricaricabile 16 L.",
-  "_sourceHash": "395dbe0808c52f1ce0ce9afe9e449aa858680ba17fd7a31dafde3de6bb27aa42",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 70; IAN 495696."
+  "_sourceHash": "53f2e19f79d0a49c16ce9c429e89d6e6f788d6a626c8a90783491ad13df1968c",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 70; IAN 495696.",
+  "specifications": {
+    "Weight": "4 kg (a vuoto)"
+  }
 }
