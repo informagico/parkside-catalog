@@ -1,10 +1,11 @@
 {
   "title": "Cacciavite di precisione elettrico",
   "body": "Avvitatore di precisione elettrico per piccole viti, con attacco per inserti da 4 mm.",
-  "_sourceHash": "cf88eb4e84906226701e78ee2c1ad3f11cce8e3809c4a9eb6cb8c7349fbbbc3a",
+  "_sourceHash": "0b44fb5a76a350454bcec4d0901818ac02cd2f77e1931dc5f1642fad57c32b61",
   "specifications": {
     "Tool holder": "inserti da 4 mm",
     "Power supply": "2 batterie AAA da 1,5 V (LR03)",
     "Torque": "0.23 Nm (motore); 3 Nm (manuale)"
-  }
+  },
+  "evidence": "Produttore: OWIM GmbH & Co. KG. Dichiarazione di conformità, pagina PDF 11; IAN 484597."
 }
