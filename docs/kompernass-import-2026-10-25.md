@@ -11,7 +11,13 @@ The catalog now contains **3,146 products**: 480 added IAN records and 103 updat
 - Kept the ten approved categories. Standalone chargers and adapters use Accessories; batteries and battery/charger kits use Batteries with explicit Ah capacity and a documented platform.
 - Kept variant-specific values scoped to their documented model. The three sander variants under 480685 have separate power and speed values. Its previous PMS 220 A1 URL redirects to the expanded record.
 - Confirmed that PBSAE 12 A1 IANs 450674, 496197 and 550424 have integrated batteries using their own manuals. The 0–700 rpm rating for 450674 remains distinct from the 35–700 rpm ratings for the other two IANs.
-- Excluded toy power-tool IAN 428083 from the existing tool taxonomy. The 336 slash-suffixed shop spare/accessory SKUs are not imported as standalone numeric IANs or substituted for their parent products.
+- Initially excluded toy power-tool IAN 428083 pending the maintainer's category decision; see the approved follow-up below. The 336 slash-suffixed shop spare/accessory SKUs are not imported as standalone numeric IANs or substituted for their parent products.
+
+## Approved follow-up: toy IAN 428083
+
+The maintainer subsequently approved adding IAN 428083 under Accessories, explicitly identified as a toy. The additional English record and Italian translation cover PP 18 B1, PP 125 B1 and PP 1500 B1. Each variant's own manual confirms its battery supply: three AA cells for PP 18 B1 and PP 125 B1, two for PP 1500 B1. The record includes the official public product photo and keeps unknown manufacturer and OEM values null.
+
+This follow-up brings the catalog to **3,147 products**, with **481 additions** and 103 updated records across the import and follow-up. [View IAN 428083](https://informagico.github.io/parkside-catalog/en/products/pp-18-b1-pp-125-b1-pp-1500-b1-428083/).
 
 ## Translation handling
 
