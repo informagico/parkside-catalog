@@ -1,6 +1,9 @@
 {
   "title": "Soffiatore per foglie ricaricabile",
   "body": "Soffiatore per foglie ricaricabile.",
-  "_sourceHash": "77b86c65fac13671498276c65aa7d60a4ff511c2c1e6ee20f19fdbafa22c4055",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 536763."
+  "_sourceHash": "705cd0bc5c4799930eb9e9ca771acf10029d3c5cf1f85bc96380ee57a13d9b9c",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 536763.",
+  "specifications": {
+    "Weight": "1.4 kg (senza batteria)"
+  }
 }

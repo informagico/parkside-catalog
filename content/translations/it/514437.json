@@ -1,10 +1,11 @@
 {
   "title": "Avvitatore a impulsi a batteria",
   "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "252a75913cd6d9dec466b9fd90983e04892a198be19be1a0b00eada620ce0472",
+  "_sourceHash": "ce2b58eeaf4c0cdbb1f895623c3106749215115710a83833597073627f0f9a7d",
   "evidence": "Dichiarazione UE di conformità, pagina PDF 11; IAN 514437.",
   "specifications": {
-    "Tool holder": "1/2 pollice, attacco quadro",
-    "Breakaway torque": "350 Nm (batteria da 5 Ah)"
+    "Tool holder": "Attacco quadro da 1/2 pollice",
+    "Breakaway torque": "350 Nm (batteria da 5 Ah)",
+    "Weight": "0.94 kg (senza batteria)"
   }
 }

@@ -1,5 +1,9 @@
 {
   "title": "Trapano avvitatore a batteria",
   "body": "Trapano avvitatore a batteria da 20 V con cambio a due velocità, mandrino autoserrante e luce LED. Include una batteria da 2 Ah, caricabatteria e un inserto a doppia estremità per avvitare.",
-  "_sourceHash": "4bbb36ed490197247f771a5c550ea535f601fda4df493728ff6f0c126c2ee037"
+  "_sourceHash": "7417ad6814f08f065caab72905bf00c9929cb149a36211120839ced870c5bf5e",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 19, rilasciata da OWIM GmbH & Co. KG per IAN 546419_2601, modello del prodotto HG14889. La copertina del manuale identifica PBSSA 20-Li B1.",
+  "specifications": {
+    "Weight": "1.3 kg (con batteria da 20 V, 2 Ah)"
+  }
 }

@@ -1,5 +1,9 @@
 {
   "title": "Lucidatrice a batteria 12 V",
   "body": "Lucidatrice per la finitura e la lucidatura delle superfici.",
-  "_sourceHash": "93ffbd0ff82f5517688c470236caf98200c922510f82273512487d23e4cb781d"
+  "_sourceHash": "855d4729af4d73f9bc7af649bdb5a35d6fa09f5b41306f488a812b0438c337ce",
+  "evidence": "",
+  "specifications": {
+    "Weight": "0.65 kg (senza batteria)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Sega a catena a benzina",
   "body": "Sega a catena a benzina.",
-  "_sourceHash": "9eac24bce898ee2d22b7a41b6e2606885d2b52ba653d4b96de07df0717c5dbdd",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 34; IAN 507549."
+  "_sourceHash": "71f5fbd42be9b6f2577c8126b4c2ea6cd9e6793d5174e23a56d6aa8b1cd5bde2",
+  "evidence": "L’introduzione identifica esplicitamente Scheppach GmbH come produttore a pagina PDF 11; la copertina e la dichiarazione identificano IAN 507549_2507.",
+  "specifications": {
+    "Weight": "6.8 kg (serbatoio vuoto, completamente assemblato)"
+  }
 }

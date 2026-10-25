@@ -35,6 +35,8 @@ Reviewed the **2,561 remaining IANs** outside the previous 586-IAN Kompernass im
 
 ## Validation
 
+Subsequent maintainer approval: the pending Italian translations were aligned and explicitly approved as a batch. All 781 affected translations are now current; see the [translation approval record](italian-translation-approval-2026-10-25.md). The translation counts above describe the state before that approval.
+
 - Production build and all 47 automated tests.
 - Product filename alignment and preservation of the six legacy URLs.
 - Consistency/classification audit with no warnings.

@@ -1,6 +1,9 @@
 {
   "title": "Tosaerba a benzina con avviamento elettrico",
   "body": "Tagliaerba per la manutenzione del prato.",
-  "_sourceHash": "052e17732e737acf341f3ef69139cf66596a5d671f0f86e944a6e9b54749d5a7",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 26; IAN 495966."
+  "_sourceHash": "79312ac3d4de21c614b1fda1fa3448374fa17399430a99a42c073802466c4ea9",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 26; IAN 495966.",
+  "specifications": {
+    "Weight": "29.0 kg (cesto di raccolta incluso, serbatoio vuoto)"
+  }
 }

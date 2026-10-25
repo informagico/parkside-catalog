@@ -1,5 +1,9 @@
 {
   "title": "Trapano a colonna",
   "body": "Trapano a colonna.",
-  "_sourceHash": "54bb37d4347b86b97ff4f73e19097eb2e782cf71a745e3cd69fb46f29ff8546a"
+  "_sourceHash": "d8d701ae86678a529d462a6c33f168704ccfbfa937cda7c2212505cac8294b2c",
+  "evidence": "",
+  "specifications": {
+    "No-load speed": "550–2600 rpm (mandrino)"
+  }
 }

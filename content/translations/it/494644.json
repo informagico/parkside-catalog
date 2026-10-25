@@ -1,6 +1,9 @@
 {
   "title": "Macchina affilatrice",
   "body": "Macchina affilatrice.",
-  "_sourceHash": "64035f26c71a0465859bcdd7a82b911775e962de1424072392c3927d079bc7ff",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 42; IAN 494644."
+  "_sourceHash": "87ec211d890530c4247aeb6d4c74d47d19300f531671fb95b7eb78e5b8280916",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 42; IAN 494644.",
+  "specifications": {
+    "Weight": "1.26 kg (accessori inclusi)"
+  }
 }

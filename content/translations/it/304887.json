@@ -1,6 +1,9 @@
 {
-  "_sourceHash": "c51b1f0be1d5934050d3ec482bccf4b528223f4a85dd4799d25d033e3703b4b3",
+  "_sourceHash": "61306cda55578ab773c0e487431a6122c895908b372b5950154155bb5fb644b8",
   "title": "Aspiratore solidi e liquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "evidence": "Dichiarazione di conformità, pagina PDF 59, rilasciata da Grizzly Tools GmbH & Co. KG per PNTS 1500 D5; IAN 304887."
+  "evidence": "Dichiarazione di conformità, pagina PDF 59, rilasciata da Grizzly Tools GmbH & Co. KG per PNTS 1500 D5; IAN 304887.",
+  "specifications": {
+    "Weight": "8.8 kg (tutti gli accessori inclusi)"
+  }
 }

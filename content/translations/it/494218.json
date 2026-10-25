@@ -1,6 +1,9 @@
 {
   "title": "Tagliasiepi ricaricabile",
   "body": "Tagliasiepi per la manutenzione delle siepi.",
-  "_sourceHash": "817d9ceb02cc9b11f97d4265b44f0372dcdd04b2a47e1e992120e59549018825",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 494218."
+  "_sourceHash": "6f775ab019908bff62c78b86dcd7f0575bc4ce3d787c58b18a38d4a92a828c0f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 494218.",
+  "specifications": {
+    "Weight": "2.5 kg (senza batteria)"
+  }
 }

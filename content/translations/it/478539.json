@@ -1,6 +1,9 @@
 {
   "title": "Motosega a benzina",
   "body": "Motosega a benzina.",
-  "_sourceHash": "d8ba4c625f5095d1a6ac613722e73f6fbbc22eb376d3a4b476b15428f5a28390",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 39; IAN 478539."
+  "_sourceHash": "a115f9de149479486178a4f548b683b92a56dc8bf9e511886b8399ac3678fd99",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 39; IAN 478539.",
+  "specifications": {
+    "Weight": "6.3 kg (con serbatoio vuoto, senza barra e catena)"
+  }
 }

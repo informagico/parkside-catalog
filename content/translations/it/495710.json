@@ -1,6 +1,9 @@
 {
   "title": "Motosega ricaricabile 40 V",
   "body": "Motosega ricaricabile 40 V.",
-  "_sourceHash": "741e5e71f6a3685f7711121781d588714e01b0191c8e42dcc6fe2b46c20697e9",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 495710."
+  "_sourceHash": "be689288b341d3b226e3ca952dc7711ab0105d2afac8aadcd8d8b33affcf4f72",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 495710.",
+  "specifications": {
+    "Weight": "2.10 kg (senza barra, catena, copribarra, olio e batterie)"
+  }
 }

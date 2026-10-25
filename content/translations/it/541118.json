@@ -1,5 +1,10 @@
 {
   "title": "Radio da cantiere a batteria 20V/12V",
   "body": "Radio da cantiere a batteria 20V/12V.",
-  "_sourceHash": "9b9e7491d42167779f6011db4b8690d27f184318c55e97e13cf1032b4e4d4bc6"
+  "_sourceHash": "9641053d7de3a0457724e73a2ddb41fa72798d44afce0923c9d0d2acc940d24c",
+  "evidence": "",
+  "specifications": {
+    "Weight": "3.1 kg (senza batteria)",
+    "Power supply": "Batteria 12 V / 20 V o adattatore 12 V DC"
+  }
 }

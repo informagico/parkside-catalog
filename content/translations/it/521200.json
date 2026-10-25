@@ -1,5 +1,14 @@
 {
   "title": "Set per lucidatura, set spazzole o pompa per trapano",
   "body": "Set per lucidatura, set spazzole o pompa per trapano.",
-  "_sourceHash": "4beed067e10633b50d57ce15d16314479e6f9605f45b8140df4d4cc9bc05dd9c"
+  "_sourceHash": "2db96116149cedc7fce89a1d3ed64d6f21074384c5983e17497aafeb73d9c05f",
+  "evidence": "",
+  "specifications": {
+    "Maximum flow rate": "HG10220 pompa per trapano: 1300 L/h",
+    "Maximum suction height": "HG10220 pompa per trapano: 3 m",
+    "Maximum delivery height": "HG10220 pompa per trapano: 15 m",
+    "Maximum water temperature": "HG10220 pompa per trapano: 40 °C",
+    "Maximum speed": "HG10220 pompa per trapano: 2800 rpm",
+    "Drive shaft diameter": "HG10220 pompa per trapano: 6.3 mm"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Motosega elettrica 1600W",
   "body": "Motosega elettrica 1600W.",
-  "_sourceHash": "2b6a72393b5695c7f0e57512e36ab344b51f3ad5c25df9313ed22bdf15320a18",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 29; IAN 495499."
+  "_sourceHash": "68e9a444b9dc9e135db89db51a804db2e45e4987814871d3e8175be878965397",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 29; IAN 495499.",
+  "specifications": {
+    "Weight": "4.8 kg (con barra e catena della motosega)"
+  }
 }

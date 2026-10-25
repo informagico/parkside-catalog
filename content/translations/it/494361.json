@@ -1,6 +1,9 @@
 {
   "title": "Avvolgitubo da parete, 25 m",
   "body": "Avvolgitubo da parete, 25 m.",
-  "_sourceHash": "aef33c9ac0ba5a43ed87fbed5fd7285a97d7bb4ff73a147c2e44cbc0fc973543",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 34; IAN 494361."
+  "_sourceHash": "df843a084188eafb021526cfdde898778fa3498ea05b7c218c8e730bb89285e6",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 34; IAN 494361.",
+  "specifications": {
+    "Weight": "9.15 kg (a vuoto)"
+  }
 }

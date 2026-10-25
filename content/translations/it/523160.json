@@ -1,5 +1,10 @@
 {
   "title": "Cacciaviti elettrico di precisione",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "163ed45546ed493391e653300ae3569085c49fb5cde6c82c3349963256b5b060"
+  "_sourceHash": "c4b0192ee748f7aebcf0fa5bad3d1150f8b22849e6ea262e903ddc9584cb9695",
+  "evidence": "",
+  "specifications": {
+    "Torque": "0.23 Nm (elettrico) / 3 Nm (manuale)",
+    "Power supply": "2 batterie LR03 / AAA da 1.5 V"
+  }
 }

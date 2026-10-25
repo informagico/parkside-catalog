@@ -1,6 +1,9 @@
 {
   "title": "Kit trapano a batteria 12 V",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "7d3f16b6a8a82c6ca3b76463b4ef69f8506ceb4fca542771170a5b5f544a9e2d",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508307."
+  "_sourceHash": "332bf9720ed709a9c37eadace2f6c305b50b2f9e35ca50e5575663a8d7f0687c",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508307.",
+  "specifications": {
+    "Weight": "0.89 kg (senza batteria)"
+  }
 }

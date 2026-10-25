@@ -1,6 +1,9 @@
 {
   "title": "Aspirapolvere a umido",
   "body": "Aspirapolvere a umido.",
-  "_sourceHash": "1a65300898c0dada28dcef8b5f3195f2e8d09d4077952fb5af9ffb33a873b9a3",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 506430."
+  "_sourceHash": "bd657b6c469d3d10113cffdda4cf54a6fb733016608e116ffbdc6fff96e34f59",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 506430.",
+  "specifications": {
+    "Weight": "10.8 kg (accessori inclusi)"
+  }
 }

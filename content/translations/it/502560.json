@@ -1,6 +1,9 @@
 {
   "title": "Tagliasiepi ricaricabile 40 V",
   "body": "Tagliasiepi per la manutenzione delle siepi.",
-  "_sourceHash": "ec17d40e858cbaed30cfdaa0b76a7dabcbd2a5ab2951dcc3c17587c46a24873a",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 19; IAN 502560."
+  "_sourceHash": "858f16319228c0cc37f6606127c39c5ccb3554d54b47e3167e0b3e4b899de2be",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 19; IAN 502560.",
+  "specifications": {
+    "Weight": "3.7 kg (senza batterie)"
+  }
 }

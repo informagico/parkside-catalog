@@ -25,6 +25,8 @@ All 480 new records have current Italian title, body and evidence translations. 
 
 ## Manuals not located
 
+Subsequent maintainer approval: all pending Italian translations, including the 102 from this import, were aligned and approved as part of the [781-record translation review](italian-translation-approval-2026-10-25.md). They are now active in the Italian catalog.
+
 The official service and the additional Parkside manual search returned no exact-IAN PDF for the following eight records. Their valid identity and photo contributions remain available; undocumented technical fields are left unknown. No specifications or manufacturer evidence were copied from other IANs.
 
 - 336363: PABH 20-Li B2.

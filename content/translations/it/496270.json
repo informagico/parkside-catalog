@@ -1,6 +1,10 @@
 {
   "title": "Radio a batteria, 20 V, 12 V",
   "body": "Radio a batteria, 20 V, 12 V.",
-  "_sourceHash": "d885592624c96b6bc9caab26d140408e9732a13d85efd6d3c74f3a832cf6d572",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 496270."
+  "_sourceHash": "d30c76353172532b22aedf63ef0c64906a59f0ff034142b7192c63b00e731b35",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 496270.",
+  "specifications": {
+    "Weight": "3.1 kg (senza batteria)",
+    "Power supply": "Batteria 12 V / 20 V o adattatore 12 V DC"
+  }
 }

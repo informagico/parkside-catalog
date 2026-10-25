@@ -1,6 +1,9 @@
 {
   "title": "Tagliabordi ricaricabile",
   "body": "Utensile da giardino per il taglio dell’erba e la pulizia della vegetazione.",
-  "_sourceHash": "d6d2e92871ed505cf0e229c6defa24008b22c06dcdea54dbcdbc24753c031039",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 22; IAN 494214."
+  "_sourceHash": "91bceca43b71255304b6ae5c80b13f072108f384ba6670f1f73b69a817c64e3d",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 22; IAN 494214.",
+  "specifications": {
+    "Weight": "1.8 kg (senza batteria)"
+  }
 }

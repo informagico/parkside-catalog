@@ -1,6 +1,9 @@
 {
   "title": "Spruzzatore universale a batteria",
   "body": "Spruzzatore universale a batteria.",
-  "_sourceHash": "d40e441d4fe52b184850393e63074a81699dc2a0b2d3cc3d99c9cf1d82e38c5f",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 40; IAN 494222."
+  "_sourceHash": "a1e6e4689d29eed04dc08740b9e809f03aba37bf07ed0120edd6ce8600eca956",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 40; IAN 494222.",
+  "specifications": {
+    "Weight": "1.26 kg (a vuoto)"
+  }
 }

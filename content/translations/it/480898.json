@@ -1,9 +1,9 @@
 {
-  "_sourceHash": "ade80f2b6b2bba18bfd175add97762c4c7ac58beeffbc1f1176fb8a23f5efa4b",
+  "_sourceHash": "32232eb1b916c63ce7233e3c8d8eb50cc806a4bd41b49de56c4a6d95dd55bc9d",
   "title": "Avvitatore ad impulsi a batteria 12v",
   "body": "Avvitatore a impulsi con alimentazione a batteria da 12 V.",
-  "evidence": "Catalogo ricambi ufficiale Kompernaß: PDSSAP 12 A1, IAN 480898.",
+  "evidence": "Kompernaß catalogo ufficiale dei ricambi: PDSSAP 12 A1, IAN 480898.",
   "specifications": {
-    "Tool holder": "6.35 mm (1/4 pollice), attacco esagonale"
+    "Tool holder": "Attacco esagonale da 6.35 mm (1/4 pollice)"
   }
 }
