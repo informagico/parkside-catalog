@@ -13,6 +13,8 @@ company: "OWIM GmbH & Co. KG"
 role: "Declared manufacturer"
 source: "https://media.sit-connect.com/public/articlemanual/bb201598-9cb2-45b9-bcde-f111e9e9fa08.pdf#page=44"
 evidence: "EU declaration of conformity, PDF page 44; IAN 487370."
+technical_source: "https://media.sit-connect.com/public/articlemanual/bb201598-9cb2-45b9-bcde-f111e9e9fa08.pdf#page=30"
+technical_evidence: "IAN 487370: the document identifies this IAN and the documented model PAMSG 20-Li B1. The technical section begins on PDF page 30."
 ---
 
 Sander for surface preparation and finishing.

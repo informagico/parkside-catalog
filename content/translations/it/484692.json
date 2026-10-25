@@ -1,5 +1,8 @@
 {
-  "title": "Borsa con attrezzi da lavoro, 23 pezzi",
-  "body": "Borsa con attrezzi da lavoro, 23 pezzi.",
-  "_sourceHash": "23927f2a4a3a3c8b0e659fb524ae37cd53c5d82fb4e632da3187f4d8de3504d3"
+  "title": "Kit di utensili con borsa, 23 pezzi",
+  "body": "Kit di 23 utensili manuali fornito in una borsa porta attrezzi.",
+  "_sourceHash": "23927f2a4a3a3c8b0e659fb524ae37cd53c5d82fb4e632da3187f4d8de3504d3",
+  "specifications": {
+    "Load capacity": "8 kg (borsa)"
+  }
 }

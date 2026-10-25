@@ -10,6 +10,9 @@ manual: "https://media.sit-connect.com/public/articlemanual/7e7faadb-74f4-4367-8
 image: {"url":"assets/products/480-4/480901.svg"}
 manufacturer_basis: "owner_confirmation"
 role: "Manufacturer confirmed by catalog owner"
+source: "https://media.sit-connect.com/public/articlemanual/7e7faadb-74f4-4367-809b-de27b07567eb.pdf"
+technical_source: "https://media.sit-connect.com/public/articlemanual/7e7faadb-74f4-4367-809b-de27b07567eb.pdf#page=29"
+technical_evidence: "IAN 480901: the document identifies this IAN and the documented model PASSP 12-Li A1. The technical section begins on PDF page 29."
 ---
 
 Sander for surface preparation and finishing.

@@ -10,6 +10,9 @@ manual: "https://media.sit-connect.com/public/articlemanual/eaf19701-faeb-4a97-9
 role: "Declared manufacturer"
 manufacturer_basis: "documents"
 image: {"url":"assets/products/465-4/465778.svg"}
+source: "https://media.sit-connect.com/public/articlemanual/eaf19701-faeb-4a97-9c3c-67b929f97b4f.pdf"
+technical_source: "https://media.sit-connect.com/public/articlemanual/eaf19701-faeb-4a97-9c3c-67b929f97b4f.pdf#page=20"
+technical_evidence: "IAN 465778: the document identifies this IAN and the documented model PALP 20-Li B2. The technical section begins on PDF page 20."
 ---
 
 Compressor for supplying compressed air.

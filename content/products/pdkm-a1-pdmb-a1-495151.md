@@ -10,6 +10,9 @@ manual: "https://media.sit-connect.com/public/articlemanual/1c7bd9e1-e44a-45a6-a
 image: {"url":"assets/products/495-1/495151.svg"}
 manufacturer_basis: "owner_confirmation"
 role: "Manufacturer confirmed by catalog owner"
+source: "https://media.sit-connect.com/public/articlemanual/1c7bd9e1-e44a-45a6-aff3-ea02ac83d071.pdf"
+technical_source: "https://media.sit-connect.com/public/articlemanual/1c7bd9e1-e44a-45a6-aff3-ea02ac83d071.pdf#page=17"
+technical_evidence: "IAN 495151: the document identifies this IAN and the documented model PDKM A1. The technical section begins on PDF page 17."
 ---
 
 Calibrated digital measuring device or rechargeable meter.

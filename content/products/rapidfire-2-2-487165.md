@@ -13,6 +13,8 @@ company: "Grizzly Tools GmbH & Co. KG"
 role: "Declared manufacturer"
 source: "https://media.sit-connect.com/public/articlemanual/44381df3-abae-4081-b0bc-1754fc194416.pdf#page=14"
 evidence: "EU declaration of conformity, PDF page 14; IAN 487165."
+technical_source: "https://media.sit-connect.com/public/articlemanual/44381df3-abae-4081-b0bc-1754fc194416.pdf#page=5"
+technical_evidence: "IAN 487165: the document identifies this IAN and the documented model Rapidfire 2.2. The technical section begins on PDF page 5."
 ---
 
 Tool for drilling and screwdriving.
