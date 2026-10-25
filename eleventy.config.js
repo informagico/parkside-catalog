@@ -15,6 +15,11 @@ export default function(eleventyConfig){
  for(const file of fs.readdirSync('node_modules/tesseract.js-core').filter(file=>/\.wasm(?:\.js)?$/.test(file))){
   eleventyConfig.addPassthroughCopy({['node_modules/tesseract.js-core/'+file]:'assets/ocr/core/'+file});
  }
+ // The visual model, index, worker and WASM are all served by this site.
+ eleventyConfig.addPassthroughCopy({'assets/visual':'assets/visual'});
+ eleventyConfig.addPassthroughCopy({'assets/fonts':'assets/fonts'});
+ eleventyConfig.addPassthroughCopy({'.cache/visual-search/index.json':'assets/visual/index.json','.cache/visual-search/vectors.bin':'assets/visual/vectors.bin','.cache/visual-search/worker.js':'assets/visual/worker.js'});
+ for(const file of ['ort-wasm-simd-threaded.mjs','ort-wasm-simd-threaded.wasm'])eleventyConfig.addPassthroughCopy({['node_modules/onnxruntime-web/dist/'+file]:'assets/visual/'+file});
  eleventyConfig.addPassthroughCopy({'node_modules/tesseract.js/dist/tesseract.min.js.LICENSE.txt':'assets/ocr/LICENSE-tesseract.txt','node_modules/tesseract.js-core/LICENSE':'assets/ocr/LICENSE-core.txt','node_modules/tesseract.js/dist/worker.min.js.LICENSE.txt':'assets/ocr/worker.min.js.LICENSE.txt'});
  if(fs.existsSync('assets/products'))eleventyConfig.addPassthroughCopy({'assets/products':'assets/products'});
  for(const p of loadProducts()){

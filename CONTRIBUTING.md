@@ -30,6 +30,13 @@ Do not invent publisher or owner credits. Confirm that the photo shows the exact
 
 The build bundles local files and successfully downloaded remote photos. If the photo is unavailable, the original category icon is shown. Do not commit generated image caches.
 
+The build also updates the visual search index from these public photos. Missing
+or unreadable photos do not block a contribution; those products remain searchable
+by text and label. Never add private chat photos or generated embedding caches to
+a PR. For recognition changes, verify actual browser inference and same-origin
+requests, combined image/text ranking and each one-sided failure fallback as
+described in [visual search](docs/visual-search.md).
+
 ## Categories
 
 Use one exact canonical English value from [content/categories.json](content/categories.json). The ten approved categories and classification examples are documented in [docs/categories.md](docs/categories.md). Batteries and battery/charger kits belong to Batteries; standalone chargers, battery adapters and general accessories belong to Accessories. Shared Italian category labels are maintained centrally. Do not invent an ad hoc category; ask the maintainer if a tool does not fit.

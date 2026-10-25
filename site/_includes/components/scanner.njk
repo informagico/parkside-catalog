@@ -8,10 +8,15 @@
  <section id="scan-image" hidden aria-label="{{ 'scanPreview' | t(lang) }}">
   <p id="scan-crop-hint">{{ 'scanCropHint' | t(lang) }}</p>
   <div class="scan-preview"><canvas id="scan-preview" aria-label="{{ 'scanPreview' | t(lang) }}" aria-describedby="scan-crop-hint"></canvas><div id="scan-selection" hidden aria-label="{{ 'scanSelection' | t(lang) }}"></div></div>
-  <div class="scan-actions"><button id="scan-rotate" type="button">↻ {{ 'scanRotate' | t(lang) }}</button><button id="scan-reset-crop" type="button">{{ 'scanResetCrop' | t(lang) }}</button><button id="scan-read" class="primary" type="button">{{ 'scanRead' | t(lang) }}</button></div>
+  <div class="scan-actions"><button id="scan-rotate" type="button">↻ {{ 'scanRotate' | t(lang) }}</button><button id="scan-reset-crop" type="button">{{ 'scanResetCrop' | t(lang) }}</button></div>
+  <label class="scan-use-text"><input id="scan-use-text" type="checkbox" checked>{{ 'scanHybridUseText' | t(lang) }}</label>
+  <div class="scan-actions"><button id="scan-visual" class="primary" type="button">{{ 'scanVisual' | t(lang) }}</button><button id="scan-read" class="secondary" type="button">{{ 'scanRead' | t(lang) }}</button></div>
+  <p class="scan-search-hint">{{ 'scanVisualDownloadHint' | t(lang) }}</p>
  </section>
  <p id="scan-status" role="status" aria-live="polite"></p>
  <progress id="scan-progress" max="1" hidden aria-label="{{ 'scanRead' | t(lang) }}"></progress>
  <div id="scan-candidates" class="scan-candidates" role="group" aria-label="{{ 'scanCandidates' | t(lang) }}" hidden></div>
+ <details id="scan-ocr-details" hidden><summary>{{ 'scanHybridReadText' | t(lang) }}</summary><p id="scan-ocr-text"></p></details>
+ <section id="scan-visual-results" aria-labelledby="scan-visual-title" hidden><h3 id="scan-visual-title">{{ 'scanVisualResults' | t(lang) }}</h3><p>{{ 'scanVisualDisclaimer' | t(lang) }}</p><p id="scan-visual-coverage" class="scan-search-hint"></p><ol id="scan-matches" class="scan-matches"></ol></section>
  <form id="scan-form"><label for="scan-query">{{ 'scanQuery' | t(lang) }}</label><div class="scan-query-row"><input id="scan-query" type="text" required maxlength="100" autocomplete="off" spellcheck="false" placeholder="IAN 407702_2207 / PABS 20-Li D5"><button class="primary" type="submit">{{ 'scanSearch' | t(lang) }}</button></div><p class="scan-search-hint">{{ 'scanSearchHint' | t(lang) }}</p></form>
 </dialog>

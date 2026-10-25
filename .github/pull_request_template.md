@@ -30,6 +30,7 @@
 - [ ] Unknown manufacturer information remains null.
 - [ ] If I supplied a photo, it matches this model/IAN and includes its source and credit.
 - [ ] If I supplied a local photo, the image file is included in this PR.
+- [ ] Photos come from public sources, not private chat attachments; generated image/embedding caches are not included.
 
 ### Optional maintainer follow-up
 
@@ -43,3 +44,7 @@ For candidate manual discovery, see [the manual search workflow](../docs/manual-
 ### Automated checks
 
 GitHub Actions validates the product, builds both languages, runs tests and produces a downloadable static preview. No local setup is required for content-only contributions.
+
+For recognition changes, also verify browser inference, combined image/text
+ranking, cancellation, one-sided failure fallbacks and same-origin requests using
+[the visual search checks](../docs/visual-search.md).

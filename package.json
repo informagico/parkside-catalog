@@ -4,9 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/clean.mjs && eleventy",
+    "build": "npm run visual:prepare && node scripts/clean.mjs && eleventy",
     "test": "node --test",
-    "dev": "eleventy --serve",
+    "dev": "npm run visual:prepare && eleventy --serve",
+    "visual:setup": "node scripts/setup-visual.mjs",
+    "visual:index": "node scripts/visual-index.mjs",
+    "visual:prepare": "node scripts/visual-index.mjs && node scripts/build-visual-worker.mjs",
     "images": "node scripts/cache-images.mjs",
     "translation": "node scripts/translation.mjs",
     "audit": "node scripts/audit.mjs",
@@ -19,8 +22,12 @@
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
     "@tesseract.js-data/eng": "^1.0.0",
+    "esbuild": "0.28.2",
     "gray-matter": "4.0.3",
     "markdown-it": "14.1.0",
+    "onnxruntime-node": "1.30.0",
+    "onnxruntime-web": "1.30.0",
+    "sharp": "0.35.5",
     "tesseract.js": "^7.0.0"
   }
 }

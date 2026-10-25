@@ -9,7 +9,7 @@ export function extractCodes(text){
   const number=match[1].replace(/\s/g,'').replace(/O/g,'0').replace(/[IL|]/g,'1');
   if(/^\d{5,6}$/.test(number))add('ian',number+(match[2]?'_'+match[2]:''),number);
  }
- for(const match of source.matchAll(/\b(P[A-Z]{1,9})[\s-]+(\d{1,4}(?:[.,]\d)?)[\s-]*(?:(LI|L I|L[I1]|L[I1]-ION)[\s-]*)?([A-H])\s*([1-9])\b/g)){
+ for(const match of source.matchAll(/\b(P[A-Z]{1,9})[\s-]+(\d{1,4}(?:[.,]\d)?)[\s-]*(?:(LI|L I|L[I1]|L[I1]-ION)[\s-]*)?([A-Z])\s*([1-9])\b/g)){
   const model=match[1]+' '+match[2]+(match[3]?'-Li':'')+' '+match[4]+match[5];
   add('model',model,model);
  }

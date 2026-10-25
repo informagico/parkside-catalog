@@ -83,9 +83,21 @@ The repository and GitHub Pages site are public. Every successful push to main p
 
 Visual verification requires a browser that can reach the preview; build and integrity checks run independently.
 
-## Browser label scanner
+## Browser photo and label search
 
-The catalog search includes **Scan label** in Italian and English. Take a photo or
+**Search by photo** can find visually similar catalog products entirely on the
+visitor's device. Select one product, optionally crop/rotate it and choose
+**Find similar products**. By default it also reads text in the same crop to
+cross-check IANs, full model codes, names and documented specifications. For a
+leaflet, include one article's image and description. Text can find records without
+a photo, and result clues explain which text matched. Disable **Also match text**
+to search images alone. The first combined use downloads about 50 MB of self-hosted
+model/runtime/index assets; photos, OCR text and embeddings are never uploaded or
+saved. Results are candidates, with related IAN links, and never establish an
+exact identity or manufacturer. **Read label** remains available for IAN/model OCR. See
+[visual search maintenance and privacy](docs/visual-search.md).
+
+The photo search dialog includes **Read label** in Italian and English. Take a photo or
 choose an image, optionally drag a crop around the label or rotate it, then run
 OCR. Confirm or edit the detected IAN/model before searching. IAN batch suffixes
 are shown for review but omitted from the catalog query; confirmed scans clear
@@ -96,7 +108,8 @@ Images are decoded and processed in memory in the browser, never uploaded or
 stored. Tesseract.js, its Web Worker, WebAssembly cores and English OCR model are
 copied from locked npm dependencies into `assets/ocr/` during the Eleventy build.
 All OCR requests stay on the site's origin, including under a GitHub Pages
-project subpath. OCR loads only when the user presses **Read label**. The language
+project subpath. OCR loads only after **Read label** or an explicit photo search
+with **Also match text** enabled. The language
 model may be cached locally by Tesseract; photos are not cached. Closing the
 scanner releases the image and terminates an active recognition worker. The
 catalog itself remains online; this feature does not promise offline access.
