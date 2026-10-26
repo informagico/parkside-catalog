@@ -137,7 +137,7 @@
   "scanGallery": "Choose image",
   "scanClose": "Close",
   "scanPreview": "Photo preview",
-  "scanCropHint": "Crop one item together with its image and nearby description. To read a label, select just the label.",
+  "scanCropHint": "Swipe on the photo to scroll. Tap Crop to select a single product or label.",
   "scanRotate": "Rotate",
   "scanResetCrop": "Whole image",
   "scanRead": "Read label",
@@ -180,5 +180,12 @@
   "scanVisualWeak": "The similarities are weak. This product may not be in the catalog: try a tighter crop or read the label.",
   "scanVisualEmpty": "No candidates available. Try reading the label or searching for an IAN or model.",
   "scanVisualTimeout": "Matching is taking too long. Try again or read the label instead.",
-  "scanVisualError": "Visual search is unavailable on this device or could not load. You can retry, read the label or enter a code manually."
+  "scanVisualError": "Visual search is unavailable on this device or could not load. You can retry, read the label or enter a code manually.",
+  "scanCrop": "Crop",
+  "scanCropDone": "Finish cropping",
+  "scanCropEditing": "Drag on the photo to select an area. Release to scroll again.",
+  "scanCropSelected": "Area selected. Scroll to search, or tap Crop to change the selection.",
+  "filterToggle": "Filters",
+  "activeFilters": "{count} active",
+  "clearSearch": "Clear search"
 }

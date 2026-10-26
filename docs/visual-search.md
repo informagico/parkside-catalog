@@ -93,3 +93,14 @@ generic promotional text does not reorder image results. Unit tests cover shared
 preprocessing, quantized cosine retrieval, model/category grouping and index
 integrity. Retrieval from transformed catalog photos is a useful regression test,
 but does not measure accuracy on arbitrary real-world photographs.
+
+## Touch interaction
+
+The preview scrolls vertically by default. Crop is an explicit mode: tap **Crop**,
+drag one rectangle, then release to restore scrolling automatically. The selected
+rectangle remains visible while scrolling. A cancelled gesture or an accidental
+tap preserves the previous selection. **Full image** clears it, and rotation or a
+new image resets the selection and crop mode. Preview display size is bounded by
+the viewport; selection coordinates are mapped to the underlying canvas, so the
+recognition input is independent of the displayed size. On phones the dialog
+fills the viewport and locks the background page until it closes.
