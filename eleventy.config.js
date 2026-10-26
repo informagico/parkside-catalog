@@ -36,6 +36,7 @@ export default function(eleventyConfig){
  eleventyConfig.addFilter('json',value=>JSON.stringify(value));
  eleventyConfig.addFilter('jsonScript',value=>JSON.stringify(value).replace(/</g,'\\u003c'));
  eleventyConfig.addFilter('clientMessages',lang=>Object.fromEntries(['resultOne','resultMany','shown','listView','gridView','activeFilters',...Object.keys(uiDictionary(lang)).filter(key=>key.startsWith('scan'))].map(key=>[key,uiDictionary(lang)[key]])));
+ eleventyConfig.addFilter('comparisonMessages',lang=>Object.fromEntries(Object.entries(uiDictionary(lang)).filter(([key])=>key.startsWith('compare')||['manufacturer','category','power'].includes(key))));
  eleventyConfig.addFilter('unique',values=>[...new Set(values)]);
  eleventyConfig.addFilter('keys',value=>Object.keys(value||{}));
  eleventyConfig.addFilter('sameModel',(products,model,slug,category)=>sameModel(products,model,category).filter(p=>p.slug!==slug));

@@ -117,3 +117,19 @@ catalog itself remains online; this feature does not promise offline access.
 Supported browsers need modules, WebAssembly, Web Workers and native HTML dialogs.
 Camera capture uses the device's file picker; on desktop it may open a file
 chooser instead. Unsupported image formats can be retried as JPEG, PNG or WebP.
+
+## Product comparison
+
+Use **Compare** on a catalog card or product page to select up to three IANs.
+The selection stays in this browser while navigating and is shared between the
+Italian and English interfaces. Open the comparison tray to see the union of
+available specifications. **Differences only** hides matching rows while keeping
+incomplete rows visible. Missing manufacturer or technical data is never treated
+as evidence of a product difference. Values are compared using their canonical
+English fields, ignoring case and whitespace; units and differently worded
+specifications are not assumed equivalent.
+
+**Copy link** creates a comparison URL with the selected IANs. Opening that link
+restores its selection. Comparison works in the browser with a static catalog
+JSON file; no third-party service is used. On small screens the table scrolls
+horizontally with sticky product headers and field labels.

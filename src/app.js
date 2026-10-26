@@ -43,6 +43,7 @@ function update(reset=true){
  if(limit>pageSize)query.set('limit',String(limit));if(container.classList.contains('list'))query.set('view','list');
  history.replaceState(history.state,'',location.pathname+(query.size?'?'+query:'')+location.hash);
  for(const link of document.querySelectorAll('[data-language-link]')){const target=new URL(link.href,location.href);target.search=location.search;target.hash=location.hash;link.href=target.href;}
+ document.dispatchEvent(new Event('catalog:updated'));
 }
 for(const e of Object.values(controls))e.addEventListener(e.type==='search'?'input':'change',()=>{clearTimeout(timer);if(e.type==='search'){$('#search-clear').hidden=!e.value;timer=setTimeout(()=>update(),120);}else update();});
 function reset(){clearTimeout(timer);for(const [k,e] of Object.entries(controls)){if(k==='confirmed')e.checked=false;else e.value=k==='sort'?'model':'';}update();}

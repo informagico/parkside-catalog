@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="{{ 'description' | t(lang) | escape }}">
-  <title>{% if title %}{{ title | escape }}{% else %}{{ 'catalog' | t(lang) }}{% endif %} · Parkside Atlas</title>
+  <title>{% if pageType == 'comparison' %}{{ 'compareTitle' | t(lang) }}{% elif title %}{{ title | escape }}{% else %}{{ 'catalog' | t(lang) }}{% endif %} · Parkside Atlas</title>
   {% for code in languages %}<link rel="alternate" hreflang="{{ code }}" href="{{ page.outputPath | localeTarget(code) | rel(page.outputPath) }}">{% endfor %}
   <link rel="stylesheet" href="{{ 'assets/style.css' | rel(page.outputPath) }}">
   <link rel="stylesheet" href="{{ 'assets/locales.css' | rel(page.outputPath) }}">
   <link rel="stylesheet" href="{{ 'assets/refinements.css' | rel(page.outputPath) }}">
   {% if pageType == 'catalog' %}<link rel="stylesheet" href="{{ 'assets/catalog.css' | rel(page.outputPath) }}"><link rel="stylesheet" href="{{ 'assets/scanner.css' | rel(page.outputPath) }}">{% endif %}
+  <link rel="stylesheet" href="{{ 'assets/compare.css' | rel(page.outputPath) }}">
 </head>
 <body{% if pageType == 'catalog' %} class="catalog-page"{% endif %}>
 <a class="skip" href="#main">{{ 'skip' | t(lang) }}</a>
@@ -24,6 +25,14 @@
 </header>
 <main id="main">{{ content | safe }}</main>
 {% if pageType != 'catalog' %}{% include 'components/footer.njk' %}{% endif %}
+<aside id="compare-tray" class="compare-tray" aria-label="{{ 'compareTitle' | t(lang) }}" hidden>
+ <span id="compare-count"></span><div id="compare-items" class="compare-items"></div>
+ <a class="primary" data-compare-link href="{{ (lang + '/compare/index.html') | rel(page.outputPath) }}">{{ 'compareOpen' | t(lang) }}</a>
+ <button type="button" id="compare-clear">{{ 'compareClear' | t(lang) }}</button>
+</aside>
+<p id="compare-status" class="compare-status" role="status" aria-live="polite"></p>
+<script id="comparison-i18n" type="application/json">{{ lang | comparisonMessages | jsonScript | safe }}</script>
+<script type="module" src="{{ 'assets/compare.js' | rel(page.outputPath) }}"></script>
 <script src="{{ 'assets/language.js' | rel(page.outputPath) }}" defer></script>
 <script src="{{ 'assets/photos.js' | rel(page.outputPath) }}" defer></script>
 {% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script><script type="module" src="{{ 'assets/scanner.js' | rel(page.outputPath) }}"></script>{% endif %}

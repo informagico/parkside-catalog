@@ -1,3 +1,4 @@
+import {comparisonProduct} from '../../lib/comparison.mjs';
 import {loadProducts} from '../../lib/catalog.mjs';
 import {languages,localize,translate} from '../../lib/i18n.mjs';
 import {modelIndex} from '../../lib/identity.mjs';
@@ -14,5 +15,6 @@ export default function(){
   companies:[...new Set(products.map(p=>p.manufacturer).filter(Boolean))].sort().map(value=>({value,label:value}))
  }]));
  const redirects=productRedirects(products,JSON.parse(fs.readFileSync('content/product-redirects.json','utf8')));
- return {products,localized,options,redirectEntries:languages.flatMap(lang=>redirects.map(p=>({...p,lang}))),entries:languages.flatMap(lang=>localized[lang].map(product=>({lang,product}))),count:products.length,models:groups.size,verified:products.filter(p=>p.manufacturer).length,photoCount:products.filter(p=>p.image).length};
+ const comparison=Object.fromEntries(languages.map(lang=>[lang,products.map((p,i)=>comparisonProduct(p,localized[lang][i],lang))]));
+ return {products,localized,comparison,options,redirectEntries:languages.flatMap(lang=>redirects.map(p=>({...p,lang}))),entries:languages.flatMap(lang=>localized[lang].map(product=>({lang,product}))),count:products.length,models:groups.size,verified:products.filter(p=>p.manufacturer).length,photoCount:products.filter(p=>p.image).length};
 }

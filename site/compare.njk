@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+pageType: comparison
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang }}/compare/index.html"
+---
+<div class="detail comparison-page" id="comparison" data-source="{{ (lang + '/data/comparison.json') | rel(page.outputPath) }}" data-root="{{ 'index.html' | rel(page.outputPath) }}">
+ <a class="back" href="{{ (lang + '/index.html') | rel(page.outputPath) }}#catalogue">← {{ 'back' | t(lang) }}</a>
+ <h1>{{ 'compareTitle' | t(lang) }}</h1><p class="lead">{{ 'compareIntro' | t(lang) }}</p>
+ <div class="comparison-actions"><a class="secondary" href="{{ (lang + '/index.html') | rel(page.outputPath) }}#catalogue">+ {{ 'compareChoose' | t(lang) }}</a><button class="secondary" id="compare-share" hidden>{{ 'compareShare' | t(lang) }}</button><label hidden id="compare-diff-label"><input type="checkbox" id="compare-diff"> {{ 'compareOnlyDiff' | t(lang) }}</label></div>
+ <p id="compare-warning" role="status" hidden></p><p id="compare-summary" aria-live="polite"></p>
+ <p id="compare-hint" class="comparison-hint" hidden>{{ 'compareScroll' | t(lang) }} →</p>
+ <div id="comparison-table" class="comparison-scroll" tabindex="0" role="region" aria-label="{{ 'compareTitle' | t(lang) }}"></div>
+ <p id="compare-notes" class="muted" hidden>{{ 'compareNotes' | t(lang) }}</p>
+ <noscript><p>{{ 'compareIntro' | t(lang) }}</p></noscript>
+</div>

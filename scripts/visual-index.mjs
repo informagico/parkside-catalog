@@ -2,7 +2,6 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import os from 'node:os';
 import sharp from 'sharp';
-import * as ort from 'onnxruntime-node';
 import {loadProducts} from '../lib/catalog.mjs';
 import {IMAGE_SIZE,VECTOR_SIZE,VISUAL_VERSION,MODEL_SHA256,imageTensor,quantizeVector} from '../src/visual-core.js';
 
@@ -28,13 +27,15 @@ for(const p of loadProducts()){
   unique.get(digest).ians.push(p.ian);
  }catch{unavailable++;}
 }
-let session,computed=0,skipped=0;
+let session,ort,computed=0,skipped=0;
 const entries=[],vectors=[];
 const started=Date.now();
 for(const [digest,item] of [...unique].sort(([a],[b])=>a.localeCompare(b))){
  const cacheFile=`${cache}/${VISUAL_VERSION}-${MODEL_SHA256}-${digest}.bin`;
  let vector=fs.existsSync(cacheFile)?fs.readFileSync(cacheFile):null;
  if(!vector||vector.length!==VECTOR_SIZE){
+  if(process.env.VISUAL_INDEX_CACHE_ONLY==='1')throw Error('Missing visual embedding cache for IAN '+item.ians.join(', '));
+  ort??=await import('onnxruntime-node');
   let decoded;
   try{decoded=await sharp(item.bytes,{limitInputPixels:40000000}).rotate().ensureAlpha().raw().toBuffer({resolveWithObject:true});}
   catch{skipped++;console.warn('Visual index: skipped unreadable photo for IAN '+item.ians.join(', '));continue;}
