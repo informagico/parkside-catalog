@@ -137,7 +137,7 @@
   "scanGallery": "Scegli immagine",
   "scanClose": "Chiudi",
   "scanPreview": "Anteprima foto",
-  "scanCropHint": "Ritaglia un solo articolo includendo immagine e descrizione vicina. Per leggere un’etichetta, seleziona solo quella.",
+  "scanCropHint": "Scorri sulla foto per continuare. Per selezionare un solo prodotto o un’etichetta, tocca Ritaglia.",
   "scanRotate": "Ruota",
   "scanResetCrop": "Immagine intera",
   "scanRead": "Leggi etichetta",
@@ -180,5 +180,12 @@
   "scanVisualWeak": "Le somiglianze sono deboli. Il prodotto potrebbe non essere nel catalogo: prova a ritagliarlo meglio o leggi l’etichetta.",
   "scanVisualEmpty": "Nessun candidato disponibile. Prova a leggere l’etichetta o cerca uno IAN o un modello.",
   "scanVisualTimeout": "Il confronto sta impiegando troppo tempo. Riprova o usa la lettura dell’etichetta.",
-  "scanVisualError": "Confronto visivo non disponibile su questo dispositivo o caricamento non riuscito. Puoi riprovare, leggere l’etichetta o cercare il codice manualmente."
+  "scanVisualError": "Confronto visivo non disponibile su questo dispositivo o caricamento non riuscito. Puoi riprovare, leggere l’etichetta o cercare il codice manualmente.",
+  "scanCrop": "Ritaglia",
+  "scanCropDone": "Fine ritaglio",
+  "scanCropEditing": "Trascina sulla foto per selezionare l’area. Al rilascio puoi tornare a scorrere.",
+  "scanCropSelected": "Area selezionata. Puoi scorrere e avviare la ricerca, oppure toccare Ritaglia per modificarla.",
+  "filterToggle": "Filtri",
+  "activeFilters": "{count} attivi",
+  "clearSearch": "Cancella ricerca"
 }

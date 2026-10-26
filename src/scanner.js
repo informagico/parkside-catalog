@@ -9,15 +9,26 @@ if(dialog&&typeof dialog.showModal==='function'){
  const selection=$('#scan-selection'),query=$('#scan-query'),status=$('#scan-status'),progress=$('#scan-progress');
  const candidates=$('#scan-candidates');
  const visualResults=$('#scan-visual-results'),matches=$('#scan-matches');
- let image=null,crop=null,start=null,worker=null,busy=false,generation=0,rotation=0;
+ let image=null,crop=null,start=null,worker=null,busy=false,generation=0,rotation=0,cropping=false,previousCrop=null;
  let visualWorker=null,visualReject=null,ocrReject=null,productsPromise=null;
  const sources=new Set(),useText=$('#scan-use-text'),ocrDetails=$('#scan-ocr-details'),ocrText=$('#scan-ocr-text');
- const locked=['#scan-camera','#scan-gallery','#scan-read','#scan-visual','#scan-use-text','#scan-rotate','#scan-reset-crop'];
- const setBusy=value=>{busy=value;dialog.setAttribute('aria-busy',String(value));for(const id of locked)$(id).disabled=value;progress.hidden=!value;};
+ const locked=['#scan-camera','#scan-gallery','#scan-read','#scan-visual','#scan-use-text','#scan-rotate','#scan-reset-crop','#scan-crop'];
+ const setBusy=value=>{if(value)setCropMode(false);busy=value;dialog.setAttribute('aria-busy',String(value));for(const id of locked)$(id).disabled=value;progress.hidden=!value;};
  const clearCandidates=()=>{candidates.replaceChildren();candidates.hidden=true;};
  const clearVisual=()=>{matches.replaceChildren();visualResults.hidden=true;$('#scan-visual-coverage').textContent='';ocrText.textContent='';ocrDetails.hidden=true;ocrDetails.open=false;};
  const stop=()=>{generation++;if(worker){const previous=worker;worker=null;void previous.terminate().catch(()=>{});}visualReject?.(new Error('cancelled'));visualReject=null;ocrReject?.(new Error('cancelled'));ocrReject=null;visualWorker?.terminate();visualWorker=null;for(const source of sources)source.width=source.height=1;sources.clear();setBusy(false);};
- const resetCrop=()=>{crop=null;start=null;selection.hidden=true;clearVisual();};
+ const cropButton=$('#scan-crop');
+ function setCropMode(value){
+  cropping=value;canvas.classList.toggle('is-cropping',value);
+  cropButton.setAttribute('aria-pressed',String(value));
+  cropButton.textContent=message(value?'scanCropDone':'scanCrop');
+  $('#scan-crop-hint').textContent=message(value?'scanCropEditing':crop?'scanCropSelected':'scanCropHint');
+ }
+ function paintSelection(){
+  selection.hidden=!crop;
+  if(crop)Object.assign(selection.style,{left:crop.x/canvas.width*100+'%',top:crop.y/canvas.height*100+'%',width:crop.width/canvas.width*100+'%',height:crop.height/canvas.height*100+'%'});
+ }
+ const resetCrop=()=>{crop=null;start=null;previousCrop=null;paintSelection();setCropMode(false);clearVisual();};
  function draw(){
   resetCrop();
   const swapped=rotation%2!==0;
@@ -29,10 +40,10 @@ if(dialog&&typeof dialog.showModal==='function'){
  }
  function close(){dialog.close();}
  open.hidden=false;
- open.addEventListener('click',()=>{dialog.showModal();status.textContent=message('scanManualHint');});
+ open.addEventListener('click',()=>{dialog.showModal();document.documentElement.classList.add('scanner-open');status.textContent=message('scanManualHint');});
  $('#scan-close').addEventListener('click',close);
  dialog.addEventListener('close',()=>{
-  stop();image=null;canvas.width=canvas.height=1;resetCrop();clearCandidates();query.value='';status.textContent='';$('#scan-image').hidden=true;
+  document.documentElement.classList.remove('scanner-open');stop();image=null;canvas.width=canvas.height=1;resetCrop();clearCandidates();query.value='';status.textContent='';$('#scan-image').hidden=true;
   for(const id of ['#scan-camera-file','#scan-gallery-file'])$(id).value='';
   open.focus();
  });
@@ -48,22 +59,30 @@ if(dialog&&typeof dialog.showModal==='function'){
    try{
     const photo=new Image();photo.src=url;await photo.decode();
     if(token!==generation||!dialog.open)return;
-    image=photo;rotation=0;draw();$('#scan-image').hidden=false;
+    image=photo;rotation=0;draw();$('#scan-image').hidden=false;$('#scan-image').scrollIntoView({block:'start',behavior:'instant'});
    }catch{if(token===generation)status.textContent=message('scanImageError');}
    finally{URL.revokeObjectURL(url);}
   });
  }
  $('#scan-rotate').addEventListener('click',()=>{if(image&&!busy){rotation=(rotation+1)%4;draw();}});
  $('#scan-reset-crop').addEventListener('click',resetCrop);
+ cropButton.addEventListener('click',()=>{if(!busy)setCropMode(!cropping);});
  const point=event=>{const rect=canvas.getBoundingClientRect();return {x:Math.max(0,Math.min(canvas.width,(event.clientX-rect.left)*canvas.width/rect.width)),y:Math.max(0,Math.min(canvas.height,(event.clientY-rect.top)*canvas.height/rect.height))};};
- canvas.addEventListener('pointerdown',event=>{if(busy||!image||!event.isPrimary)return;canvas.setPointerCapture(event.pointerId);resetCrop();start=point(event);});
+ canvas.addEventListener('pointerdown',event=>{
+  if(busy||!image||!cropping||!event.isPrimary||event.button!==0)return;
+  canvas.setPointerCapture(event.pointerId);previousCrop=crop;start=point(event);
+ });
  canvas.addEventListener('pointermove',event=>{
   if(!start)return;const end=point(event);
   crop={x:Math.min(start.x,end.x),y:Math.min(start.y,end.y),width:Math.abs(end.x-start.x),height:Math.abs(end.y-start.y)};
-  selection.hidden=false;Object.assign(selection.style,{left:crop.x/canvas.width*100+'%',top:crop.y/canvas.height*100+'%',width:crop.width/canvas.width*100+'%',height:crop.height/canvas.height*100+'%'});
+  paintSelection();
  });
- canvas.addEventListener('pointerup',()=>{start=null;if(crop&&(crop.width<20||crop.height<20))resetCrop();});
- canvas.addEventListener('pointercancel',resetCrop);
+ canvas.addEventListener('pointerup',()=>{
+  if(!start)return;start=null;
+  if(!crop||crop.width<20||crop.height<20){crop=previousCrop;paintSelection();return;}
+  previousCrop=null;clearVisual();clearCandidates();setCropMode(false);
+ });
+ canvas.addEventListener('pointercancel',()=>{if(!start)return;start=null;crop=previousCrop;previousCrop=null;paintSelection();});
  function snapshot(){
   const region=crop||{x:0,y:0,width:canvas.width,height:canvas.height},source=document.createElement('canvas');
   source.width=Math.max(1,Math.round(region.width));source.height=Math.max(1,Math.round(region.height));

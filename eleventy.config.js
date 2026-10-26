@@ -35,7 +35,7 @@ export default function(eleventyConfig){
  eleventyConfig.addFilter('localeTarget',(outputPath,lang)=>path.relative('dist',outputPath).replaceAll('\\','/').replace(/^(it|en)\//,lang+'/'));
  eleventyConfig.addFilter('json',value=>JSON.stringify(value));
  eleventyConfig.addFilter('jsonScript',value=>JSON.stringify(value).replace(/</g,'\\u003c'));
- eleventyConfig.addFilter('clientMessages',lang=>Object.fromEntries(['resultOne','resultMany','shown','listView','gridView',...Object.keys(uiDictionary(lang)).filter(key=>key.startsWith('scan'))].map(key=>[key,uiDictionary(lang)[key]])));
+ eleventyConfig.addFilter('clientMessages',lang=>Object.fromEntries(['resultOne','resultMany','shown','listView','gridView','activeFilters',...Object.keys(uiDictionary(lang)).filter(key=>key.startsWith('scan'))].map(key=>[key,uiDictionary(lang)[key]])));
  eleventyConfig.addFilter('unique',values=>[...new Set(values)]);
  eleventyConfig.addFilter('keys',value=>Object.keys(value||{}));
  eleventyConfig.addFilter('sameModel',(products,model,slug,category)=>sameModel(products,model,category).filter(p=>p.slug!==slug));
