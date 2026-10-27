@@ -4,7 +4,8 @@ ian: "436726"
 title: "Heat-shrink tubing and wiring accessories"
 category: "Accessories"
 power: "Manual"
-manufacturer: null
+manufacturer: "Kompernass Handels GmbH"
+manufacturer_basis: owner_confirmation
 oem: null
 specifications: {"Full IAN":"436726_2304"}
 source: "https://www.kompernass.com/gb/heat-shrink-tubing-cable-splice-connector-terminal-block/436726"

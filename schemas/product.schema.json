@@ -153,6 +153,34 @@
       "type": "string",
       "pattern": "^https://",
       "description": "Optional product manual PDF URL."
+    },
+    "documents": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Optional warranty and service PDFs. These do not count as operating manuals.",
+      "items": {
+        "type": "object",
+        "required": ["type", "url"],
+        "properties": {
+          "type": {"type": "string", "enum": ["warranty"]},
+          "url": {"type": "string", "pattern": "^https://"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "manuals": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Optional manuals for separate variants under this IAN. If manual is also set, its URL must be included in this list; otherwise the first entry is used as the primary manual.",
+      "items": {
+        "type": "object",
+        "required": ["model", "url"],
+        "properties": {
+          "model": {"type": "string", "pattern": "\\S", "description": "Model code identifying the variant covered by this manual."},
+          "url": {"type": "string", "pattern": "^https://"}
+        },
+        "additionalProperties": false
+      }
     }
   }
 }

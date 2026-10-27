@@ -67,6 +67,9 @@
   "documentation": "DOCUMENTATION",
   "followSources": "Sources",
   "manual": "Manual",
+  "manuals": "Manuals",
+  "productDocuments": "Documents",
+  "warrantyPdf": "Warranty and service information (PDF)",
   "officialCatalog": "Official catalog",
   "technicalSource": "Official Lidl specifications",
   "openGithub": "Open record on GitHub",
@@ -225,5 +228,7 @@
   "missingFilterTitle": "Which details should be missing?",
   "missingCombinationHint": "Show records missing only the selected details. Leave everything unchecked to see all incomplete records.",
   "contributionMoreCount": "Show {count} more records",
-  "contributionShowAll": "Show all {count} records"
+  "contributionShowAll": "Show all {count} records",
+  "contributionEmptyTitle": "No records match your filters.",
+  "contributionEmptyText": "Try another IAN or model, change the category or adjust the selected missing details."
 }

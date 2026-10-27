@@ -18,6 +18,10 @@ Do not infer manufacturers from appearance or a spare parts catalog. Keep manufa
 
 Check the scope of the manual before adding data: a supplied charger's input power is not the cordless tool's power, and a component manual does not establish the identity of a whole kit. Record technical page references in optional technical_source and technical_evidence metadata. Model codes can be reused for unrelated products; comparisons group the same normalized model code within its functional category.
 
+If an IAN covers separate articles with different manuals, add an optional `manuals` list in the same product file. Each entry needs `model` (the covered variant's model code) and `url` (its HTTPS PDF URL). The product page displays each manual with its model label in both languages. Keep `manual` as the primary URL when already present and include it in the list; when omitted, the first entry becomes the primary manual. Avoid duplicate URLs and keep specifications scoped to the variant documented by each PDF.
+
+For a PDF containing warranty and service information, use an optional `documents` list with `type: "warranty"` and its HTTPS `url`. It appears as a labelled product document in both languages. A warranty leaflet does not fill the missing operating-manual field and does not establish technical specifications.
+
 When adding or correcting a model code, check the other IANs for that full model and category. The site automatically displays their IAN count and comparison table in both languages. Keep each IAN's own specifications, manual and manufacturer provenance; a shared model is not permission to copy data between records. Different generations, kits and reused codes in different categories remain separate.
 
 ### Photos in the same Markdown

@@ -11,6 +11,8 @@ manufacturer: null
 specifications: {}
 # Optional: remove the manual and image blocks when unavailable.
 manual: "https://example.com/product-manual.pdf"
+# For separate variant manuals under one IAN, see the optional manuals list in CONTRIBUTING.md.
+# Warranty and service leaflets belong in the optional documents list; see CONTRIBUTING.md.
 image:
   url: "https://example.com/product-photo.jpg"
 ---

@@ -67,6 +67,9 @@
   "documentation": "DOCUMENTAZIONE",
   "followSources": "Fonti",
   "manual": "Manuale",
+  "manuals": "Manuali",
+  "productDocuments": "Documenti",
+  "warrantyPdf": "Garanzia e assistenza (PDF)",
   "officialCatalog": "Catalogo ufficiale",
   "technicalSource": "Specifiche ufficiali Lidl",
   "openGithub": "Apri scheda su GitHub",
@@ -225,5 +228,7 @@
   "missingFilterTitle": "Quali dati devono mancare?",
   "missingCombinationHint": "Mostra le schede a cui mancano solo i dati selezionati. Lascia tutto deselezionato per vederle tutte.",
   "contributionMoreCount": "Mostra altre {count} schede",
-  "contributionShowAll": "Mostra tutte le {count} schede"
+  "contributionShowAll": "Mostra tutte le {count} schede",
+  "contributionEmptyTitle": "Nessuna scheda corrisponde ai filtri.",
+  "contributionEmptyText": "Prova un altro IAN o modello, cambia categoria oppure modifica i dati mancanti selezionati."
 }
