@@ -253,5 +253,7 @@
   "Orbit diameter": "Diametro dell’orbita",
   "Sanding plate dimensions": "Dimensioni delle piastre abrasive",
   "Suction disc diameter": "Diametro della ventosa",
-  "Maximum inlet pressure": "Pressione massima in ingresso"
+  "Maximum inlet pressure": "Pressione massima in ingresso",
+  "Maximum combined power": "Potenza totale massima di aspiratore e presa",
+  "Filter efficiency": "Efficienza di filtrazione"
 }

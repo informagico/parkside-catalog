@@ -28,6 +28,7 @@
 - [ ] For Batteries records, I included capacity in `#.# Ah` format and the documented battery system where applicable; standalone chargers use Accessories.
 - [ ] I linked a primary source and explained what it confirms.
 - [ ] If an IAN has multiple variant manuals, each `manuals` entry labels the covered model; URLs are unique and include the primary `manual` URL when present. Specifications remain scoped to their documented variant.
+- [ ] Warranty and service leaflets use `documents` with `type: "warranty"`, without filling the operating `manual` field or inferring technical data.
 - [ ] Unknown manufacturer information remains null.
 - [ ] If I supplied a photo, it matches this model/IAN and includes its source and credit.
 - [ ] If I supplied a local photo, the image file is included in this PR.
