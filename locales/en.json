@@ -225,5 +225,7 @@
   "missingFilterTitle": "Which details should be missing?",
   "missingCombinationHint": "Show records missing only the selected details. Leave everything unchecked to see all incomplete records.",
   "contributionMoreCount": "Show {count} more records",
-  "contributionShowAll": "Show all {count} records"
+  "contributionShowAll": "Show all {count} records",
+  "contributionEmptyTitle": "No records match your filters.",
+  "contributionEmptyText": "Try another IAN or model, change the category or adjust the selected missing details."
 }

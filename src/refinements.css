@@ -123,6 +123,13 @@ body:has(.contribution-page) header nav{gap:28px;font-size:13px}
 @media(max-width:700px){body:has(.contribution-page) header{height:76px;padding:0 20px}body:has(.contribution-page) header .brand{font-size:13px}body:has(.contribution-page) header .brandmark{width:33px;height:33px}body:has(.contribution-page) header .brand-sub{font-size:7px}body:has(.contribution-page) header nav{gap:16px;font-size:11px}.contribution-page.detail{padding:30px 16px 56px}.contribution-intro{margin-bottom:24px}.contribution-page .contribution-controls{grid-template-columns:minmax(0,1fr);padding:20px;gap:18px}.contribution-page .missing-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}.contribution-page .missing-options label{padding:10px;font-size:12px}.contribution-page .contribution-table th,.contribution-page .contribution-table td{padding:14px}.contribution-page .contribution-table td:first-child{min-width:100px;width:100px}.contribution-page .contribution-table td:nth-child(2){min-width:180px}.contribution-page .contribution-table td:nth-child(3){min-width:150px}.contribution-page .contribution-table td:last-child,.contribution-page .contribution-table th:last-child{display:none}}
 
 /* Contribution pagination controls. */
+.contribution-empty{margin-top:28px;padding:40px 24px;text-align:center;background:#fff;border:1px solid #dde4da;border-radius:10px}
+.contribution-empty-icon{display:grid;place-items:center;width:48px;height:48px;margin:0 auto 18px;border-radius:50%;background:#edf1e8;color:#637b59}
+.contribution-empty-icon svg{width:26px;height:26px}
+.contribution-empty h2{margin:0;font:650 clamp(20px,3vw,24px)/1.3 system-ui;letter-spacing:-.025em;color:#203b32}
+.contribution-empty p{max-width:480px;margin:12px auto 0;font-size:14px;line-height:1.7;color:#68776e}
+.contribution-empty .secondary{display:inline-flex;align-items:center;gap:12px;margin-top:24px;min-height:44px;border-color:#365e3c;border-radius:6px;background:#365e3c;color:#fff;font-size:13px;cursor:pointer}
+.contribution-empty .secondary:hover{background:#294c30}
 .contribution-pagination{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 .contribution-pagination .secondary{margin:0!important;border-radius:6px;min-height:42px;font-size:12px;cursor:pointer}
 .contribution-pagination #contribution-all{border-color:#cbd7c0;background:#edf3e6;color:#345434}

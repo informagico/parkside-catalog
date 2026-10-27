@@ -6,6 +6,10 @@ const fields = [...document.querySelectorAll('#contribution-missing input[name="
 const count = document.querySelector('#contribution-count');
 const more = document.querySelector('#contribution-more');
 const all = document.querySelector('#contribution-all');
+const results = document.querySelector('.contribution-results');
+const table = document.querySelector('#contribution-table');
+const empty = document.querySelector('#contribution-empty');
+const pagination = document.querySelector('.contribution-pagination');
 const params = new URLSearchParams(location.search);
 const requestedLimit = Number(params.get('limit'));
 let limit = Number.isSafeInteger(requestedLimit) && requestedLimit >= 50
@@ -31,6 +35,11 @@ function render() {
     matchesMissing(row, selected)
   );
   matchingCount = matching.length;
+  const hasResults = matchingCount > 0;
+  results.hidden = !hasResults;
+  table.hidden = !hasResults;
+  empty.hidden = hasResults;
+  pagination.hidden = !hasResults;
   const shown = Math.min(limit, matchingCount);
   body.replaceChildren(...matching.slice(0, limit));
   count.textContent = count.dataset.resultShown.replace('{shown}', shown).replace('{count}', matchingCount);
@@ -60,11 +69,14 @@ all.addEventListener('click', () => {
   limit = Math.max(limit, matchingCount);
   render();
 });
-document.querySelector('#contribution-reset').addEventListener('click', () => {
+function reset() {
   search.value = '';
   category.value = '';
   fields.forEach(input => { input.checked = false; });
   limit = 50;
   render();
-});
+  search.focus();
+}
+document.querySelector('#contribution-reset').addEventListener('click', reset);
+document.querySelector('#contribution-empty-reset').addEventListener('click', reset);
 render();
