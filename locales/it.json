@@ -112,7 +112,7 @@
   "manualPdf": "Apri manuale PDF",
   "reportCorrection": "Segnala una correzione",
   "variantIntro": "IAN dello stesso modello. Le caratteristiche riportate si riferiscono alla singola scheda.",
-  "contributeTitle": "Aiuta a completare il catalogo",
+  "contributeTitle": "Completiamo il catalogo.",
   "missingField": "Dato mancante",
   "missingManufacturer": "Produttore",
   "missingModel": "Codice modello",
@@ -219,5 +219,9 @@
   "compareAdded": "Aggiunto al confronto: {model}",
   "compareRemoved": "Rimosso dal confronto: {model}",
   "compareProduct": "Apri scheda",
-  "compareLoadFailed": "Impossibile caricare il confronto. Ricarica la pagina per riprovare."
+  "compareLoadFailed": "Impossibile caricare il confronto. Ricarica la pagina per riprovare.",
+  "contributionIntroText": "Trova le schede a cui puoi aggiungere un’informazione.",
+  "contributionSearchLabel": "Cerca una scheda",
+  "missingFilterTitle": "Quali dati devono mancare?",
+  "missingCombinationHint": "Mostra le schede a cui mancano solo i dati selezionati. Lascia tutto deselezionato per vederle tutte."
 }

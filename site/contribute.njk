@@ -8,9 +8,22 @@ pagination:
 permalink: "{{ lang }}/contribute/index.html"
 ---
 <section class="detail contribution-page">
-<h1>{{ 'contributeTitle' | t(lang) }}</h1><p>{{ 'contributeText' | t(lang) }}</p>
+<div class="contribution-intro"><h1>{{ 'contributeTitle' | t(lang) }}</h1><p>{{ 'contributionIntroText' | t(lang) }}</p></div>
 <p><a class="primary" href="{{ site.repository }}/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">{{ 'contributionGuide' | t(lang) }} ↗</a></p>
-<div class="contribution-controls"><label>{{ 'search' | t(lang) }}<input id="contribution-search" type="search"></label><label>{{ 'category' | t(lang) }}<select id="contribution-category"><option value="">{{ 'allCategories' | t(lang) }}</option>{% for c in catalog.options[lang].categories %}<option value="{{ c.value | escape }}">{{ c.label | escape }}</option>{% endfor %}</select></label><label>{{ 'missingField' | t(lang) }}<select id="contribution-missing"><option value="">{{ 'anyMissing' | t(lang) }}</option><option value="manufacturer">{{ 'missingManufacturer' | t(lang) }}</option><option value="model">{{ 'missingModel' | t(lang) }}</option><option value="manual">{{ 'missingManual' | t(lang) }}</option><option value="image">{{ 'missingImage' | t(lang) }}</option></select></label></div>
-<p id="contribution-count" aria-live="polite"></p>
+<div class="contribution-controls">
+<label>{{ 'contributionSearchLabel' | t(lang) }}<input id="contribution-search" type="search" placeholder="{{ 'search' | t(lang) | escape }}"></label>
+<label>{{ 'category' | t(lang) }}<select id="contribution-category"><option value="">{{ 'allCategories' | t(lang) }}</option>{% for c in catalog.options[lang].categories %}<option value="{{ c.value | escape }}">{{ c.label | escape }}</option>{% endfor %}</select></label>
+<fieldset id="contribution-missing" class="contribution-missing" aria-describedby="contribution-missing-hint">
+<legend>{{ 'missingFilterTitle' | t(lang) }}</legend>
+<div class="missing-options">
+<label><input type="checkbox" name="missing" value="manufacturer"><span>{{ 'missingManufacturer' | t(lang) }}</span></label>
+<label><input type="checkbox" name="missing" value="model"><span>{{ 'missingModel' | t(lang) }}</span></label>
+<label><input type="checkbox" name="missing" value="manual"><span>{{ 'missingManual' | t(lang) }}</span></label>
+<label><input type="checkbox" name="missing" value="image"><span>{{ 'missingImage' | t(lang) }}</span></label>
+</div>
+<p id="contribution-missing-hint">{{ 'missingCombinationHint' | t(lang) }}</p>
+</fieldset>
+</div>
+<div class="contribution-results"><p id="contribution-count" aria-live="polite"></p><button id="contribution-reset" type="button">{{ 'resetFilters' | t(lang) }} <span aria-hidden="true">↺</span></button></div>
 <div class="table-scroll"><table class="contribution-table"><thead><tr><th>IAN</th><th>{{ 'product' | t(lang) }}</th><th>{{ 'missingField' | t(lang) }}</th><th></th></tr></thead><tbody id="contribution-rows">{% for p in catalog.localized[lang] %}{% if not p.manufacturer or not p.model or not p.manual or not p.image %}<tr data-category="{{ p.categoryKey | escape }}" data-search="{{ (p.ian + ' ' + (p.model or '') + ' ' + p.title) | lower | escape }}" data-missing="{% if not p.manufacturer %}manufacturer {% endif %}{% if not p.model %}model {% endif %}{% if not p.manual %}manual {% endif %}{% if not p.image %}image{% endif %}"><td><a href="{{ (lang + '/products/' + p.slug + '/index.html') | rel(page.outputPath) }}">{{ p.ian }}</a></td><td>{{ (p.model or p.title) | escape }}{% if p.model %}<small>{{ p.title | escape }}</small>{% endif %}</td><td>{% if not p.manufacturer %}<span>{{ 'missingManufacturer' | t(lang) }}</span> {% endif %}{% if not p.model %}<span>{{ 'missingModel' | t(lang) }}</span> {% endif %}{% if not p.manual %}<span>{{ 'missingManual' | t(lang) }}</span> {% endif %}{% if not p.image %}<span>{{ 'missingImage' | t(lang) }}</span>{% endif %}</td><td><a href="{{ p | correctionUrl | escape }}" target="_blank" rel="noopener noreferrer">{{ 'reportCorrection' | t(lang) }} ↗</a></td></tr>{% endif %}{% endfor %}</tbody></table></div><button id="contribution-more" class="secondary">{{ 'more' | t(lang) }} ↓</button>
 </section>

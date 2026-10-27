@@ -112,7 +112,7 @@
   "manualPdf": "Open PDF manual",
   "reportCorrection": "Suggest a correction",
   "variantIntro": "IANs for this model. Each record retains its own documented specifications.",
-  "contributeTitle": "Help complete the catalog",
+  "contributeTitle": "Let’s complete the catalog.",
   "missingField": "Missing information",
   "missingManufacturer": "Manufacturer",
   "missingModel": "Model code",
@@ -219,5 +219,9 @@
   "compareAdded": "Added to comparison: {model}",
   "compareRemoved": "Removed from comparison: {model}",
   "compareProduct": "View product",
-  "compareLoadFailed": "Unable to load the comparison. Reload the page to try again."
+  "compareLoadFailed": "Unable to load the comparison. Reload the page to try again.",
+  "contributionIntroText": "Find the records where you can add a missing detail.",
+  "contributionSearchLabel": "Find a record",
+  "missingFilterTitle": "Which details should be missing?",
+  "missingCombinationHint": "Show records missing only the selected details. Leave everything unchecked to see all incomplete records."
 }
