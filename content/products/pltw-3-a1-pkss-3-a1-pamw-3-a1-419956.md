@@ -4,7 +4,8 @@ ian: "419956"
 title: "Cable stripping and termination tools"
 category: "Workshop Equipment"
 power: "Manual"
-manufacturer: null
+manufacturer: "Kompernass Handels GmbH"
+manufacturer_basis: owner_confirmation
 oem: null
 specifications: {"Full IAN":"419956_2204"}
 source: "https://www.kompernass.com/gb/lsa-terminal-tool-diagonal-cutters/419956"
