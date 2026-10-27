@@ -4,7 +4,8 @@ ian: "434249"
 title: "pH and TDS meters"
 category: "Measuring & Detection"
 power: "Replaceable batteries"
-manufacturer: null
+manufacturer: "Kompernass Handels GmbH"
+manufacturer_basis: owner_confirmation
 oem: null
 specifications: {"Power supply":"PPHM 2 A1 / PTDSM 2 A1: 3 V CR2032 button cell","Full IAN":"434249_2304","pH measurement range":"PPHM 2 A1: 0.00–14.00","pH resolution":"PPHM 2 A1: 0.01","pH accuracy":"PPHM 2 A1: ±0.05","Conductivity range":"PTDSM 2 A1: 0–9999 μS/cm","Conductivity resolution":"PTDSM 2 A1: 1 μS/cm"}
 source: "https://www.kompernass.com/gb/ph-meter-tds-meter/434249"
