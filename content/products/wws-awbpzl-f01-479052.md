@@ -1,10 +1,11 @@
 ---
-model: null
+model: "WWS-AWBPZL-F01"
 ian: "479052"
 title: "Weed burner"
 category: "Gardening"
 power: "Unverified"
-manufacturer: null
+manufacturer: "Walter Werkzeuge Salzburg GmbH"
+manufacturer_basis: owner_confirmation
 specifications: {"Full IAN":"479052_2410"}
 manual: "https://media.sit-connect.com/public/articlemanual/a24a9bae-4ed9-4f5f-b4d4-089579e001cb.pdf"
 image: {"url":"assets/products/479-1/479052.svg"}
