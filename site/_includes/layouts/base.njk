@@ -7,7 +7,7 @@
   {% for code in languages %}<link rel="alternate" hreflang="{{ code }}" href="{{ page.outputPath | localeTarget(code) | rel(page.outputPath) }}">{% endfor %}
   <link rel="stylesheet" href="{{ 'assets/style.css' | rel(page.outputPath) }}">
   <link rel="stylesheet" href="{{ 'assets/locales.css' | rel(page.outputPath) }}">
-  <link rel="stylesheet" href="{{ 'assets/refinements.css' | rel(page.outputPath) }}">
+  <link rel="stylesheet" href="{{ 'assets/refinements.css' | rel(page.outputPath) }}?v=20261027-pagination">
   {% if pageType == 'catalog' %}<link rel="stylesheet" href="{{ 'assets/catalog.css' | rel(page.outputPath) }}"><link rel="stylesheet" href="{{ 'assets/scanner.css' | rel(page.outputPath) }}">{% endif %}
   <link rel="stylesheet" href="{{ 'assets/compare.css' | rel(page.outputPath) }}">
 </head>
@@ -37,5 +37,5 @@
 <script src="{{ 'assets/photos.js' | rel(page.outputPath) }}" defer></script>
 {% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script><script type="module" src="{{ 'assets/scanner.js' | rel(page.outputPath) }}"></script>{% endif %}
 {% if pageType != 'catalog' %}<script src="{{ 'assets/return.js' | rel(page.outputPath) }}" defer></script>{% endif %}
-{% if pageType == 'contribute' %}<script src="{{ 'assets/contribute.js' | rel(page.outputPath) }}" defer></script>{% endif %}
+{% if pageType == 'contribute' %}<script src="{{ 'assets/contribute.js' | rel(page.outputPath) }}?v=20261027-pagination" defer></script>{% endif %}
 </body></html>

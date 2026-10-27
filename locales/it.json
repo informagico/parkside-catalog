@@ -223,5 +223,7 @@
   "contributionIntroText": "Trova le schede a cui puoi aggiungere un’informazione.",
   "contributionSearchLabel": "Cerca una scheda",
   "missingFilterTitle": "Quali dati devono mancare?",
-  "missingCombinationHint": "Mostra le schede a cui mancano solo i dati selezionati. Lascia tutto deselezionato per vederle tutte."
+  "missingCombinationHint": "Mostra le schede a cui mancano solo i dati selezionati. Lascia tutto deselezionato per vederle tutte.",
+  "contributionMoreCount": "Mostra altre {count} schede",
+  "contributionShowAll": "Mostra tutte le {count} schede"
 }

@@ -223,5 +223,7 @@
   "contributionIntroText": "Find the records where you can add a missing detail.",
   "contributionSearchLabel": "Find a record",
   "missingFilterTitle": "Which details should be missing?",
-  "missingCombinationHint": "Show records missing only the selected details. Leave everything unchecked to see all incomplete records."
+  "missingCombinationHint": "Show records missing only the selected details. Leave everything unchecked to see all incomplete records.",
+  "contributionMoreCount": "Show {count} more records",
+  "contributionShowAll": "Show all {count} records"
 }
