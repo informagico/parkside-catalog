@@ -3,8 +3,6 @@ import {loadProducts} from '../../lib/catalog.mjs';
 import {languages,localize,translate} from '../../lib/i18n.mjs';
 import {modelIndex} from '../../lib/identity.mjs';
 import {previewMetadata} from '../../lib/preview.mjs';
-import fs from 'node:fs';
-import {productRedirects} from '../../lib/product-paths.mjs';
 export default function(){
  const products=loadProducts(),groups=modelIndex(products),modelIanCounts=new Map();
  for(const group of groups.values())for(const p of group)modelIanCounts.set(p.ian,group.length);
@@ -14,7 +12,6 @@ export default function(){
   power:[...new Set(products.map(p=>p.power))].sort().map(value=>({value,label:translate(value,lang)})),
   companies:[...new Set(products.map(p=>p.manufacturer).filter(Boolean))].sort().map(value=>({value,label:value}))
  }]));
- const redirects=productRedirects(products,JSON.parse(fs.readFileSync('content/product-redirects.json','utf8')));
  const comparison=Object.fromEntries(languages.map(lang=>[lang,products.map((p,i)=>comparisonProduct(p,localized[lang][i],lang))]));
- return {products,localized,comparison,options,redirectEntries:languages.flatMap(lang=>redirects.map(p=>({...p,lang}))),entries:languages.flatMap(lang=>localized[lang].map(product=>({lang,product}))),count:products.length,models:groups.size,verified:products.filter(p=>p.manufacturer).length,photoCount:products.filter(p=>p.image).length};
+ return {products,localized,comparison,options,entries:languages.flatMap(lang=>localized[lang].map(product=>({lang,product}))),count:products.length,models:groups.size,verified:products.filter(p=>p.manufacturer).length,photoCount:products.filter(p=>p.image).length};
 }

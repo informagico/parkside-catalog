@@ -42,5 +42,5 @@ if(!write){
   const after=before.replace(/content\/products\/[a-z0-9-]+\.md/g,value=>replacements.get(value)||value);
   if(after!==before)fs.writeFileSync(file,after);
  }
- console.log('Renamed '+changes.length+' product files; legacy URLs preserved in '+aliasFile+'.');
+ console.log('Renamed '+changes.length+' product files; historical slugs recorded in '+aliasFile+' (no redirect pages are published).');
 }

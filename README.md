@@ -34,7 +34,7 @@ Product filenames use lowercase `model-ian.md`, or `ian.md` when the model is un
 | Path | Purpose |
 | --- | --- |
 | content/products/*.md | English records; one IAN per file, image included |
-| content/product-redirects.json | Previous product URL slugs mapped to their IANs |
+| content/product-redirects.json | Historical product slugs mapped to their IANs; legacy redirect pages are not published |
 | content/translations/it/IAN.json | Optional translated title, body, evidence and textual specification values |
 | content/categories.json | Exact allowed category values |
 | locales/fields/it.json | Shared field labels and enum translations |

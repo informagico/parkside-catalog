@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {productSlug,productRedirects} from '../lib/product-paths.mjs';
 import {loadProducts} from '../lib/catalog.mjs';
-import {t} from '../lib/i18n.mjs';
 
 test('product filenames normalize complete model codes and preserve string IANs',()=>{
  for(const [model,ian,expected] of [
@@ -28,19 +27,14 @@ test('redirects resolve each historical slug to the current IAN without chains o
  assert.throws(()=>productRedirects(products,{'../old':'123456'}),/Unsafe/);
 });
 
-test('all legacy product URLs have bilingual redirects and working canonical targets',()=>{
+test('the build publishes only current product paths in both languages',()=>{
  const products=loadProducts();
  const aliases=JSON.parse(fs.readFileSync('content/product-redirects.json','utf8'));
- const redirects=productRedirects(products,aliases);
- assert(redirects.length>0);
- for(const lang of ['it','en'])for(const {from,to} of redirects){
-  const html=fs.readFileSync(`dist/${lang}/products/${from}/index.html`,'utf8');
-  const target=`../${to}/`;
-  assert(html.includes(`lang="${lang}"`));
-  assert(html.includes(`rel="canonical" href="${target}"`));
-  assert(html.includes(`http-equiv="refresh" content="0;url=${target}"`));
-  assert(html.includes(`location.replace(${JSON.stringify(target)}+location.search+location.hash)`));
-  assert(html.includes(`<a href="${target}">${t(lang,'openProduct')}</a>`));
-  assert(fs.existsSync(`dist/${lang}/products/${to}/index.html`));
+ const current=products.map(p=>p.slug).sort();
+ for(const lang of ['it','en']){
+  const root=`dist/${lang}/products`;
+  assert.deepEqual(fs.readdirSync(root).sort(),current);
+  for(const slug of current)assert(fs.existsSync(`${root}/${slug}/index.html`));
+  for(const {from} of productRedirects(products,aliases))assert(!fs.existsSync(`${root}/${from}/index.html`));
  }
 });

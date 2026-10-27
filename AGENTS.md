@@ -1,6 +1,6 @@
 # Catalog rules
 
-- Canonical product Markdown and documentation are English. Keep one file per IAN in content/products. Use lowercase model-ian.md when the model is known and ian.md when it is null. Run npm run filenames -- --write after model corrections to align filenames and retain old public URLs in content/product-redirects.json. Preserve IANs as strings.
+- Canonical product Markdown and documentation are English. Keep one file per IAN in content/products. Use lowercase model-ian.md when the model is known and ian.md when it is null. Run npm run filenames -- --write after model corrections to align filenames. content/product-redirects.json records historical slugs only; do not generate legacy redirect pages. The owner chose to publish current product URLs only. Preserve IANs as strings.
 - Contributions need only one English Markdown file. Images belong in its image block; local images are included in assets/products. Never reintroduce a separate photo registry or the checked field.
 - Translate product prose by IAN and stable field name in content/translations/<language>/<IAN>.json. Missing or outdated translations must never block valid English contributions. Hold stale translations back and show the English source with a notice.
 - Shared category, power and specification labels are translated centrally in locales/fields. UI text lives in locales/<language>.json. Never use full product sentences as translation keys.
