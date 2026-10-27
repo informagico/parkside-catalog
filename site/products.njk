@@ -20,7 +20,7 @@ permalink: "{{ entry.lang }}/products/{{ entry.product.slug }}/index.html"
   <section class="panel"><span class="eyebrow">{{ 'identity' | t(lang) }}</span><h2>{{ 'behind' | t(lang) }}</h2><dl><dt>{{ 'manufacturer' | t(lang) }}</dt><dd>{% if p.manufacturer %}{{ p.manufacturer | escape }}{% else %}{{ 'unknown' | t(lang) }}{% endif %}</dd></dl></section>
   <section class="panel"><span class="eyebrow">{{ 'technical' | t(lang) }}</span><h2>{{ 'details' | t(lang) }}</h2><div lang="{{ p.textLanguages.body }}">{{ p.body | markdown | safe }}</div>{% if (p.specifications | keys | length) > 0 %}<dl>{% for key,value in p.specifications %}<dt>{{ key | escape }}</dt><dd>{{ value | escape }}</dd>{% endfor %}</dl>{% endif %}</section>
  </div><aside>
-  {% if p.manual %}<section class="panel"><h2>{{ 'manual' | t(lang) }}</h2><a class="variant" href="{{ p.manual | escape }}" target="_blank" rel="noopener noreferrer">{{ 'manualPdf' | t(lang) }} ↗</a></section>{% endif %}
+  {% if p.manual %}<section class="panel"><h2>{% if p.manuals and p.manuals | length > 1 %}{{ 'manuals' | t(lang) }}{% else %}{{ 'manual' | t(lang) }}{% endif %}</h2>{% if p.manuals %}{% for manual in p.manuals %}<a class="variant" href="{{ manual.url | escape }}" target="_blank" rel="noopener noreferrer">{{ manual.model | escape }} · {{ 'manualPdf' | t(lang) }} ↗</a>{% endfor %}{% else %}<a class="variant" href="{{ p.manual | escape }}" target="_blank" rel="noopener noreferrer">{{ 'manualPdf' | t(lang) }} ↗</a>{% endif %}</section>{% endif %}
 
  </aside></div>
 </div>

@@ -9,6 +9,11 @@ specifications: {"Product range":"Performance","Battery system":"X20V-Team","No-
 image: {"url":"assets/products/472-4/472728.svg"}
 manufacturer_basis: "owner_confirmation"
 manual: "https://media.sit-connect.com/public/articlemanual/8d191888-d74a-4f07-a843-370a1d16fc14.pdf"
+manuals:
+  - model: "PAMSP 20-Li A1"
+    url: "https://media.sit-connect.com/public/articlemanual/8d191888-d74a-4f07-a843-370a1d16fc14.pdf"
+  - model: "PAESP 20-Li A1"
+    url: "https://media.sit-connect.com/public/articlemanual/327f1a04-1d84-4a0b-a15a-c0bbdf5a3e2a.pdf"
 technical_source: "https://media.sit-connect.com/public/articlemanual/8d191888-d74a-4f07-a843-370a1d16fc14.pdf#page=12"
 technical_evidence: "IAN 472728: Technical data reviewed on PDF page 12. This manual covers PAMSP 20-Li A1 only; variant-specific values are scoped to that model and are not assigned to PAESP 20-Li A1."
 ---
