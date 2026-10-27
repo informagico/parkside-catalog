@@ -4,7 +4,8 @@ ian: "523317"
 title: "Moisture meter / infrared thermometer"
 category: "Measuring & Detection"
 power: "Unverified"
-manufacturer: null
+manufacturer: "OWIM GmbH & Co. KG"
+manufacturer_basis: owner_confirmation
 specifications: {"Full IAN":"523317_2601"}
 image: {"url":"assets/products/523-3/523317.svg"}
 manual: "https://media.sit-connect.com/public/articlemanual/b461b4f9-6cf7-4c99-8cbf-79c696b67e3d.pdf"
