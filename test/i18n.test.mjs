@@ -51,7 +51,7 @@ test('Both static catalogs have identical identities and translated product page
   assert(home.includes('hreflang="it"'));assert(home.includes('hreflang="en"'));
   const page=fs.readFileSync(`dist/${lang}/products/pwdl-40-a1-544816/index.html`,'utf8');
   const other=lang==='it'?'en':'it';
-  assert(page.includes(`../../../${other}/products/pwdl-40-a1-544816/index.html`));
+  assert(page.includes(`../../../${other}/products/pwdl-40-a1-544816/`));
   assert(page.includes('1500 W'));assert(page.includes('Grizzly Tools'));
  }
  const enPage=fs.readFileSync('dist/en/products/pwdl-40-a1-544816/index.html','utf8');

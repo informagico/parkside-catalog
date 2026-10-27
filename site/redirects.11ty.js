@@ -7,7 +7,7 @@ export default class {
   eleventyExcludeFromCollections:true
  }}
  render({redirect:{lang,to}}){
-  const target=`../${to}/index.html`;
+  const target=`../${to}/`;
   const label=t(lang,'openProduct');
   return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><title>${label}</title><meta name="robots" content="noindex"><link rel="canonical" href="${target}"><meta http-equiv="refresh" content="0;url=${target}"><script>location.replace(${JSON.stringify(target)}+location.search+location.hash)</script></head><body><a href="${target}">${label}</a></body></html>`;
  }

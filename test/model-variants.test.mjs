@@ -40,7 +40,7 @@ test('every shared model has a matching badge and complete comparison table in b
    assert.equal((table.match(/<tr\b/g)||[]).length,group.length,p.ian+' row count');
    assert.equal((table.match(/class="current-variant"/g)||[]).length,1);
    assert(table.includes(`aria-current="page">${p.ian}</span>`));
-   for(const other of group.filter(q=>q.ian!==p.ian))assert(table.includes(`href="../${other.slug}/index.html"`),p.ian+' missing peer '+other.ian);
+   for(const other of group.filter(q=>q.ian!==p.ian))assert(table.includes(`href="../${other.slug}/"`),p.ian+' missing peer '+other.ian);
   }
  }
 });

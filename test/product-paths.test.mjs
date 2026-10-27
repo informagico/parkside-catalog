@@ -35,7 +35,7 @@ test('all legacy product URLs have bilingual redirects and working canonical tar
  assert(redirects.length>0);
  for(const lang of ['it','en'])for(const {from,to} of redirects){
   const html=fs.readFileSync(`dist/${lang}/products/${from}/index.html`,'utf8');
-  const target=`../${to}/index.html`;
+  const target=`../${to}/`;
   assert(html.includes(`lang="${lang}"`));
   assert(html.includes(`rel="canonical" href="${target}"`));
   assert(html.includes(`http-equiv="refresh" content="0;url=${target}"`));

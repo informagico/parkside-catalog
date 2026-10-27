@@ -16,7 +16,7 @@ const announce=text=>{
  statusTimer=setTimeout(()=>$('#compare-status').textContent='',6000);
 };
 function compareUrl(){
- const url=new URL(locale+'/compare/index.html',moduleRoot);
+ const url=new URL(locale+'/compare/',moduleRoot);
  if(selected.length)url.searchParams.set('ians',selected.map(p=>p.ian).join(','));
  return url;
 }
@@ -83,7 +83,7 @@ function render(){
   const cell=el('th');cell.scope='col';
   cell.append(removeButton({ian:p.ian,model:p.model||p.title}));
   if(p.image){const img=el('img');img.src=new URL(p.image,pageRoot).href;img.alt='';img.loading='lazy';cell.append(img);}
-  const link=el('a',p.model||p.title);link.href=new URL(`${locale}/products/${p.slug}/index.html`,pageRoot).href;
+  const link=el('a',p.model||p.title);link.href=new URL(`${locale}/products/${p.slug}/`,pageRoot).href;
   cell.append(link,el('small',p.title),el('small','IAN '+p.ian));header.append(cell);
  }
  head.append(header);table.append(head);

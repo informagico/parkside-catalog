@@ -5,6 +5,7 @@ import {art} from './lib/product.mjs';
 import {loadProducts} from './lib/catalog.mjs';
 import {t,uiDictionary,languages} from './lib/i18n.mjs';
 import {sameModel,variantDifferences} from './lib/identity.mjs';
+import {relativeUrl} from './lib/urls.mjs';
 const markdown=new MarkdownIt({html:false,linkify:false});
 export default function(eleventyConfig){
  eleventyConfig.addPassthroughCopy({'src':'assets'});
@@ -31,7 +32,7 @@ export default function(eleventyConfig){
  eleventyConfig.addFilter('t',(key,lang,values={})=>t(lang,key,values));
  eleventyConfig.addFilter('art',category=>art(category));
  eleventyConfig.addFilter('markdown',value=>markdown.render(value||''));
- eleventyConfig.addFilter('rel',(target,outputPath)=>path.relative(path.dirname(outputPath),path.join('dist',target)).replaceAll('\\','/')||'index.html');
+ eleventyConfig.addFilter('rel',relativeUrl);
  eleventyConfig.addFilter('localeTarget',(outputPath,lang)=>path.relative('dist',outputPath).replaceAll('\\','/').replace(/^(it|en)\//,lang+'/'));
  eleventyConfig.addFilter('json',value=>JSON.stringify(value));
  eleventyConfig.addFilter('jsonScript',value=>JSON.stringify(value).replace(/</g,'\\u003c'));

@@ -55,7 +55,7 @@ document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&
 let saved;try{saved=JSON.parse(sessionStorage.getItem(storageKey)||'null');}catch{}
 const restore=params.get('restore')==='1'||performance.getEntriesByType('navigation')[0]?.type==='back_forward';
 update(false);
-if(restore&&saved){const u=new URL(saved.url,location.href);if(u.origin===location.origin&&u.pathname===location.pathname&&u.search===location.search){const restoreScroll=()=>requestAnimationFrame(()=>{scrollTo({top:Number(saved.scroll)||0,behavior:'instant'});resultsScroller.scrollTop=Number(saved.resultsScroll)||0;});if(document.readyState==='complete')restoreScroll();else addEventListener('load',restoreScroll,{once:true});}}
+if(restore&&saved){const u=new URL(saved.url,location.href);u.pathname=u.pathname.replace(/\/index\.html$/,'/');if(u.origin===location.origin&&u.pathname===location.pathname&&u.search===location.search){const restoreScroll=()=>requestAnimationFrame(()=>{scrollTo({top:Number(saved.scroll)||0,behavior:'instant'});resultsScroller.scrollTop=Number(saved.resultsScroll)||0;});if(document.readyState==='complete')restoreScroll();else addEventListener('load',restoreScroll,{once:true});}}
 
 // A confirmed scan replaces the search and clears filters that could hide it.
 document.addEventListener('catalog:scan-search',event=>{

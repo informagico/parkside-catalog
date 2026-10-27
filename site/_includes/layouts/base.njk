@@ -2,6 +2,7 @@
 <html lang="{{ lang }}"{% if pageType == 'catalog' %} class="catalog-document"{% endif %}>
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  {% include 'components/clean-url.njk' %}
   <meta name="description" content="{{ 'description' | t(lang) | escape }}">
   <title>{% if pageType == 'comparison' %}{{ 'compareTitle' | t(lang) }}{% elif title %}{{ title | escape }}{% else %}{{ 'catalog' | t(lang) }}{% endif %} · Parkside Atlas</title>
   {% for code in languages %}<link rel="alternate" hreflang="{{ code }}" href="{{ page.outputPath | localeTarget(code) | rel(page.outputPath) }}">{% endfor %}
@@ -32,10 +33,10 @@
 </aside>
 <p id="compare-status" class="compare-status" role="status" aria-live="polite"></p>
 <script id="comparison-i18n" type="application/json">{{ lang | comparisonMessages | jsonScript | safe }}</script>
-<script type="module" src="{{ 'assets/compare.js' | rel(page.outputPath) }}"></script>
+<script type="module" src="{{ 'assets/compare.js' | rel(page.outputPath) }}?v=20261027-clean-urls"></script>
 <script src="{{ 'assets/language.js' | rel(page.outputPath) }}" defer></script>
 <script src="{{ 'assets/photos.js' | rel(page.outputPath) }}" defer></script>
-{% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}" defer></script><script type="module" src="{{ 'assets/scanner.js' | rel(page.outputPath) }}"></script>{% endif %}
-{% if pageType != 'catalog' %}<script src="{{ 'assets/return.js' | rel(page.outputPath) }}" defer></script>{% endif %}
+{% if pageType == 'catalog' %}<script id="client-i18n" type="application/json">{{ lang | clientMessages | jsonScript | safe }}</script><script src="{{ 'assets/app.js' | rel(page.outputPath) }}?v=20261027-clean-urls" defer></script><script type="module" src="{{ 'assets/scanner.js' | rel(page.outputPath) }}"></script>{% endif %}
+{% if pageType != 'catalog' %}<script src="{{ 'assets/return.js' | rel(page.outputPath) }}?v=20261027-clean-urls" defer></script>{% endif %}
 {% if pageType == 'contribute' %}<script src="{{ 'assets/contribute.js' | rel(page.outputPath) }}?v=20261027-pagination" defer></script>{% endif %}
 </body></html>

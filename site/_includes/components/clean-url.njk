@@ -1,0 +1,5 @@
+<script>
+if (/\/index\.html$/.test(location.pathname)) {
+  history.replaceState(history.state, '', location.pathname.slice(0, -10) + location.search + location.hash);
+}
+</script>
