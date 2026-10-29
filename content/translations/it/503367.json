@@ -1,6 +1,9 @@
 {
   "title": "Lampada da lavoro LED con presa",
   "body": "Lampada da lavoro LED con presa.",
-  "_sourceHash": "b8e5b1fd9bf23de544de9370acd9495c15597662936150d8bdaa35388164c7cb",
-  "evidence": "Produttore: OWIM GmbH & Co. KG. Identificazione del produttore nel manuale, pagina PDF 16; IAN 503367."
+  "_sourceHash": "e38d05f906f8a8f58b8b54f5a8363954743201e45c379462847f5f4fa04ad1af",
+  "evidence": "Produttore: OWIM GmbH & Co. KG. Identificazione del produttore nel manuale, pagina PDF 16; IAN 503367.",
+  "specifications": {
+    "Weight": "Circa 650 g"
+  }
 }

@@ -61,7 +61,12 @@ test('Both static catalogs have identical identities and translated product page
 });
 
 test('New English records need no translation and stale prose is held back',()=>{
- const original=parse(fs.readFileSync('content/products/pwdl-40-a1-544816.md','utf8'));
+ // The baseline must have a current translation; catalog edits can make any
+ // particular product stale without changing localization behavior.
+ const original=fs.readdirSync('content/products').filter(file=>file.endsWith('.md'))
+  .map(file=>parse(fs.readFileSync('content/products/'+file,'utf8')))
+  .find(product=>{const translation=readTranslation(product.ian,'it');return translation?._sourceHash===translationHash(product)&&translation.title&&translation.title!==product.title;});
+ assert(original,'A current translated catalog record is required for the baseline');
  const missing=localize({...original,ian:'999999'},'it');
  assert.equal(missing.title,original.title);assert.equal(missing.body,original.body);assert.equal(missing.translationMissing,true);assert.equal(missing.translationNeedsReview,false);
  const changed=localize({...original,evidence:'Updated evidence'},'it');

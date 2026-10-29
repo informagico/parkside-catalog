@@ -1,6 +1,10 @@
 {
   "title": "Tagliapiastrelle ricaricabile",
   "body": "Tagliapiastrelle ricaricabile.",
-  "_sourceHash": "6be77682bbdcafcc54aa26ef9d28662df8e0ed79dbf6dd3c491edee39c9165e1",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 28; IAN 529045."
+  "_sourceHash": "85664a9b76348eb50ea8e781f296eabc64a34a09e224cf37eed3440de7d59d0f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 28; IAN 529045.",
+  "specifications": {
+    "Cutting depth at 45°": "Circa 23 mm",
+    "Cutting depth at 0°": "Circa 38 mm"
+  }
 }

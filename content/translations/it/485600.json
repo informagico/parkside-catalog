@@ -1,6 +1,9 @@
 {
   "title": "Smerigliatrice angolare cordless premium",
   "body": "Smerigliatrice angolare per smerigliatura e taglio con dischi adatti.",
-  "_sourceHash": "ca702d0777ab428f5291ecc044a7be1ba9c2239e05cf9de4c7e5efb28e6f7b41",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 23; IAN 485600."
+  "_sourceHash": "9975179a2b856c52d53d7c5b7976609d45bc9085de7e75183032584762299422",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 23; IAN 485600.",
+  "specifications": {
+    "Weight": "Circa 1.66 kg (senza batteria)"
+  }
 }

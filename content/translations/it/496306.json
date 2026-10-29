@@ -1,6 +1,9 @@
 {
   "title": "Pistola per cartucce ricaricabile",
   "body": "Pistola per cartucce ricaricabile.",
-  "_sourceHash": "e1befd6c9df100095d8b4b42c60d36cae3b581919d05d3194e2ccfa7f4e1e781",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 496306."
+  "_sourceHash": "85a95ec833e5e24004356c346a4213e4b32e7571a91d86f99409180bca954612",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 15; IAN 496306.",
+  "specifications": {
+    "Weight": "Circa 1.6 kg (senza batteria)"
+  }
 }

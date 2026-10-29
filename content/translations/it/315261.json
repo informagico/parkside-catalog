@@ -2,5 +2,8 @@
   "title": "Potatore a batteria 20 V",
   "body": "Utensile da potatura per tagliare rami e curare gli alberi.",
   "evidence": "Produttore: Kompernass Handels GmbH. Dichiarazione di conformità, pagina PDF 21; IAN 315261.",
-  "_sourceHash": "b61a5ae06a53941adb1ba409bae76f641f828bb9899d3db48eb12a6f9ce48b4d"
+  "_sourceHash": "3ce48c3410fd7507a7096945115357954e95293b8287d524dd6349a4c7c4486f",
+  "specifications": {
+    "Cutting length": "Circa 200 mm"
+  }
 }

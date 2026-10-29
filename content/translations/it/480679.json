@@ -1,6 +1,9 @@
 {
   "title": "Sega circolare da banco",
   "body": "Sega circolare per tagli rettilinei.",
-  "_sourceHash": "b76216931a492e2a7eff542029f5d2ec9e92eaf2a590ed84997271d9503319b7",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 86; IAN 480679."
+  "_sourceHash": "d7e1db0d7ad7af62dbcbf36ed6dde6a21444c64833fcb800ba8fbf5d53dbe30d",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 86; IAN 480679.",
+  "specifications": {
+    "Weight": "Circa 22 kg"
+  }
 }

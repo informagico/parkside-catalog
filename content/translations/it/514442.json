@@ -1,6 +1,10 @@
 {
   "title": "Sega circolare senza filo",
   "body": "Sega circolare per tagli rettilinei.",
-  "_sourceHash": "9e59fec0ba0aac95702788c2951333af2adb593b0c3299587d8d962094a2905b",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 43; IAN 514442."
+  "_sourceHash": "ef8e37d49fa4b58b107a37092f0e4ba327b4265dccf1bcb9c85d4b22d744281b",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 43; IAN 514442.",
+  "specifications": {
+    "Cutting depth at 45°": "Circa 33 mm",
+    "Cutting depth at 0°": "Circa 44 mm"
+  }
 }

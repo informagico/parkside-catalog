@@ -1,6 +1,9 @@
 {
   "title": "Aspirapolvere/aspiraliquidi",
   "body": "Aspiratore per la raccolta di detriti solidi e liquidi.",
-  "_sourceHash": "504821092155c43267ff86c383a596de96aca66d6fb93af9d520cbcbbd36f467",
-  "evidence": ""
+  "_sourceHash": "f982ae2a49c25dab431da185cf8ae48e4384fe08d0a41e11db3174d449bd06e7",
+  "evidence": "",
+  "specifications": {
+    "Power cord": "Circa 6 m"
+  }
 }

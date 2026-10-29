@@ -1,6 +1,9 @@
 {
   "title": "Robot tosaerba",
   "body": "Tagliaerba per la manutenzione del prato.",
-  "_sourceHash": "cddad037136233dbbf4271d2999cedab0b1ffd0e9a85b7de076c767ab238b511",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 34; IAN 489488."
+  "_sourceHash": "d3087205542ebf62f9f034e1f2f69f0adf853a249d11dc395688e5cafdad0fdb",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 34; IAN 489488.",
+  "specifications": {
+    "Weight": "Circa 1.5 kg"
+  }
 }

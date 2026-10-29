@@ -1,6 +1,9 @@
 {
   "title": "Taglierina al plasma",
   "body": "Taglierina al plasma.",
-  "_sourceHash": "9b8bea3a3be04d2ed70ddedc21e1626a1d03881bfba51a093c9acf53bc17c901",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 23; IAN 494641."
+  "_sourceHash": "5ee1cfd8f95117c31d69f2b0e2977f4769d38a0c34865e394749f61a2d33e03a",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 23; IAN 494641.",
+  "specifications": {
+    "Weight": "Circa 5 kg"
+  }
 }

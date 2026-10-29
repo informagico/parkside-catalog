@@ -1,6 +1,9 @@
 {
   "title": "Levigatrice a nastro e disco",
   "body": "Levigatrice per la preparazione e la finitura delle superfici.",
-  "_sourceHash": "edad04893aac6b09ee5a7e5325ef59f114df325e2871953cd67edc2c1b0181e1",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 41; IAN 458725."
+  "_sourceHash": "ad08763fdec08064e70d25ad512cd0e72e8f3d3777f3f717cfcc702b46c97af0",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 41; IAN 458725.",
+  "specifications": {
+    "Weight": "Circa 11.5 kg"
+  }
 }

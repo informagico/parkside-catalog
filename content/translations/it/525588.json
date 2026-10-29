@@ -1,6 +1,9 @@
 {
   "title": "Aspirapolvere",
   "body": "Aspirapolvere.",
-  "_sourceHash": "8054ec269599cfb3c4c472cc426da7317fc44a47fedeb8adab56ebdceb18efee",
-  "evidence": ""
+  "_sourceHash": "905942640ddc297a13f83d23be79c35383af5b92bea1f774fb19a2810bd1f87e",
+  "evidence": "",
+  "specifications": {
+    "Hose length": "Circa 1.7 m"
+  }
 }

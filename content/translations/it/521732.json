@@ -1,5 +1,8 @@
 {
-  "title": "Levigatrice orbitale o roto-orbitale a batteria 20 V",
-  "body": "Levigatrice per la preparazione e la finitura delle superfici.",
-  "_sourceHash": "e408fb60a9e113ec45d958c207acec1ec97b20ed3b345827d8f3539299fa9edd"
+  "title": "Levigatrice rotorbitale a batteria 20 V",
+  "body": "Levigatrice rotorbitale a batteria 20 V con platorello da 125 mm, diametro dell’orbita di 2.5 mm e velocità a vuoto regolabile da 6000 a 10000 giri/min. La frequenza di oscillazione va da 12000 a 20000 oscillazioni/min. Compatibile con le batterie X20V-Team, escluse quelle da 12 Ah; batteria e caricabatterie non inclusi.",
+  "_sourceHash": "6ad20dc5970c94d2eb939ab9dbd3286502fdc9b5869253f863f3fbfe96d9f06e",
+  "specifications": {
+    "Battery compatibility": "X20V-Team; non compatibile con batterie da 12 Ah"
+  }
 }

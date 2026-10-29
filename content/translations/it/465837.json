@@ -1,6 +1,9 @@
 {
   "title": "Motosega a batteria 20 V",
   "body": "Motosega a batteria 20 V.",
-  "_sourceHash": "8447e31abaa4e16bff2a6fc15fd2fca3213661f80fec96c18eefe3e0bad7b117",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 38; IAN 465837."
+  "_sourceHash": "b8249bd01d62a54c7eb7508aca3c251fb920c1ef5e16bc89cf029a39a1f80e3a",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 38; IAN 465837.",
+  "specifications": {
+    "Oil tank capacity": "Circa 270 ml"
+  }
 }

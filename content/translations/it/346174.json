@@ -1,9 +1,10 @@
 {
   "title": "Sega a catena 20 V",
   "body": "Sega a catena 20 V.",
-  "_sourceHash": "8a00fc7fdc974d60c15d27393f299d338a81d5d97b7f0f892c7e87691732bbe4",
+  "_sourceHash": "b6724faa37412c16d835206b981e7ec1939f42f7099bad1e071d3a83eda17d37",
   "evidence": "Dichiarazione UE di conformità, pagina PDF 194; IAN 346174.",
   "specifications": {
-    "Weight": "3.25 kg (senza caricabatterie+ batterie)"
+    "Weight": "3.25 kg (senza caricabatterie+ batterie)",
+    "Cutting length": "Circa 230 mm"
   }
 }

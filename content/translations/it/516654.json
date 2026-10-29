@@ -1,7 +1,7 @@
 {
   "title": "Misuratore di umidità",
   "body": "Misuratore di umidità per legno e materiali da costruzione, alimentato da due pile AAA. Visualizza i valori di umidità con una risoluzione dello 0,1%.",
-  "_sourceHash": "79a78f5a99e6a00611918f824287456da03ba18dca420cf0a6af1d74d85f2447",
+  "_sourceHash": "2b3d5345ecc7cfa8dbb57c446b8b350485d64f4b349f7590e427e598ae3b2a34",
   "specifications": {
     "Power supply": "2 pile LR03 (AAA), 3 V totali",
     "Temperature range": "0–40 °C (funzionamento)"

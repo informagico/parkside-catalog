@@ -1,5 +1,12 @@
 {
-  "title": "Faro portatile a batteria",
-  "body": "Faro portatile a batteria.",
-  "_sourceHash": "138e055d56a1aee63228e7f9b1e5fac4ea944d8af87bc57fff065b187898aaf7"
+  "title": "Faro LED a batteria",
+  "body": "Faro LED a batteria da 75 W con flusso luminoso regolabile da 1000 a 10000 lm e luce bianca diurna da 5600 K. Il faro si inclina di 165° ed è dotato di filettatura da 5/8 di pollice per treppiede. Funziona con una batteria X20V-Team oppure tramite alimentatore PCP-009 con uscita a 20 V CC.",
+  "_sourceHash": "0721d7eb4824e4c34194eb87d874d73168a8ef134f912e21ff74c68b6be285e6",
+  "specifications": {
+    "Power supply": "Batteria X20V-Team / 20 V CC tramite alimentatore PCP-009",
+    "Runtime at maximum brightness": "25 / 50 / 100 min con batterie da 2 / 4 / 8 Ah (10000 lm)",
+    "Tripod thread": "5/8 di pollice",
+    "Weight": "Circa 2.5 kg (senza batteria)",
+    "Dimensions": "200 × 290 × 325 mm (lunghezza × larghezza × altezza)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Smerigliatrice per satinatura/spazzolatura",
   "body": "Smerigliatrice per satinatura/spazzolatura.",
-  "_sourceHash": "9ad077e146b5dd8f506a8bf1e3eed2fb88e8a6ce1307ba7c64c9c8ec05bfa322",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508903."
+  "_sourceHash": "62c8b0384856c5c53b8b93d3a8724d18dc8482a41b3e6ebf33990fc862fc7da3",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 508903.",
+  "specifications": {
+    "Weight": "Circa 3.5 kg"
+  }
 }

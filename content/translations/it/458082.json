@@ -1,6 +1,9 @@
 {
   "title": "Martello perforatore",
   "body": "Trapano a percussione per lavori di foratura.",
-  "_sourceHash": "17830c16e29966289d0d1b126c17c5a510fc57c60cfd283de347fb1ac24acd40",
-  "evidence": "Produttore: OWIM GmbH & Co. KG. Dichiarazione di conformità, pagina PDF 74; IAN 458082."
+  "_sourceHash": "18fd1c55077ae8a25ec7f146a15d3948a1168a2f631df2d0eb7f12238e60edb1",
+  "evidence": "Produttore: OWIM GmbH & Co. KG. Dichiarazione di conformità, pagina PDF 74; IAN 458082.",
+  "specifications": {
+    "Weight": "4.9 kg (senza batteria)"
+  }
 }

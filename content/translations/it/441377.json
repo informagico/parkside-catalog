@@ -1,6 +1,9 @@
 {
   "title": "Levigatrice orbitale",
   "body": "Levigatrice per la preparazione e la finitura delle superfici.",
-  "_sourceHash": "35e30e76dd4ef64509395efe7fc8f1f5eb92cc8f36bebf5a5d59e398a048e1e4",
-  "evidence": ""
+  "_sourceHash": "df9d3d7c1ecbad3cb83b5b6260ec11f2f4c3b4fc2a0fa268808c4c2eed97374d",
+  "evidence": "",
+  "specifications": {
+    "Weight": "Circa 2.7 kg"
+  }
 }

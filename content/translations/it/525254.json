@@ -1,6 +1,9 @@
 {
   "title": "Compressore 24L",
   "body": "Compressore per la produzione di aria compressa.",
-  "_sourceHash": "1146add9638ce286622cc20ec39310b4d39cdded7fc498c3df919d691f617602",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 20; IAN 525254."
+  "_sourceHash": "6957146c6a6da6dc65550012337cedc689e9f66bbb8fa6ba89dff502dca5f5fc",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 20; IAN 525254.",
+  "specifications": {
+    "Working pressure": "Circa 8 bar"
+  }
 }

@@ -1,6 +1,12 @@
 {
   "title": "Avvitatore a impulsi 20 V",
   "body": "Avvitatore a impulsi con attacco quadro per serrare e allentare dadi e bulloni.",
-  "_sourceHash": "16d400cc81f2befdf7ce13d541eee5a61b6d3cac115718fb3cbb71dc0be1b1ed",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 485618."
+  "_sourceHash": "fe6044de44caeb6e5d591c388e2db1168c826e2f794dab3a5b44665d942779e2",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 485618.",
+  "specifications": {
+    "Speed control": "3 livelli selezionati elettronicamente; grilletto a velocità variabile",
+    "Tool holder": "Attacco quadro da 1/2\" (12.7 mm)",
+    "Weight": "Circa 4 kg (con batteria)",
+    "Socket adapter": "Da 1/2\" (12.7 mm) a 3/4\" (19 mm)"
+  }
 }

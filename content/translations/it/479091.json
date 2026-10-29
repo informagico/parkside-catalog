@@ -1,6 +1,9 @@
 {
   "title": "Livella laser a croce ricaricabile con treppiede",
   "body": "Livella laser a croce ricaricabile con treppiede.",
-  "_sourceHash": "652cc8aa762baed986590c5cc58fc371dd5769ea3f10f64cf7b1ab9b31d2482b",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 14; IAN 479091."
+  "_sourceHash": "874b0fc874221f1a42c06388e9dc6513a206f9e964b9c60daba980ee40660c97",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 14; IAN 479091.",
+  "specifications": {
+    "Weight": "260 g (senza treppiede)"
+  }
 }

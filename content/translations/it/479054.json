@@ -1,6 +1,9 @@
 {
   "title": "Trituratore di lame",
   "body": "Trituratore di lame.",
-  "_sourceHash": "ce98f4508d2f368d2bb99daa684d9aeafbbb710cb27a647000c9ad218e9a8d24",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 22; IAN 479054."
+  "_sourceHash": "e150776652aabd18cabfbf18a7f4162f0b4861f3d0839682a36894955e825ba5",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 22; IAN 479054.",
+  "specifications": {
+    "Weight": "Circa 8.6 kg"
+  }
 }

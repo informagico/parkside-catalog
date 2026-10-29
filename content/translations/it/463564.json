@@ -1,5 +1,8 @@
 {
   "title": "Banco da lavoro portatile con supporto per macchina",
   "body": "Banco da lavoro portatile con supporto per macchina.",
-  "_sourceHash": "395e63a86f3b8705e4c9068fc86d15b99d5c5cfad91544a20ae524fb5e8cacee"
+  "_sourceHash": "ba4fcde728ce419325f657d3a58f663b85c80a9126128eb06f62994268c1e20e",
+  "specifications": {
+    "Weight": "Circa 22.5 kg"
+  }
 }

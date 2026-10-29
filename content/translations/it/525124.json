@@ -1,6 +1,9 @@
 {
   "title": "Pialla elettrica",
   "body": "Pialla per la lavorazione di superfici in legno.",
-  "_sourceHash": "0553f4dbb5d0868d15d2a0d4ad0e815bd14b7e738175814d23a243ad4e3fa547",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 525124."
+  "_sourceHash": "25a89e732939e19ad3fc51361c8f1271998b451d9fc03b60563895ffeb49368b",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 16; IAN 525124.",
+  "specifications": {
+    "Weight": "Circa 3.5 kg"
+  }
 }

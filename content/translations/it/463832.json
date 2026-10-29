@@ -1,6 +1,9 @@
 {
   "title": "Pistola per sigillante a batteria",
   "body": "Pistola per sigillante a batteria.",
-  "_sourceHash": "0dd925ad7ef846ae46454b3c4c3d89b20d800f6af289243cebf0c8825fb03059",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 463832."
+  "_sourceHash": "166a46736eb0f15580f111dec1e4412a5ca984b6ce8827153c020766a184f9b0",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 463832.",
+  "specifications": {
+    "Weight": "Circa 1.6 kg (senza batteria)"
+  }
 }
