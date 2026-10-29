@@ -1,6 +1,9 @@
 {
   "title": "Compressore silenzioso",
   "body": "Compressore per la produzione di aria compressa.",
-  "_sourceHash": "15fb70dceb1d6cf386c599f6043264dd33bf28f7620a3444ea289d7c6a2da0c5",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 44; IAN 481648."
+  "_sourceHash": "8fea24d2005fa2c34c6727591be1f313a4906f979b959ac307c490f69983ca22",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 44; IAN 481648.",
+  "specifications": {
+    "Working pressure": "Circa 8 bar"
+  }
 }

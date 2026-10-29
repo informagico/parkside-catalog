@@ -1,6 +1,9 @@
 {
   "title": "Soffiatore ricaricabile",
   "body": "Soffiatore ricaricabile.",
-  "_sourceHash": "84f59eb653b904a8019c7121a3e9a0626641967bc9be8793293b58c8e9d73f8e",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 507939."
+  "_sourceHash": "451e9cc34ef6783bfa4e707b38d8348b90408e09e70f84cd3ba58a78d29a0b7f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 27; IAN 507939.",
+  "specifications": {
+    "Weight": "Circa 1.25 kg (senza batteria)"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Smerigliatrice combinata",
   "body": "Smerigliatrice combinata.",
-  "_sourceHash": "de6fe36e769ff9f77ee2885841d37f9103cd67ec88fac87b09aa8a92e4829c27",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 525412."
+  "_sourceHash": "c707545040507df1ac38d4b0510dedc5292fbc0dc00f5bfca5def1fde4003137",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 525412.",
+  "specifications": {
+    "Weight": "Circa 6.95 kg"
+  }
 }

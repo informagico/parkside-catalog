@@ -1,6 +1,9 @@
 {
   "title": "Tagliasiepi cordless",
   "body": "Tagliasiepi per la manutenzione delle siepi.",
-  "_sourceHash": "08c7206498fab74767480e79e2b544defd790265931aa433b0aa05b8c0ab6b23",
-  "evidence": "Produttore: Grizzly Tools GmbH & Co. KG. Dichiarazione di conformità, pagina PDF 321; IAN 497661."
+  "_sourceHash": "20368623fdd18268ad7efe534d6593ad5055fe6ebe8fd13d253a69ddd2534bae",
+  "evidence": "Produttore: Grizzly Tools GmbH & Co. KG. Dichiarazione di conformità, pagina PDF 321; IAN 497661.",
+  "specifications": {
+    "Cutting length": "Circa 58 cm"
+  }
 }

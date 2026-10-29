@@ -2,5 +2,8 @@
   "title": "Avvitatore a impulsi",
   "body": "Avvitatore a impulsi per serrare e allentare dadi e bulloni.",
   "evidence": "Produttore: Kompernass Handels GmbH. Dichiarazione di conformità, pagina PDF 18; IAN 373207.",
-  "_sourceHash": "84ee005e1124c99d45ff4d6381ebdce320779b31385400e66a95efeb93e1d33a"
+  "_sourceHash": "bced4520e971139599fe12f5f258bee7b20fd1e04d81afcb3c5553cf1fb8c900",
+  "specifications": {
+    "Torque": "Circa 310 Nm"
+  }
 }

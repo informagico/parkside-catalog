@@ -1,9 +1,10 @@
 {
   "title": "Cesoia ricaricabile per erba e cespugli",
   "body": "Cesoia ricaricabile per erba e cespugli.",
-  "_sourceHash": "32439039e0082c86223ef45da491f1ef744c33731bced6824c62a18bc7e3a249",
+  "_sourceHash": "1c7ae2397619099046e12d43d919ec104aa469cb83bebe0b70181b529df60dae",
   "evidence": "Dichiarazione UE di conformità, pagina PDF 20; IAN 494228.",
   "specifications": {
-    "Weight": "0.94 kg (senza batteria/senza lama)"
+    "Weight": "0.94 kg (senza batteria/senza lama)",
+    "Tooth spacing": "Circa 20 mm"
   }
 }

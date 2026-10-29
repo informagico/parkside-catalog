@@ -1,9 +1,10 @@
 {
   "title": "Pompa sommergibile per acqua pulita",
   "body": "Pompa sommergibile per acqua pulita.",
-  "_sourceHash": "f7e4f3fd27ed4a0e6c083945c787dd29aea12cc9da888497c8bc4163595c4599",
+  "_sourceHash": "2a6d8a288d9715d3019c7866858be1c64446c8308dbcec7a4f020eed9b7f81b8",
   "evidence": "",
   "specifications": {
-    "Weight": "3.8 kg (accessori inclusi)"
+    "Weight": "3.8 kg (accessori inclusi)",
+    "Maximum flow rate": "Circa 10000 l/h"
   }
 }

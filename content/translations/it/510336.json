@@ -1,6 +1,9 @@
 {
   "title": "Lampada ricaricabile a LED con morsetto",
   "body": "Lampada ricaricabile a LED con morsetto.",
-  "_sourceHash": "08729a2be5d86a2a4b06f829dace1e52054d032f2a2c856f12db7579e8f5bcde",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 11; IAN 510336."
+  "_sourceHash": "bad256a4abf130bdb93f8d499dbe2b6553952dc15df43cd9580f23c4573becc1",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 11; IAN 510336.",
+  "specifications": {
+    "Weight": "565 g (senza batteria)"
+  }
 }

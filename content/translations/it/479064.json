@@ -1,6 +1,9 @@
 {
   "title": "Aspirafoglie",
   "body": "Aspirafoglie.",
-  "_sourceHash": "4e344a19deb62f6a625c7e91fa2c9bb1e8d29aba6a294f662f86bc87ee1e0d64",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 25; IAN 479064."
+  "_sourceHash": "bbea139411e7863396724c61dae2f2bf25660517a5233a35579eee21f034acea",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 25; IAN 479064.",
+  "specifications": {
+    "Weight including accessories": "Circa 4.05 kg"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Frantoio a rulli elettrico",
   "body": "Frantoio a rulli elettrico.",
-  "_sourceHash": "461b08714d083f5a995e726f02e87f0229f9550dddbba2690d92d36ae3c00161",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 22; IAN 495946."
+  "_sourceHash": "80f11e0a921b51ded32536c3981999069304bb8f8bbd134fafc44343ff04d487",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 22; IAN 495946.",
+  "specifications": {
+    "Weight": "Circa 20.5 kg"
+  }
 }

@@ -1,6 +1,13 @@
 {
-  "title": "Avvitatore a percussione ricaricabile",
-  "body": "Utensile a impulsi per serrare e allentare elementi di fissaggio.",
-  "_sourceHash": "a8d3d8e069e93021392122634d8330031f89f2030b688955a99a98c33e83b239",
-  "evidence": ""
+  "title": "Avvitatore a impulsi a batteria 20 V",
+  "body": "Avvitatore a impulsi a batteria 20 V con attacco quadro da ½ pollice, tre livelli di prestazioni selezionabili elettronicamente e grilletto a velocità variabile. Eroga fino a 1356 Nm di coppia, 1550 giri/min e 1900 colpi/min. Dispone di rotazione oraria e antioraria, luce di lavoro LED e clip da cintura. Il manuale elenca bussole da 17, 19 e 21 mm, un adattatore da ½ a ¾ di pollice e una valigetta.",
+  "_sourceHash": "b52706dc7ca93622e6fd413a20903afc360669a3eb1dbec8c90414209851634f",
+  "evidence": "",
+  "specifications": {
+    "Tool holder": "Attacco quadro da 1/2\" (12.7 mm)",
+    "Weight": "Circa 4 kg (con batteria)",
+    "Speed control": "3 livelli selezionati elettronicamente; grilletto a velocità variabile",
+    "Socket adapter": "Da 1/2\" (12.7 mm) a 3/4\" (19 mm)",
+    "Warranty": "5 anni dalla data di acquisto"
+  }
 }

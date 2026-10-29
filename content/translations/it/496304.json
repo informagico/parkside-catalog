@@ -1,6 +1,9 @@
 {
   "title": "Batteria smart da 20 V/8.0 Ah",
   "body": "Batteria smart da 20 V/8.0 Ah.",
-  "_sourceHash": "e1596c7b09e82a6998a4fd575e5af1759809146698f742f4ba6bbc4a5cc5e4c2",
-  "evidence": "Dichiarazione di conformità, pagine PDF 31–32, rilasciata da Grizzly Tools GmbH & Co. KG per PAPP 208 A1; IAN 496304_2504."
+  "_sourceHash": "0cce1692867df5eb0333bff63aba2d0279f4732c4d3e53c4e2d7e7cffe5f215e",
+  "evidence": "Dichiarazione di conformità, pagine PDF 31–32, rilasciata da Grizzly Tools GmbH & Co. KG per PAPP 208 A1; IAN 496304_2504.",
+  "specifications": {
+    "Weight": "Circa 1 kg"
+  }
 }

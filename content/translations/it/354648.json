@@ -1,6 +1,9 @@
 {
   "title": "Pistola per colla a caldo 20 V",
   "body": "Pistola per colla a caldo 20 V.",
-  "_sourceHash": "5d1ca3d2ae4550060f39b4275fbcbe07c2c85542a9cae70ed213a0fe9ee8f1cb",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 30; IAN 354648."
+  "_sourceHash": "6f8a1d14abe9a9c27f2c510f99e7142f32e77a346e2a195dd64575e2935d366f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 30; IAN 354648.",
+  "specifications": {
+    "Weight": "0.31 kg (senza batteria)"
+  }
 }

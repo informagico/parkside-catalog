@@ -1,6 +1,9 @@
 {
   "title": "Batteria, 4.0 Ah",
   "body": "Batteria, 4.0 Ah.",
-  "_sourceHash": "e8b2fff0a26aa2dde50d2c70fab5e0a5871729966d19abddc6ab0b047749cdd5",
-  "evidence": ""
+  "_sourceHash": "20525a3f54f0a3df95f30647676a818db3609ee4da3e0f264210bc84f269941f",
+  "evidence": "",
+  "specifications": {
+    "Weight": "Circa 700 g"
+  }
 }

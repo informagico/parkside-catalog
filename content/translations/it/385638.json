@@ -1,6 +1,9 @@
 {
   "title": "Sega per legno 12 V",
   "body": "Sega per legno 12 V.",
-  "_sourceHash": "2ff355b4a9a9ce2750d3f6851b647543d813cb79ab19ec89e13f073f0fd4f03e",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 74; IAN 385638."
+  "_sourceHash": "a1da49b7c5bbcb81aba0065e18d667a3ffe22729c2ecc48e7276f7d15b4a186b",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 74; IAN 385638.",
+  "specifications": {
+    "Cutting length": "Circa 125 mm"
+  }
 }

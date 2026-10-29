@@ -1,6 +1,9 @@
 {
   "title": "Avvitatore a batteria a bastone, 4 V",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "6581d4d5604649c08b96237ce714359797dc7a9c4caa777d1f1e5e5a1a95c164",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 21; IAN 472073."
+  "_sourceHash": "016a39d6f365956c4fdcb39c086348148b3e3cdcf497a09bd32fce7e360507a2",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 21; IAN 472073.",
+  "specifications": {
+    "Weight": "Circa 0.45 kg"
+  }
 }

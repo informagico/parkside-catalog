@@ -1,6 +1,9 @@
 {
   "title": "Batteria esterna con torcia",
   "body": "Batteria esterna con torcia.",
-  "_sourceHash": "00dcea8faca1970c293d795aec039878308cf4af60c09c433e7ee3511373fcb1",
-  "evidence": ""
+  "_sourceHash": "15d19ad775d484c4d73f224d28c9b9dfbc2c3bcddfbef7076493447a0aa936bd",
+  "evidence": "",
+  "specifications": {
+    "Weight": "Circa 220 g"
+  }
 }

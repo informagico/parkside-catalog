@@ -1,6 +1,9 @@
 {
   "title": "Trapano a colonna",
   "body": "Trapano a colonna.",
-  "_sourceHash": "1637043a35a5ce617df3e3cc7458ba3a87de42c7c3f1b55b2d08ec0ba6e54596",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 265; IAN 417394."
+  "_sourceHash": "2347e232795076d24ebe4dff23a5024d75d2558dd535180830d90385019514c0",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 265; IAN 417394.",
+  "specifications": {
+    "Weight including accessories": "Circa 9.1 kg"
+  }
 }

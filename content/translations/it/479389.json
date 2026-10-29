@@ -1,6 +1,9 @@
 {
   "title": "Frigo elettrico portatile ricaricabile, 24 L",
   "body": "Frigo elettrico portatile ricaricabile, 24 L.",
-  "_sourceHash": "2f95e2f56bc6622c12e24ebc6105738455fbcc2480c8470b747e1043a39699a2",
-  "evidence": "Produttore: TARGA GmbH. Identificazione del produttore nel manuale, pagina PDF 27; IAN 479389."
+  "_sourceHash": "57f58f96210b5aaf47bf928e798ebe2873ffc46723fc96f3e6948fd233bf7c5b",
+  "evidence": "Produttore: TARGA GmbH. Identificazione del produttore nel manuale, pagina PDF 27; IAN 479389.",
+  "specifications": {
+    "Weight": "Circa 5 kg"
+  }
 }

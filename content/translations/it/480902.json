@@ -1,6 +1,10 @@
 {
   "title": "Sega circolare ricaricabile",
   "body": "Sega circolare per tagli rettilinei.",
-  "_sourceHash": "58a25918cb6477bef248a93792946c31e1bec2d42c613658aa69af1284922d5e",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 51; IAN 480902."
+  "_sourceHash": "3da08756febb43f5c3488edd291d2d8d6ed3f1dbe77f26a6076ac528f568b9ce",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 51; IAN 480902.",
+  "specifications": {
+    "Cutting depth at 45°": "Circa 33 mm",
+    "Cutting depth at 0°": "Circa 44 mm"
+  }
 }

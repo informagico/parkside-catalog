@@ -1,6 +1,9 @@
 {
   "title": "Compressore portatile",
   "body": "Compressore per la produzione di aria compressa.",
-  "_sourceHash": "1a8f86b88f6975a2354c8062f11396077af6aab9c4ee593798113e10063d7c39",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 43; IAN 472141."
+  "_sourceHash": "0ca50c58fc860d718bfe448b7879077ff358e0d2d9087bf43b353ccc14cac69f",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 43; IAN 472141.",
+  "specifications": {
+    "Working pressure": "Circa 8 bar"
+  }
 }

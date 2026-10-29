@@ -2,5 +2,8 @@
   "title": "Sega circolare a batteria 12 V",
   "body": "Sega circolare per tagli diritti in pannelli e tavole adatti.",
   "evidence": "Produttore: Kompernass Handels GmbH. Dichiarazione di conformità, pagina PDF 16; IAN 302329.",
-  "_sourceHash": "e7009490723517df679c3d4b6393cb0e305c8b56af7053dbf97d4b61793919eb"
+  "_sourceHash": "63b178af4c45df51d3aa0aea09a14ed73cb2d5a1fc3da55296a255f856782a73",
+  "specifications": {
+    "Cutting depth at 45°": "Circa 17 mm"
+  }
 }

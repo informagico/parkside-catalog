@@ -1,6 +1,9 @@
 {
   "title": "Avvitatore ricaricabile con impugnatura girevole",
   "body": "Utensile per lavori di foratura e avvitamento.",
-  "_sourceHash": "bc4fb5a327178cd5adb6000b87bb552678d9f48b4de8707673cc6371c3cc6c87",
-  "evidence": ""
+  "_sourceHash": "c9cbb86c2ff55557b58cbf90875835354b965468a6aa8ebdaa1df68380569255",
+  "evidence": "",
+  "specifications": {
+    "Weight": "Circa 0.45 kg"
+  }
 }

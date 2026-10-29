@@ -1,6 +1,9 @@
 {
   "title": "Dispositivo di localizzazione",
   "body": "Dispositivo di localizzazione.",
-  "_sourceHash": "24bdf637cec04870b20f17ed51febd17c73470a5e10ea29ce826a6a045c3f45f",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 14; IAN 506429."
+  "_sourceHash": "1c7863dd59363d1c582e303912461a095347207bec8b41b416bd59a376db96d6",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 14; IAN 506429.",
+  "specifications": {
+    "Weight": "320 g (senza batteria)"
+  }
 }

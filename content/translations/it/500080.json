@@ -1,6 +1,9 @@
 {
   "title": "Faro LED",
   "body": "Faro LED.",
-  "_sourceHash": "896b337da0e697fc7e2a306476459673036b8383d9956f098dbfcbf653021a44",
-  "evidence": ""
+  "_sourceHash": "4d04b5c5476cf337f057ec58fcd362fc657aa53b0ad9b4393cc4cd85393bd5fc",
+  "evidence": "",
+  "specifications": {
+    "Weight": "Circa 1300 g"
+  }
 }

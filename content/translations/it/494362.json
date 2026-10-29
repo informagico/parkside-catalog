@@ -1,6 +1,9 @@
 {
   "title": "Pompa a pressione per giardino",
   "body": "Pompa a pressione per giardino.",
-  "_sourceHash": "0daa8b54b11a7c51e6d609b7f72577891305442c9762033677443e2b3279c022",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 25; IAN 494362."
+  "_sourceHash": "03ed2d75b2590f29a7bb949c03bbb11e6c1487e8ac5bf82be6f97328d82633eb",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 25; IAN 494362.",
+  "specifications": {
+    "Working pressure": "Circa 2.5 bar"
+  }
 }

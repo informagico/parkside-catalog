@@ -1,6 +1,9 @@
 {
   "title": "Motozappa a benzina",
   "body": "Motozappa a benzina.",
-  "_sourceHash": "dbdde94c9ac1ffd754ed1fab869e9120256f99736528e3295f17abef6c9f892d",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 24; IAN 495953."
+  "_sourceHash": "84dcc3317d4d062485231590c96e01eaf580b27a19859360405a7f360495df3c",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 24; IAN 495953.",
+  "specifications": {
+    "Weight": "Circa 31 kg"
+  }
 }

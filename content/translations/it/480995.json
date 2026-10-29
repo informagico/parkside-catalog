@@ -1,6 +1,9 @@
 {
   "title": "Motosega ricaricabile",
   "body": "Motosega ricaricabile.",
-  "_sourceHash": "ccc97b1d972b31778a83b1f17bddc09169d15810661d5632b61f64e910139094",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 37; IAN 480995."
+  "_sourceHash": "a0bc9c5743b541f6449c9196ff98eed64aef0246960a88a131243c79da74c6b9",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 37; IAN 480995.",
+  "specifications": {
+    "Oil tank capacity": "Circa 270 ml"
+  }
 }

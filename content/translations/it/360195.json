@@ -1,5 +1,8 @@
 {
   "title": "Trapano a percussione 12 V",
   "body": "Trapano a percussione per lavori di foratura.",
-  "_sourceHash": "92be5b46ef12d99795249fd0e20c8eb8e9c06a6b539903e21d80801c903c6b4c"
+  "_sourceHash": "70ff3725aa454d37652f787d357d32fafc012308197ddd73797cbc125dadb0d4",
+  "specifications": {
+    "Weight": "1.15 kg (senza batteria)"
+  }
 }

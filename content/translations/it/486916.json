@@ -1,6 +1,9 @@
 {
   "title": "Aspiratore/soffiatore per foglie a benzina",
   "body": "Utensile da giardino per la raccolta e la rimozione delle foglie.",
-  "_sourceHash": "dca04e640538c781c3543182bf131da6feb8c3ccda2dd9c8ce3faf086cd22eeb",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 26; IAN 486916."
+  "_sourceHash": "2b1f704e47b498193f15bc40502e43aaed35d725193e2fd2b19341bd1b9c80a5",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 26; IAN 486916.",
+  "specifications": {
+    "Weight including accessories": "Circa 6.4 kg"
+  }
 }

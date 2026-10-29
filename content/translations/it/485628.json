@@ -1,6 +1,9 @@
 {
   "title": "Batteria smart 12.0 Ah",
   "body": "Batteria smart 12.0 Ah.",
-  "_sourceHash": "c156002b3b0e6c3e89be28c68ebf9e35b76c5a93ddd1ece276ff18e7af9ada05",
-  "evidence": ""
+  "_sourceHash": "b517460b90d82b4503fb03cbaa9faaae2a2f2a392c614e0bd4a715a26dcca0b0",
+  "evidence": "",
+  "specifications": {
+    "Weight": "Circa 1.4 kg"
+  }
 }

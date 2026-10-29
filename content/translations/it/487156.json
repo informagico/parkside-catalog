@@ -1,6 +1,9 @@
 {
   "title": "Levigatrice a nastro da banco",
   "body": "Levigatrice per la preparazione e la finitura delle superfici.",
-  "_sourceHash": "de0fcda331cafaf69134cf4ce92e2c78aba6d1f6b693a6d05817aeaacb69468c",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 487156."
+  "_sourceHash": "028309ba57d9dcbb24e799f68f41cbf08f7ad931b5713013c547bbdccf1352aa",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 17; IAN 487156.",
+  "specifications": {
+    "Weight including accessories": "Circa 7.1 kg"
+  }
 }

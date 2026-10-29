@@ -1,6 +1,9 @@
 {
   "title": "Torcia a LED ricaricabile",
   "body": "Torcia a LED ricaricabile.",
-  "_sourceHash": "a184d7c6365eeb54ba8a37414b5f914b253232e8bb8e022318f199ae8da8eab0",
-  "evidence": ""
+  "_sourceHash": "39fdae928c10ab7793d4eb20fa6afa14b3eadeb3dabe5dfa0ffc4021ffa1964d",
+  "evidence": "",
+  "specifications": {
+    "Weight": "595 g (senza batteria)"
+  }
 }

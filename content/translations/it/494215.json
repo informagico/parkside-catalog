@@ -1,6 +1,9 @@
 {
   "title": "Sega a catena ricaricabile da 20 V",
   "body": "Sega a catena ricaricabile da 20 V.",
-  "_sourceHash": "a33416af0ce530d3e6032b6e1395ca0bb5959c7cfcdbea948ae0516648bebd29",
-  "evidence": ""
+  "_sourceHash": "035baaf2cdf813b32cf8ff9fe2358c41eb229e1da24b904f4df6c2f7928a2fd8",
+  "evidence": "",
+  "specifications": {
+    "Oil tank capacity": "Circa 270 ml"
+  }
 }

@@ -1,6 +1,9 @@
 {
   "title": "Tosaerba elettrico",
   "body": "Tagliaerba per la manutenzione del prato.",
-  "_sourceHash": "61f70e3d9ccef0f5610cf2fea376e1cebba90bbced7db21d87b45432cc7070a5",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 495489."
+  "_sourceHash": "dd427ecdd94c95b26d949187f0077eee53696ee1faf6ab34102e094d35e688c3",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 18; IAN 495489.",
+  "specifications": {
+    "Weight": "Circa 15.9 kg"
+  }
 }

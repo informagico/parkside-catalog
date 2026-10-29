@@ -1,6 +1,9 @@
 {
   "title": "Aspirafoglie/soffiatore elettrico 2600 W",
   "body": "Utensile da giardino per la raccolta e la rimozione delle foglie.",
-  "_sourceHash": "cca605bf7829e086223850fef9c6352de514ad6b8dda8b67add44b2b8e07b36d",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 24; IAN 486908."
+  "_sourceHash": "6c53f3bbb23404379581767966786486320b3de916af319981705073ee233138",
+  "evidence": "Dichiarazione UE di conformità, pagina PDF 24; IAN 486908.",
+  "specifications": {
+    "Weight including accessories": "Circa 3.2 kg"
+  }
 }
