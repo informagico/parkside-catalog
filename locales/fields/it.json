@@ -255,5 +255,20 @@
   "Suction disc diameter": "Diametro della ventosa",
   "Maximum inlet pressure": "Pressione massima in ingresso",
   "Maximum combined power": "Potenza totale massima di aspiratore e presa",
-  "Filter efficiency": "Efficienza di filtrazione"
+  "Filter efficiency": "Efficienza di filtrazione",
+  "Internal model": "Modello interno",
+  "Chisel position adjustment": "Regolazione della posizione dello scalpello",
+  "Auxiliary handle": "Impugnatura supplementare",
+  "Depth stop": "Asta di profondità",
+  "Grease included": "Grasso incluso",
+  "Carrying case": "Valigetta",
+  "Sound pressure level": "Livello di pressione sonora",
+  "Sound power level": "Livello di potenza sonora",
+  "Noise uncertainty": "Incertezza del rumore",
+  "Vibration in hammer drilling (main handle)": "Vibrazioni in foratura a percussione (impugnatura principale)",
+  "Vibration in chiselling (main handle)": "Vibrazioni in scalpellatura (impugnatura principale)",
+  "Vibration in hammer drilling (auxiliary handle)": "Vibrazioni in foratura a percussione (impugnatura supplementare)",
+  "Vibration in chiselling (auxiliary handle)": "Vibrazioni in scalpellatura (impugnatura supplementare)",
+  "Vibration uncertainty": "Incertezza delle vibrazioni",
+  "Warranty": "Garanzia"
 }

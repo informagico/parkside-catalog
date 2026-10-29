@@ -1,6 +1,14 @@
 {
-  "title": "Martello combinato cordless",
-  "body": "Trapano a percussione per lavori di foratura.",
-  "_sourceHash": "6635d0a0297294eb6793ed9043d85b0834907fea40abc2c868efa39264fbefad",
-  "evidence": "Dichiarazione UE di conformità, pagina PDF 26; IAN 485599."
+  "title": "Martello tassellatore e demolitore a batteria 20 V",
+  "body": "Martello tassellatore SDS-Plus da 20 V per la foratura a percussione di muratura, calcestruzzo e pietra, la scalpellatura di calcestruzzo, pietra e intonaco e la foratura di pietra, legno e metallo. Dispone di due livelli di velocità a selezione elettronica, rotazione reversibile, posizione dello scalpello regolabile e luce LED. L’impugnatura supplementare è orientabile a 360° e l’asta di profondità in metallo permette di impostare la profondità di foratura.\n\nInclude punte Performance da 6, 8 e 10 mm, 50 g di grasso, un panno e una valigetta. Batteria e caricabatterie sono venduti separatamente.",
+  "_sourceHash": "cbecfc51871b31e0f4a0dc2b634902515822f61584c0d0bdb25af4660ae3aa68",
+  "evidence": "La dichiarazione UE di conformità a pagina PDF 42 identifica OWIM GmbH & Co. KG per lo IAN 485599_2501, modello interno HG13539. La copertina e i dati tecnici identificano l'utensile come PKHAP 2034-Li B1.",
+  "specifications": {
+    "Speed control": "2 livelli a selezione elettronica",
+    "Operating modes": "Foratura / Foratura a percussione / Scalpellatura",
+    "Auxiliary handle": "Orientabile a 360°",
+    "Depth stop": "Metallo",
+    "Operating temperature": "Da -5 °C a +50 °C",
+    "Warranty": "5 anni dalla data di acquisto"
+  }
 }
